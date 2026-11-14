@@ -1,0 +1,14 @@
+.venv/
+.bootstrap/
+__pycache__/
+.*_cache/
+.coverage
+dist/
+*.egg-info/
+.DS_Store
+results/*
+!results/.gitkeep
+.env
+.env.*
+*.pem
+*.key

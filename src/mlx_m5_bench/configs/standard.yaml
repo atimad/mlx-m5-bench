@@ -1,0 +1,16 @@
+repeats: 3
+warmups: 1
+cases:
+  - {algorithm: logistic, samples: 2000, features: 32}
+  - {algorithm: logistic, samples: 12000, features: 32}
+  - {algorithm: logistic, samples: 12000, features: 256, classes: 3}
+  - {algorithm: knn, samples: 2000, features: 32}
+  - {algorithm: knn, samples: 8000, features: 32}
+  - {algorithm: knn, samples: 8000, features: 32, neighbors: 15}
+  - {algorithm: knn, samples: 8000, features: 128, classes: 3}
+  - {algorithm: svc, samples: 1500, features: 32}
+  - {algorithm: svc, samples: 4000, features: 32}
+  - {algorithm: svc, samples: 4000, features: 256, classes: 3}
+  - {algorithm: pca, samples: 2000, features: 32}
+  - {algorithm: pca, samples: 12000, features: 32}
+  - {algorithm: pca, samples: 12000, features: 256, components: 8}

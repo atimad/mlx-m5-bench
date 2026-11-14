@@ -1,0 +1,16 @@
+repeats: 5
+warmups: 1
+timeout_s: 600
+cases:
+  - {algorithm: logistic, samples: 30000, features: 256}
+  - {algorithm: logistic, samples: 100000, features: 256}
+  - {algorithm: logistic, samples: 175000, features: 1024, classes: 3}
+  - {algorithm: knn, samples: 10000, features: 64}
+  - {algorithm: knn, samples: 30000, features: 64}
+  - {algorithm: knn, samples: 30000, features: 64, neighbors: 25}
+  - {algorithm: svc, samples: 6000, features: 128}
+  - {algorithm: svc, samples: 9000, features: 128}
+  - {algorithm: svc, samples: 20000, features: 128}
+  - {algorithm: pca, samples: 25000, features: 512, components: 12}
+  - {algorithm: pca, samples: 80000, features: 512, components: 12}
+  - {algorithm: pca, samples: 150000, features: 2048, components: 12}

@@ -1,0 +1,7 @@
+repeats: 1
+warmups: 0
+cases:
+  - {algorithm: logistic, samples: 600, features: 16}
+  - {algorithm: knn, samples: 600, features: 16, classes: 3}
+  - {algorithm: svc, samples: 600, features: 16}
+  - {algorithm: pca, samples: 600, features: 16}
