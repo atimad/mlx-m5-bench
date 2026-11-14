@@ -39,7 +39,7 @@ xcrun clang -dynamiclib -fobjc-arc -framework Foundation -framework Metal \
 for case in svc pca pca-small; do
   MTL_CAPTURE_ENABLED=1 MLXLEARN_FORCE_BACKEND=mlx \
     VECLIB_MAXIMUM_THREADS=4 OMP_NUM_THREADS=4 \
-    .venv/bin/python scripts/trace_svc_pca.py "$case" "$out/$case" "$out/probe.dylib" \
+    .venv/bin/python scripts/trace_fit_inference.py "$case" "$out/$case" "$out/probe.dylib" \
     > "$out/$case.json"
 done
 ```

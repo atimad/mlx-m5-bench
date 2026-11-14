@@ -43,7 +43,7 @@ Both implementations receive identical contiguous float32 arrays and labels. Int
 
 Every timed operation has a backend classification. Available categories include CPU baseline, CPU fallback/owned host path, reported GPU, reported mixed CPU/GPU, independently verified GPU, unknown and unsupported.
 
-Current estimator results carry library diagnostics and source-audited exceptions. Separate Metal traces verify GPU work in matched standard KNN prediction, SVC fit and prediction, and PCA fit and transform replays. The smaller PCA transform took the host path. [KNN trace](docs/evidence/metal-knn-8000x128-c3-k5/README.md) · [SVC and PCA traces](docs/evidence/metal-svc-pca/README.md) A successful Metal matrix-multiplication probe establishes capability. Each estimator retains its own evidence status.
+Current estimator results carry library diagnostics and source-audited exceptions. Separate Metal traces verify GPU work in matched logistic regression fits, standard KNN prediction, SVC fit and prediction, and PCA fit and transform replays. Both traced logistic prediction cases and the smaller PCA transform took the host path. [Logistic traces](docs/evidence/metal-logistic/README.md) · [KNN trace](docs/evidence/metal-knn-8000x128-c3-k5/README.md) · [SVC and PCA traces](docs/evidence/metal-svc-pca/README.md) A successful Metal matrix-multiplication probe establishes capability. Each estimator retains its own evidence status.
 
 Speed ratios appear only for passing numerical comparisons with reported GPU or mixed paths. CPU paths and unknown execution retain their measured timings and an ineligible ratio. Charts label the evidence level and retain failed or missing cases. The dashboard displays raw failure details.
 

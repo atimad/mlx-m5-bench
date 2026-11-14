@@ -1,4 +1,4 @@
-"""Replay one standard SVC or PCA case with operation-scoped Metal evidence."""
+"""Replay a selected benchmark case with operation-scoped Metal evidence."""
 
 import argparse
 import csv
@@ -22,6 +22,8 @@ from mlx_m5_bench.datasets import generate
 from mlx_m5_bench.estimators import create, parameters
 
 CASES = {
+    "logistic": "logistic-2000x32-c2",
+    "logistic-full": "logistic-100000x256-c2",
     "svc": "svc-4000x256-c3",
     "pca": "pca-12000x256-c2-p8",
     "pca-small": "pca-2000x32-c2-p3",
@@ -100,10 +102,10 @@ def main() -> None:
     if not probe.trace_install():
         raise RuntimeError("Unable to install Metal command buffer observer")
 
-    profile = load_profile("standard")
+    profile = load_profile("full" if args.case == "logistic-full" else "standard")
     case: Case = next(case for case in profile.cases if case.key == CASES[args.case])
     data = generate(case, profile.seed)
-    inference = "predict" if case.algorithm == "svc" else "transform"
+    inference = "transform" if case.algorithm == "pca" else "predict"
     outputs = {}
     captures = {}
     with (

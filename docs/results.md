@@ -22,8 +22,8 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 
 | Case | Operation | CPU ms | Candidate ms | CPU/candidate | Evidence | Correctness |
 |---|---|---:|---:|---:|---|---|
-| logistic-2000x32-c2 | fit | 1.156 | 5.023 | 0.23 | MIXED_CPU_GPU_REPORTED | PASS |
-| logistic-2000x32-c2 | predict | 0.058 | 0.126 | ineligible | CPU_FALLBACK | PASS |
+| logistic-2000x32-c2 | fit | 1.156 | 5.023 | 0.23 | [Verified GPU work in matched fit](evidence/metal-logistic/README.md) | PASS |
+| logistic-2000x32-c2 | predict | 0.058 | 0.126 | ineligible | [CPU path corroborated by trace](evidence/metal-logistic/README.md) | PASS |
 | knn-2000x32-c2-k5 | fit | 0.164 | 0.231 | ineligible | UNKNOWN | PASS |
 | knn-2000x32-c2-k5 | predict | 1.014 | 1.032 | 0.98 | GPU_REPORTED_UNVERIFIED | PASS |
 | knn-8000x128-c3-k5 | fit | 0.535 | 0.496 | ineligible | UNKNOWN | PASS |
@@ -32,14 +32,18 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 | svc-4000x256-c3 | predict | 164.797 | 2.270 | 72.59 | [Verified GPU work in mixed replay](evidence/metal-svc-pca/README.md) | PASS |
 | pca-12000x256-c2-p8 | fit | 4.053 | 4.135 | 0.98 | [Verified GPU work in mixed replay](evidence/metal-svc-pca/README.md) | PASS |
 | pca-12000x256-c2-p8 | transform | 0.208 | 0.783 | 0.27 | [GPU_VERIFIED in matched replay](evidence/metal-svc-pca/README.md) | PASS |
-| logistic-100000x256-c2 | fit | 42.453 | 17.093 | 2.48 | MIXED_CPU_GPU_REPORTED | PASS |
-| logistic-100000x256-c2 | predict | 0.974 | 1.774 | ineligible | CPU_FALLBACK | PASS |
+| logistic-100000x256-c2 | fit | 42.453 | 17.093 | 2.48 | [Verified GPU work in matched fit](evidence/metal-logistic/README.md) | PASS |
+| logistic-100000x256-c2 | predict | 0.974 | 1.774 | ineligible | [CPU path corroborated by trace](evidence/metal-logistic/README.md) | PASS |
 | knn-30000x64-c2-k5 | fit | 0.723 | 0.717 | ineligible | UNKNOWN | PASS |
 | knn-30000x64-c2-k5 | predict | 110.976 | 14.335 | 7.74 | GPU_REPORTED_UNVERIFIED | PASS |
 | pca-80000x512-c2-p12 | fit | 30.649 | 13.672 | 2.24 | MIXED_CPU_GPU_REPORTED | PASS |
 | pca-80000x512-c2-p12 | transform | 2.256 | 1.220 | 1.85 | GPU_REPORTED_UNVERIFIED | PASS |
 
 Both gains and regressions occurred. Small logistic fits and PCA transforms often favored CPU. KNN query gains grew with sample count on the tested panel. SVC results describe mixed kernel/host-optimizer execution. KNN fit/index construction remains UNKNOWN and ratio-ineligible.
+
+## Logistic regression Metal verification
+
+The 2,000 × 32 and 100,000 × 256 fits completed 14 and 18 Metal command buffers, respectively. Both prediction windows and all scikit-learn controls recorded zero submissions. All test labels agreed with scikit-learn on both replays. The verified GPU work applies to fit. The prediction evidence corroborates the host path. [Completion traces, controls, and capture metadata](evidence/metal-logistic/README.md)
 
 ## SVC and PCA Metal verification
 

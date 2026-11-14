@@ -1,0 +1,69 @@
+{
+  "case": "logistic-100000x256-c2",
+  "dataset_sha256": "2cccfa8f417026b9717c50618f0ec527a2739e11f7c95727d0033a3fa95eafe5",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "solver": "lbfgs",
+    "C": 1.0,
+    "tol": 1e-05,
+    "max_iter": 300,
+    "class_weight": null
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.94892,
+    "candidate_accuracy": 0.94892,
+    "agreement": 1.0,
+    "probability_mae": 3.2061749431527405e-05,
+    "probability_max": 0.0008044441699400218
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 18,
+      "sum_gpu_buffer_ms": 23.08887307299301
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {
+    "fit": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "082b7bd8d8ba933a6400a9bb6a365f7f20f4005badf0d8630771c5af11201f07",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_logistic_center_initial__75000_256_257_293_1_9_float_float_float_float_float_float_uint32_t",
+        "custom_kernel_mlxlearn_logistic_center_stats__75000_256_float_float",
+        "custom_kernel_mlxlearn_native_lbfgs_accept__75000_257_8_float_float_float_float_float_float_float_float_floats_float_float_float_float",
+        "custom_kernel_mlxlearn_native_lbfgs_backward_bias__75000_256_257_float_float_bools_float",
+        "custom_kernel_mlxlearn_native_lbfgs_direct_forward__75000_256_257_float_float_float_float_float_float",
+        "custom_kernel_mlxlearn_native_lbfgs_direction__257_256_10_0_32_float_float_float_float_float_float_float_float_float_floats_float_floats_floats_float_float_float_float_float_float",
+        "custom_kernel_mlxlearn_native_lbfgs_speculative__75000_256_257_293_8_32_8_1_float_float_float_float_float_float_floats_float_float_float"
+      ]
+    }
+  },
+  "benchmark_run": "20261114T184334529634Z-661130fd99",
+  "scope": "Separate instrumented replay. Original benchmark timing calls were untraced."
+}
