@@ -122,7 +122,7 @@ def run(
                 env = os.environ.copy()
                 # No inherited tuning overrides may silently change the benchmark.
                 for key in list(env):
-                    if key.startswith("MLXLEARN_"):
+                    if key.startswith("MLXLEARN_") or key == "MTL_CAPTURE_ENABLED":
                         del env[key]
                 for key in (
                     "OMP_NUM_THREADS",

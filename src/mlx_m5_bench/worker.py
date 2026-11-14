@@ -53,7 +53,7 @@ def bench(
                 return
             stack.enter_context(
                 mlxlearn.config_context(
-                    device="gpu",
+                    device=profile.mlx_device,
                     fallback_policy="raise",
                     diagnostics=True,
                     deterministic=True,
