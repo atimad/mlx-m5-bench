@@ -1,6 +1,6 @@
 # Limitations and unresolved verification
 
-- Independent Metal tracing verified one matched KNN prediction replay. Original timing records retain their contemporaneous backend classifications. Other estimator paths retain their existing evidence levels. [KNN trace evidence](evidence/metal-knn-8000x128-c3-k5/README.md)
+- Independent Metal tracing verified GPU work in selected KNN, SVC and PCA replays. Verification is specific to the traced operations and workloads. Original timing records retain their contemporaneous backend classifications. Other estimator paths retain their existing evidence levels. [KNN trace evidence](evidence/metal-knn-8000x128-c3-k5/README.md) · [SVC and PCA trace evidence](evidence/metal-svc-pca/README.md)
 - CPU-first process ordering, background load, power policy and thermal drift can influence results. Full energy and frequency instrumentation is absent.
 - Cold means the first estimator call after imports and input preparation. Native library loading can be partly warmed by module discovery.
 - Shared float32 input does not ensure identical internal precision. Logistic and SVC optimizer implementations differ. PCA can use a CPU eigensolver after GPU Gram computation.

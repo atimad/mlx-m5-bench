@@ -54,7 +54,7 @@ A convergence warning or nonzero SVC fit_status_ makes the pair INCONCLUSIVE. It
 
 The evidence classes are CPU_BASELINE, CPU_FALLBACK, GPU_REPORTED_UNVERIFIED, MIXED_CPU_GPU_REPORTED, GPU_VERIFIED, UNKNOWN and UNSUPPORTED. CPU_FALLBACK includes owned CPU paths and source-audited host inference. Diagnostics retain the distinction between owned CPU and actual delegation to scikit-learn.
 
-GPU_VERIFIED is reserved for independent operation-level evidence. The current runner never assigns it. MLX dispatch logs, source review and allocator activity establish reported routing. A separate scoped Metal replay verifies one standard KNN prediction workload and is linked from the results. Timed rows preserve the evidence captured during measurement. A functional Metal probe has its own capability field.
+GPU_VERIFIED is reserved for independent operation-level evidence. The current runner never assigns it. MLX dispatch logs, source review and allocator activity establish reported routing. Separate scoped Metal replays verify GPU work in selected KNN, SVC and PCA operations and are linked from the results. Timed rows preserve the evidence captured during measurement. A functional Metal probe has its own capability field.
 
 CPU/candidate ratios require passing correctness for both rows, successful measurements, and reported GPU or mixed execution. Their labels preserve the evidence level. No GPU ratio is emitted for CPU fallback, unknown or unsupported work. A ratio below one indicates that the candidate took longer. Results describe complete library operations with mixed host work where applicable.
 

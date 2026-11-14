@@ -1,0 +1,75 @@
+{
+  "case": "svc-4000x256-c3",
+  "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "kernel": "rbf",
+    "gamma": 0.00390625,
+    "C": 1.0,
+    "tol": 0.001,
+    "cache_size": 64,
+    "max_iter": 100000,
+    "shrinking": false,
+    "decision_function_shape": "ovo",
+    "class_weight": null
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.943,
+    "candidate_accuracy": 0.943,
+    "agreement": 1.0,
+    "decision_max_error": 0.0012584050935378066,
+    "cpu_support_count": 2646,
+    "candidate_support_count": 2646
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 4,
+      "sum_gpu_buffer_ms": 4.725916951429099
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 1,
+      "sum_gpu_buffer_ms": 0.28912501875311136
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {
+    "fit": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "a804b165fce30d264f200886d5bccc69262194431ffdd9a96d5d2cbd70d110ed",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_svc_transform__1_float_float_float_floatc_uint64_tc_float"
+      ]
+    },
+    "predict": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "f611abb66b623f5b2d069104af873c78a3bbc6d0ea416a563fbf6f31fafcfbc1",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_svc_transform__1_float_float_float_floatc_uint64_tc_float"
+      ]
+    }
+  },
+  "benchmark_run": "20261114T184308448033Z-84f22b8ebf",
+  "scope": "Separate instrumented replay. Original benchmark timing calls were untraced."
+}

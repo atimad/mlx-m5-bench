@@ -1,0 +1,68 @@
+{
+  "case": "pca-12000x256-c2-p8",
+  "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_components": 8,
+    "svd_solver": "covariance_eigh",
+    "whiten": false
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "min_principal_cosine": 0.9999999958724254,
+    "cpu_rmse": 1.689781665802002,
+    "candidate_rmse": 1.6897817850112915,
+    "cpu_retained_variance": 0.20696626603603363,
+    "candidate_retained_variance": 0.20696571469306946
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 3,
+      "sum_gpu_buffer_ms": 0.7060000789351761
+    },
+    "mlxlearn-transform": {
+      "completed_buffers": 2,
+      "sum_gpu_buffer_ms": 0.07024995284155011
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {
+    "fit": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "a77c098c6c1e22e3ee0999bd4eabba409610290197eefdd01fc5bfb6907bcc1c",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_pca_stats__9000_256_8_256_float_float_float_uint32_t"
+      ]
+    },
+    "transform": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "940c657466eba0912a37dd4de00bfb10b97b1f54b8d7d93fd609f4bc97ba3280",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_pca_stats__9000_256_8_256_float_float_float_uint32_t"
+      ]
+    }
+  },
+  "benchmark_run": "20261114T184308448033Z-84f22b8ebf",
+  "scope": "Separate instrumented replay. Original benchmark timing calls were untraced."
+}

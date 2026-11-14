@@ -18,7 +18,7 @@ Quick has one steady repetition per case. Standard has three. Full has five. Fir
 
 ## Representative steady medians
 
-Dataset sizes are total samples before the 75/25 split. Ratios compare the four-thread CPU baseline with a reported GPU or mixed candidate. The marked KNN query has independent Metal evidence from a separate matching replay.
+Dataset sizes are total samples before the 75/25 split. Ratios compare the four-thread CPU baseline with a reported GPU or mixed candidate. The marked operations have independent Metal evidence from separate matching replays. Original timing rows retain the evidence available during measurement.
 
 | Case | Operation | CPU ms | Candidate ms | CPU/candidate | Evidence | Correctness |
 |---|---|---:|---:|---:|---|---|
@@ -28,10 +28,10 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 | knn-2000x32-c2-k5 | predict | 1.014 | 1.032 | 0.98 | GPU_REPORTED_UNVERIFIED | PASS |
 | knn-8000x128-c3-k5 | fit | 0.535 | 0.496 | ineligible | UNKNOWN | PASS |
 | knn-8000x128-c3-k5 | predict | 12.784 | 2.420 | 5.28 | [GPU_VERIFIED in matched replay](evidence/metal-knn-8000x128-c3-k5/README.md) | PASS |
-| svc-4000x256-c3 | fit | 348.609 | 34.218 | 10.19 | MIXED_CPU_GPU_REPORTED | PASS |
-| svc-4000x256-c3 | predict | 164.797 | 2.270 | 72.59 | MIXED_CPU_GPU_REPORTED | PASS |
-| pca-12000x256-c2-p8 | fit | 4.053 | 4.135 | 0.98 | MIXED_CPU_GPU_REPORTED | PASS |
-| pca-12000x256-c2-p8 | transform | 0.208 | 0.783 | 0.27 | GPU_REPORTED_UNVERIFIED | PASS |
+| svc-4000x256-c3 | fit | 348.609 | 34.218 | 10.19 | [Verified GPU work in mixed replay](evidence/metal-svc-pca/README.md) | PASS |
+| svc-4000x256-c3 | predict | 164.797 | 2.270 | 72.59 | [Verified GPU work in mixed replay](evidence/metal-svc-pca/README.md) | PASS |
+| pca-12000x256-c2-p8 | fit | 4.053 | 4.135 | 0.98 | [Verified GPU work in mixed replay](evidence/metal-svc-pca/README.md) | PASS |
+| pca-12000x256-c2-p8 | transform | 0.208 | 0.783 | 0.27 | [GPU_VERIFIED in matched replay](evidence/metal-svc-pca/README.md) | PASS |
 | logistic-100000x256-c2 | fit | 42.453 | 17.093 | 2.48 | MIXED_CPU_GPU_REPORTED | PASS |
 | logistic-100000x256-c2 | predict | 0.974 | 1.774 | ineligible | CPU_FALLBACK | PASS |
 | knn-30000x64-c2-k5 | fit | 0.723 | 0.717 | ineligible | UNKNOWN | PASS |
@@ -40,6 +40,10 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 | pca-80000x512-c2-p12 | transform | 2.256 | 1.220 | 1.85 | GPU_REPORTED_UNVERIFIED | PASS |
 
 Both gains and regressions occurred. Small logistic fits and PCA transforms often favored CPU. KNN query gains grew with sample count on the tested panel. SVC results describe mixed kernel/host-optimizer execution. KNN fit/index construction remains UNKNOWN and ratio-ineligible.
+
+## SVC and PCA Metal verification
+
+The SVC fit and prediction replays completed four and one Metal command buffers, respectively. The larger PCA fit and transform completed three and two. The smaller PCA fit completed three, while its transform completed zero, consistent with CPU routing. All three replays passed numerical checks. [Completion traces, controls, and capture metadata](evidence/metal-svc-pca/README.md)
 
 ## Correctness and reliability findings
 
