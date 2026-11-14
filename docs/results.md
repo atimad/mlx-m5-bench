@@ -41,6 +41,22 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 
 Both gains and regressions occurred. Small logistic fits and PCA transforms often favored CPU. KNN query gains grew with sample count on the tested panel. SVC results describe mixed kernel/host-optimizer execution. The two traced KNN fit and index-construction replays had zero Metal submissions. Fit remains ratio-ineligible.
 
+## Automatic selection versus forced MLX
+
+Automatic selection kept both KNN first queries on the GPU. It routed both logistic fits, SVC fit and prediction, and both PCA fits and transforms to CPU. Logistic prediction already used CPU in forced mode. The smaller PCA transform also used CPU in both modes. All seven matched replays passed numerical checks.
+
+| Workload | Forced fit / inference GPU buffers | Auto fit / inference GPU buffers |
+|---|---:|---:|
+| KNN 8,000 × 128 | 0 / 1 | 0 / 1 |
+| KNN 30,000 × 64 | 0 / 7 | 0 / 7 |
+| Logistic 2,000 × 32 | 14 / 0 | 0 / 0 |
+| Logistic 100,000 × 256 | 18 / 0 | 0 / 0 |
+| SVC 4,000 × 256 | 4 / 1 | 0 / 0 |
+| PCA 12,000 × 256 | 3 / 2 | 0 / 0 |
+| PCA 2,000 × 32 | 3 / 0 | 0 / 0 |
+
+The original performance table remains the forced-MLX timing panel. The auto replays were instrumented to verify routing. [Routing events, Metal traces, and crossover details](evidence/metal-auto/README.md)
+
 ## KNN fit and index construction
 
 No Metal command buffers were submitted during fit for the 8,000 × 128 and 30,000 × 64 workloads. The first predictions on those fresh models completed one and seven GPU buffers, respectively. Fit owns and stages the training arrays. Search and any lazy query preparation are measured with prediction. All observed labels matched scikit-learn. [Fit traces, first-query traces, and controls](evidence/metal-knn-fit/README.md)

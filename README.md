@@ -47,6 +47,8 @@ Current estimator results carry library diagnostics and source-audited exception
 
 Speed ratios appear only for passing numerical comparisons with reported GPU or mixed paths. CPU paths and unknown execution retain their measured timings and an ineligible ratio. Charts label the evidence level and retain failed or missing cases. The dashboard displays raw failure details.
 
+Matched auto-mode traces kept KNN queries on GPU and selected CPU paths for the traced logistic, SVC and PCA workloads. [Automatic routing evidence](docs/evidence/metal-auto/README.md)
+
 See the [measured local results](docs/results.md), [methodology](docs/methodology.md), [limitations](docs/limitations.md) and [upstream API review](docs/upstream.md).
 
 ## Profiles and outputs

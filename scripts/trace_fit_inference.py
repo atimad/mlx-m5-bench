@@ -92,11 +92,16 @@ def main() -> None:
     parser.add_argument("case", choices=CASES)
     parser.add_argument("output", type=Path)
     parser.add_argument("probe", type=Path)
+    parser.add_argument("--mode", choices=("forced", "auto"), default="forced")
     args = parser.parse_args()
     if os.environ.get("MTL_CAPTURE_ENABLED") != "1":
         parser.error("Start Python with MTL_CAPTURE_ENABLED=1")
-    if os.environ.get("MLXLEARN_FORCE_BACKEND") != "mlx":
-        parser.error("Set MLXLEARN_FORCE_BACKEND=mlx to match the benchmark")
+    override = os.environ.get("MLXLEARN_FORCE_BACKEND")
+    if args.mode == "forced" and override != "mlx":
+        parser.error("Set MLXLEARN_FORCE_BACKEND=mlx for forced mode")
+    if args.mode == "auto" and override is not None:
+        parser.error("Unset MLXLEARN_FORCE_BACKEND for auto mode")
+    device = "auto" if args.mode == "auto" else "gpu"
     args.output.mkdir(parents=True, exist_ok=False)
     probe = ctypes.CDLL(str(args.probe.resolve()))
     probe.trace_begin.argtypes = [ctypes.c_char_p]
@@ -110,26 +115,35 @@ def main() -> None:
     inference = "transform" if case.algorithm == "pca" else "predict"
     outputs = {}
     captures = {}
+    routing = {}
     with (
         threadpool_limits(limits=profile.threads),
         mlxlearn.config_context(
-            device="gpu", fallback_policy="raise", deterministic=True, random_state=profile.seed
+            device=device, fallback_policy="raise", deterministic=True, random_state=profile.seed
         ),
     ):
         for implementation in ("sklearn", "mlxlearn"):
             warm_model = create(case, implementation, profile.threads).fit(data.train, data.y_train)
             getattr(warm_model, inference)(data.test)
             model = create(case, implementation, profile.threads)
+            mlxlearn.clear_backend_diagnostics()
             observe(
                 probe,
                 args.output / f"{implementation}-fit.tsv",
                 lambda model=model: model.fit(data.train, data.y_train),
             )
+            if implementation == "mlxlearn":
+                routing["fit"] = [event.as_dict() for event in mlxlearn.get_backend_diagnostics()]
+            mlxlearn.clear_backend_diagnostics()
             result = observe(
                 probe,
                 args.output / f"{implementation}-{inference}.tsv",
                 lambda model=model: getattr(model, inference)(data.test),
             )
+            if implementation == "mlxlearn":
+                routing[inference] = [
+                    event.as_dict() for event in mlxlearn.get_backend_diagnostics()
+                ]
             outputs[implementation] = extract(model, case.algorithm, data, result)
 
         # Capture separate replays. Fit and the first inference on the new model are isolated.
@@ -155,6 +169,10 @@ def main() -> None:
         json.dumps(
             {
                 "case": case.key,
+                "mode": args.mode,
+                "requested_device": device,
+                "force_backend": override,
+                "routing": routing,
                 "dataset_sha256": data.fingerprint(),
                 "seed": profile.seed,
                 "threads": profile.threads,

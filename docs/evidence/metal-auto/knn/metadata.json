@@ -1,0 +1,101 @@
+{
+  "case": "knn-8000x128-c3-k5",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          6000,
+          128
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "predict",
+        "backend": "mlx",
+        "reason": "auto-query",
+        "detail": "",
+        "shape": [
+          2000,
+          128
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "3b0132f0818f32e05c0f5aecb217b855126b32a470daeb1a7d89e1311ba6cebc",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_neighbors": 5,
+    "algorithm": "brute",
+    "metric": "euclidean",
+    "weights": "uniform",
+    "n_jobs": 4
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.9235,
+    "candidate_accuracy": 0.9235,
+    "agreement": 1.0,
+    "probability_mae": 4.56472237140663e-09,
+    "probability_max": 2.384185793236071e-08
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 1,
+      "sum_gpu_buffer_ms": 7.651666994206607
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {
+    "predict": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "4bd81b16f44694bf44d60fc3cd71b2a87592da22794cfae96853d7cf27e07830",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_certified_general_finish_0__5_128_0_float_float_float_int32_t_bool_int32_tc_float_int32_t",
+        "custom_kernel_mlxlearn_neighbor_votes__2000_5_3_0_1_int32_t_int32_t_floatc_float_int32_t",
+        "custom_kernel_mlxlearn_refine_certified_shortlist__128_7_5_1_float_float_int32_t_float_bool_int32_tc_floatc_float_int32_t_bool"
+      ]
+    }
+  },
+  "benchmark_run": "20261114T184308448033Z-84f22b8ebf",
+  "forced_evidence": "../../metal-knn-fit/knn/metadata.json",
+  "scope": "Separate automatic-routing replay. Original benchmark timing calls used forced MLX and were untraced."
+}

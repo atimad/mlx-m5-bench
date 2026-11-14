@@ -1,0 +1,109 @@
+{
+  "case": "svc-4000x256-c3",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "SVC",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          3000,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      },
+      {
+        "estimator": "SVC",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "below-crossover",
+        "detail": "3000 samples x 256 features is below the measured SVC crossover (2048 samples and 1000000 element-ops, both required)",
+        "shape": [
+          3000,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "SVC",
+        "operation": "predict",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          1000,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "kernel": "rbf",
+    "gamma": 0.00390625,
+    "C": 1.0,
+    "tol": 0.001,
+    "cache_size": 64,
+    "max_iter": 100000,
+    "shrinking": false,
+    "decision_function_shape": "ovo",
+    "class_weight": null
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.943,
+    "candidate_accuracy": 0.943,
+    "agreement": 1.0,
+    "decision_max_error": 0.0003451742192281948,
+    "cpu_support_count": 2646,
+    "candidate_support_count": 2646
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "benchmark_run": "20261114T184308448033Z-84f22b8ebf",
+  "forced_evidence": "../../metal-svc-pca/svc/metadata.json",
+  "scope": "Separate automatic-routing replay. Original benchmark timing calls used forced MLX and were untraced."
+}

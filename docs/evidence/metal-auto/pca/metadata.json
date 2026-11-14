@@ -1,0 +1,89 @@
+{
+  "case": "pca-12000x256-c2-p8",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "PCA",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "below-crossover",
+        "detail": "9000 samples x 256 features is below the PCA covariance_eigh crossover (8000000 elements or 512 features)",
+        "shape": [
+          9000,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "transform": [
+      {
+        "estimator": "PCA",
+        "operation": "transform",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          3000,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_components": 8,
+    "svd_solver": "covariance_eigh",
+    "whiten": false
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "min_principal_cosine": 0.99999999999636,
+    "cpu_rmse": 1.689781665802002,
+    "candidate_rmse": 1.689781665802002,
+    "cpu_retained_variance": 0.20696626603603363,
+    "candidate_retained_variance": 0.20696625113487244
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "benchmark_run": "20261114T184308448033Z-84f22b8ebf",
+  "forced_evidence": "../../metal-svc-pca/pca/metadata.json",
+  "scope": "Separate automatic-routing replay. Original benchmark timing calls used forced MLX and were untraced."
+}
