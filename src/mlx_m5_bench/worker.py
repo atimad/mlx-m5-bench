@@ -6,6 +6,7 @@ import sys
 import traceback
 import warnings
 from contextlib import ExitStack
+from importlib import import_module
 from pathlib import Path
 from time import perf_counter
 from typing import Any
@@ -40,8 +41,8 @@ def bench(
     with ExitStack() as stack:
         if candidate:
             try:
-                import mlx.core as mx
-                import mlxlearn
+                mx = import_module("mlx.core")
+                mlxlearn = import_module("mlxlearn")
 
                 if not mx.metal.is_available():
                     raise RuntimeError("Metal unavailable")
