@@ -71,6 +71,10 @@ Automatic selection kept both KNN first queries on the GPU. It routed both logis
 
 The original performance table remains the forced-MLX timing panel. The auto replays were instrumented to verify routing. [Routing events, Metal traces, and crossover details](evidence/metal-auto/README.md)
 
+## KNN query-batch crossover
+
+With the same 3,072 training rows, 32 features and five neighbors, automatic KNN stayed on CPU for four queries and submitted a GPU buffer for five. Auto prediction took 0.128 and 0.566 ms, versus 0.256 and 0.236 ms for the corresponding scikit-learn controls. Forced MLX used the GPU for both, at 0.656 and 0.677 ms. The batch-size routing switch did not coincide with a latency win for this workload. [Full timing table, separate Metal traces and reproduction commands](evidence/knn-query-crossover/README.md)
+
 ## KNN fit and index construction
 
 No Metal command buffers were submitted during fit for the 8,000 × 128 and 30,000 × 64 workloads. The first predictions on those fresh models completed one and seven GPU buffers, respectively. Fit owns and stages the training arrays. Search and any lazy query preparation are measured with prediction. All observed labels matched scikit-learn. [Fit traces, first-query traces, and controls](evidence/metal-knn-fit/README.md)
