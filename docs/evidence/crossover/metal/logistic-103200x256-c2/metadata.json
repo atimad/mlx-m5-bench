@@ -1,0 +1,120 @@
+{
+  "case": "logistic-103200x256-c2",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "LogisticRegression",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          77400,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      },
+      {
+        "estimator": "LogisticRegression",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "below-crossover",
+        "detail": "77400 samples x 256 features is below the measured logistic-regression crossover (20000 samples and 20000000 elements, or 250000 samples and 8000000 elements)",
+        "shape": [
+          77400,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "LogisticRegression",
+        "operation": "predict",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          25800,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      },
+      {
+        "estimator": "LogisticRegression",
+        "operation": "decision_function",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          25800,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "d544fe9e07b5d748f0c65c85d0b8bdf41f69ec991a58e13ad7fa690fc51e9d13",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "solver": "lbfgs",
+    "C": 1.0,
+    "tol": 1e-05,
+    "max_iter": 300,
+    "class_weight": null
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.937906976744186,
+    "candidate_accuracy": 0.937906976744186,
+    "agreement": 1.0,
+    "probability_mae": 2.5913280243268523e-05,
+    "probability_max": 0.0005803370323423929
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "timing_run_ids": [
+    "20261114T201525106094Z-0a2448427a",
+    "20261114T201706528344Z-0a2448427a",
+    "20261114T201559184153Z-fc68646b67",
+    "20261114T201633091270Z-fc68646b67"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "case": "pca-42084x256-c2-p8",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "PCA",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          31563,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "transform": [
+      {
+        "estimator": "PCA",
+        "operation": "transform",
+        "backend": "mlx",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          10521,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "e5b6df1d02fecf5362ad4e18d072a55174f33a8c1d44c8b19f4115157da8fc0f",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_components": 8,
+    "svd_solver": "covariance_eigh",
+    "whiten": false
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "min_principal_cosine": 0.9999999975064574,
+    "cpu_rmse": 1.6885299682617188,
+    "candidate_rmse": 1.688530683517456,
+    "cpu_retained_variance": 0.2066609114408493,
+    "candidate_retained_variance": 0.20666053891181946
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 3,
+      "sum_gpu_buffer_ms": 1.7448749858886003
+    },
+    "mlxlearn-transform": {
+      "completed_buffers": 2,
+      "sum_gpu_buffer_ms": 0.1378330052830279
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {
+    "fit": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "7bf6fe1a4604e1cfbe7e97f1e6b3cccceb78cf4cff06239b493c56e2d2333590",
+      "selected_shader_symbols": []
+    },
+    "transform": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "8e90e96b2ed291fff4719cbc45a3f213550fa651e1e1279635528cc51669f829",
+      "selected_shader_symbols": []
+    }
+  },
+  "timing_run_ids": [
+    "20261114T201525106094Z-0a2448427a",
+    "20261114T201706528344Z-0a2448427a",
+    "20261114T201559184153Z-fc68646b67",
+    "20261114T201633091270Z-fc68646b67"
+  ]
+}

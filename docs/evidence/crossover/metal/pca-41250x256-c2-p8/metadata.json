@@ -1,0 +1,92 @@
+{
+  "case": "pca-41250x256-c2-p8",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "PCA",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "below-crossover",
+        "detail": "30937 samples x 256 features is below the PCA covariance_eigh crossover (8000000 elements or 512 features)",
+        "shape": [
+          30937,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "transform": [
+      {
+        "estimator": "PCA",
+        "operation": "transform",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          10313,
+          256
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "531efb022c1f6f06349e29f3343bdab53b2da506bcfd3f0a47556f826d7ba76d",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_components": 8,
+    "svd_solver": "covariance_eigh",
+    "whiten": false
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "min_principal_cosine": 0.9999999999985811,
+    "cpu_rmse": 1.6869841814041138,
+    "candidate_rmse": 1.6869841814041138,
+    "cpu_retained_variance": 0.20640021562576294,
+    "candidate_retained_variance": 0.20640023052692413
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "timing_run_ids": [
+    "20261114T201525106094Z-0a2448427a",
+    "20261114T201706528344Z-0a2448427a",
+    "20261114T201559184153Z-fc68646b67",
+    "20261114T201633091270Z-fc68646b67"
+  ]
+}
