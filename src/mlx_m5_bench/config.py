@@ -22,10 +22,15 @@ class Case(Settings):
     classes: Literal[2, 3] = 2
     neighbors: Positive = 5
     components: Positive = 3
+    query_rows: Positive | None = None
 
     @model_validator(mode="after")
     def dimensions(self) -> Self:
         train = self.samples - (self.samples + 3) // 4
+        if self.query_rows is not None and (
+            self.algorithm != "knn" or self.query_rows > self.samples - train
+        ):
+            raise ValueError("query_rows requires KNN and must fit within the test set")
         if self.algorithm == "knn" and self.neighbors > train:
             raise ValueError("neighbors must fit within the training set")
         if self.algorithm == "pca" and self.components > min(train, self.features):
@@ -35,7 +40,7 @@ class Case(Settings):
     @property
     def key(self) -> str:
         return f"{self.algorithm}-{self.samples}x{self.features}-c{self.classes}" + {
-            "knn": f"-k{self.neighbors}",
+            "knn": f"-k{self.neighbors}" + (f"-q{self.query_rows}" if self.query_rows else ""),
             "pca": f"-p{self.components}",
         }.get(self.algorithm, "")
 

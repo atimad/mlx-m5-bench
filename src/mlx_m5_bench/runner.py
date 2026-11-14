@@ -84,6 +84,7 @@ def run(
                 "features": case.features,
                 "classes": case.classes,
                 "neighbors": case.neighbors,
+                "query_rows": case.query_rows,
                 "components": case.components,
                 "profile": name,
                 "estimated_bytes": estimate,

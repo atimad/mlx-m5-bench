@@ -52,6 +52,9 @@ def generate(case: Case, seed: int) -> Dataset:
     if case.algorithm != "pca":
         scaler = StandardScaler(copy=False).fit(train)
         train, test = scaler.transform(train), scaler.transform(test)
+    if case.query_rows is not None:
+        test = test[: case.query_rows]
+        y_test = y_test[: case.query_rows]
     return Dataset(
         np.ascontiguousarray(train, dtype=np.float32),
         np.ascontiguousarray(test, dtype=np.float32),

@@ -367,3 +367,19 @@ def test_timeout_records(tmp_path, monkeypatch):
     path = run(profile, "quick", tmp_path, ("sklearn",))
     assert signals
     assert json.loads((path / "measurements.json").read_text())[0]["status"] == "timeout"
+
+
+def test_knn_query_prefix_preserves_training_set():
+    common = {"algorithm": "knn", "samples": 100, "features": 8}
+    small = Case.model_validate({**common, "query_rows": 4})
+    large = Case.model_validate({**common, "query_rows": 5})
+    lhs, rhs = generate(small, 42), generate(large, 42)
+    assert small.key != large.key
+    np.testing.assert_array_equal(lhs.train, rhs.train)
+    np.testing.assert_array_equal(lhs.y_train, rhs.y_train)
+    np.testing.assert_array_equal(lhs.test, rhs.test[:4])
+    np.testing.assert_array_equal(lhs.y_test, rhs.y_test[:4])
+    with pytest.raises(ValidationError, match="query_rows"):
+        Case.model_validate({**common, "query_rows": 26})
+    with pytest.raises(ValidationError, match="query_rows"):
+        Case.model_validate({**common, "algorithm": "svc", "query_rows": 4})
