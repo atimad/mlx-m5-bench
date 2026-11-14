@@ -22,6 +22,8 @@ from mlx_m5_bench.datasets import generate
 from mlx_m5_bench.estimators import create, parameters
 
 CASES = {
+    "knn": "knn-8000x128-c3-k5",
+    "knn-full": "knn-30000x64-c2-k5",
     "logistic": "logistic-2000x32-c2",
     "logistic-full": "logistic-100000x256-c2",
     "svc": "svc-4000x256-c3",
@@ -102,7 +104,7 @@ def main() -> None:
     if not probe.trace_install():
         raise RuntimeError("Unable to install Metal command buffer observer")
 
-    profile = load_profile("full" if args.case == "logistic-full" else "standard")
+    profile = load_profile("full" if args.case.endswith("-full") else "standard")
     case: Case = next(case for case in profile.cases if case.key == CASES[args.case])
     data = generate(case, profile.seed)
     inference = "transform" if case.algorithm == "pca" else "predict"
