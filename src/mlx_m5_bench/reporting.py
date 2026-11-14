@@ -46,6 +46,7 @@ def aggregate(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "backend": "|".join(sorted(backends)),
             "measured_repeats": len(valid),
             "failure_count": sum(row["status"] != "ok" for row in group),
+            "measurement_status": ", ".join(sorted({row["status"] for row in group})),
         }
         if valid:
             item.update(
@@ -141,12 +142,13 @@ def charts(directory: Path, summary: list[dict[str, Any]], raw: list[dict[str, A
     chart_dir = directory / "charts"
     chart_dir.mkdir(exist_ok=True)
     steady = [row for row in summary if row["phase"] == "steady"]
-    labels = sorted({row["case"] for row in steady})
+    labels = sorted({row["case"] for row in summary})
     positions = {case: index for index, case in enumerate(labels)}
 
     for operation, filename in (("fit", "training_speedup"), ("inference", "prediction_speedup")):
         fig, ax = plt.subplots(figsize=(12, max(3, len(labels) * 0.45)))
-        for row in steady:
+        candidates = [row for row in summary if row["phase"] in {"steady", "unmeasured"}]
+        for row in candidates:
             if row["implementation"] != "mlxlearn":
                 continue
             if (row["operation"] == "fit") != (operation == "fit"):
@@ -155,17 +157,29 @@ def charts(directory: Path, summary: list[dict[str, Any]], raw: list[dict[str, A
             position = positions[row["case"]]
             if ratio is None:
                 ax.text(
-                    0.03,
+                    0.01,
                     position,
-                    f"{row['correctness']} / {row['backend']} / ineligible",
+                    f"{row['measurement_status']} / {row['correctness']} / {row['backend']}",
                     fontsize=7,
                     va="center",
+                    transform=ax.get_yaxis_transform(),
                 )
             else:
-                ax.barh(position, ratio, color="#187d91", alpha=0.8)
+                ax.barh(position, ratio - 1, left=1, color="#187d91", alpha=0.8)
+                ax.plot(ratio, position, ".", color="#103e48")
         ax.set_yticks(range(len(labels)), labels, fontsize=7)
+        if labels:
+            ax.set_ylim(-0.65, len(labels) - 0.35)
         ax.axvline(1, color="black", linewidth=0.8)
-        ax.set_xlabel("CPU / candidate median ratio")
+        ratios = [
+            row["cpu_over_candidate_ratio"]
+            for row in candidates
+            if row.get("cpu_over_candidate_ratio")
+            and (row["operation"] == "fit") == (operation == "fit")
+        ]
+        ax.set_xscale("log")
+        ax.set_xlim(min([0.1, *ratios]) * 0.7, max([2, *ratios]) * 1.5)
+        ax.set_xlabel("CPU / candidate median ratio (log scale)")
         ax.set_title(f"{operation.title()} • reported GPU and mixed paths • unverified")
         save(fig, chart_dir / f"{filename}.png")
 

@@ -1,0 +1,984 @@
+[
+  {
+    "case": "logistic-12000x32-c2",
+    "algorithm": "logistic",
+    "samples": 12000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 561446912,
+    "memory_budget_bytes": 7277710540,
+    "parameters": {
+      "solver": "lbfgs",
+      "C": 1.0,
+      "tol": 1e-05,
+      "max_iter": 300,
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "cold",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.0029183750157244503,
+    "predict_s": 9.674998000264168e-05,
+    "pipeline_s": 0.0030275420285761356,
+    "after": {
+      "rss_bytes": 203784192,
+      "process_peak_rss_bytes": 203784192
+    },
+    "repetition": 0,
+    "prep_s": 0.02695554099045694,
+    "dataset_sha256": "efd1d55faff0a03f08c613b6be922fe254cc180407ed298929e40cd440160932",
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 15,
+        "prefix": "libomp",
+        "filepath": "/Users/REDACTED/repos/mlx-m5-bench/.venv/lib/python3.13/site-packages/sklearn/.dylibs/libomp.dylib",
+        "version": null
+      }
+    ],
+    "before": {
+      "rss_bytes": 203505664,
+      "process_peak_rss_bytes": 203505664
+    },
+    "iterations": [
+      16
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7404305420350283,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "logistic-12000x32-c2",
+    "algorithm": "logistic",
+    "samples": 12000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 561446912,
+    "memory_budget_bytes": 7277710540,
+    "parameters": {
+      "solver": "lbfgs",
+      "C": 1.0,
+      "tol": 1e-05,
+      "max_iter": 300,
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "warmup",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.002596207952592522,
+    "predict_s": 9.554100688546896e-05,
+    "pipeline_s": 0.0026988330064341426,
+    "after": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "repetition": 1,
+    "prep_s": 0.02695554099045694,
+    "dataset_sha256": "efd1d55faff0a03f08c613b6be922fe254cc180407ed298929e40cd440160932",
+    "before": {
+      "rss_bytes": 203784192,
+      "process_peak_rss_bytes": 203784192
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7404313750448637,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "logistic-12000x32-c2",
+    "algorithm": "logistic",
+    "samples": 12000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 561446912,
+    "memory_budget_bytes": 7277710540,
+    "parameters": {
+      "solver": "lbfgs",
+      "C": 1.0,
+      "tol": 1e-05,
+      "max_iter": 300,
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.00269950000802055,
+    "predict_s": 0.00010045798262581229,
+    "pipeline_s": 0.002806957985740155,
+    "after": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "repetition": 2,
+    "prep_s": 0.02695554099045694,
+    "dataset_sha256": "efd1d55faff0a03f08c613b6be922fe254cc180407ed298929e40cd440160932",
+    "before": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "iterations": [
+      16
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7404318330227397,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "logistic-12000x32-c2",
+    "algorithm": "logistic",
+    "samples": 12000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 561446912,
+    "memory_budget_bytes": 7277710540,
+    "parameters": {
+      "solver": "lbfgs",
+      "C": 1.0,
+      "tol": 1e-05,
+      "max_iter": 300,
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.0026365420198999345,
+    "predict_s": 8.299999171867967e-05,
+    "pipeline_s": 0.00272641604533419,
+    "after": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "repetition": 3,
+    "prep_s": 0.02695554099045694,
+    "dataset_sha256": "efd1d55faff0a03f08c613b6be922fe254cc180407ed298929e40cd440160932",
+    "before": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "iterations": [
+      16
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7404321250505745,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "logistic-12000x32-c2",
+    "algorithm": "logistic",
+    "samples": 12000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 561446912,
+    "memory_budget_bytes": 7277710540,
+    "parameters": {
+      "solver": "lbfgs",
+      "C": 1.0,
+      "tol": 1e-05,
+      "max_iter": 300,
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.002549791010096669,
+    "predict_s": 8.195795817300677e-05,
+    "pipeline_s": 0.002637707977555692,
+    "after": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "repetition": 4,
+    "prep_s": 0.02695554099045694,
+    "dataset_sha256": "efd1d55faff0a03f08c613b6be922fe254cc180407ed298929e40cd440160932",
+    "before": {
+      "rss_bytes": 203833344,
+      "process_peak_rss_bytes": 203833344
+    },
+    "iterations": [
+      16
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.740432333026547,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "knn-8000x32-c2-k5",
+    "algorithm": "knn",
+    "samples": 8000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 841254912,
+    "memory_budget_bytes": 7305196339,
+    "parameters": {
+      "n_neighbors": 5,
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "weights": "uniform",
+      "n_jobs": 15
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "cold",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.0002835000050254166,
+    "predict_s": 0.007262582948897034,
+    "pipeline_s": 0.007557667035143822,
+    "after": {
+      "rss_bytes": 206651392,
+      "process_peak_rss_bytes": 206651392
+    },
+    "repetition": 0,
+    "prep_s": 0.006883916968945414,
+    "dataset_sha256": "c925724a75331c76a615af0897eaa1a3d4b182f92950c8a3aa51c485df12430f",
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 15,
+        "prefix": "libomp",
+        "filepath": "/Users/REDACTED/repos/mlx-m5-bench/.venv/lib/python3.13/site-packages/sklearn/.dylibs/libomp.dylib",
+        "version": null
+      }
+    ],
+    "before": {
+      "rss_bytes": 200802304,
+      "process_peak_rss_bytes": 200802304
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.8485627080081031,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "knn-8000x32-c2-k5",
+    "algorithm": "knn",
+    "samples": 8000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 841254912,
+    "memory_budget_bytes": 7305196339,
+    "parameters": {
+      "n_neighbors": 5,
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "weights": "uniform",
+      "n_jobs": 15
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "warmup",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.00045854196650907397,
+    "predict_s": 0.0056201250408776104,
+    "pipeline_s": 0.006092874973546714,
+    "after": {
+      "rss_bytes": 206782464,
+      "process_peak_rss_bytes": 206782464
+    },
+    "repetition": 1,
+    "prep_s": 0.006883916968945414,
+    "dataset_sha256": "c925724a75331c76a615af0897eaa1a3d4b182f92950c8a3aa51c485df12430f",
+    "before": {
+      "rss_bytes": 206684160,
+      "process_peak_rss_bytes": 206684160
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.8485635420074686,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "knn-8000x32-c2-k5",
+    "algorithm": "knn",
+    "samples": 8000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 841254912,
+    "memory_budget_bytes": 7305196339,
+    "parameters": {
+      "n_neighbors": 5,
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "weights": "uniform",
+      "n_jobs": 15
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.00028370798099786043,
+    "predict_s": 0.00707962503656745,
+    "pipeline_s": 0.007373916974756867,
+    "after": {
+      "rss_bytes": 206913536,
+      "process_peak_rss_bytes": 206913536
+    },
+    "repetition": 2,
+    "prep_s": 0.006883916968945414,
+    "dataset_sha256": "c925724a75331c76a615af0897eaa1a3d4b182f92950c8a3aa51c485df12430f",
+    "before": {
+      "rss_bytes": 206782464,
+      "process_peak_rss_bytes": 206782464
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.8485639580176212,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "knn-8000x32-c2-k5",
+    "algorithm": "knn",
+    "samples": 8000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 841254912,
+    "memory_budget_bytes": 7305196339,
+    "parameters": {
+      "n_neighbors": 5,
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "weights": "uniform",
+      "n_jobs": 15
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.00034279096871614456,
+    "predict_s": 0.006347249960526824,
+    "pipeline_s": 0.006702583050355315,
+    "after": {
+      "rss_bytes": 209141760,
+      "process_peak_rss_bytes": 209141760
+    },
+    "repetition": 3,
+    "prep_s": 0.006883916968945414,
+    "dataset_sha256": "c925724a75331c76a615af0897eaa1a3d4b182f92950c8a3aa51c485df12430f",
+    "before": {
+      "rss_bytes": 209125376,
+      "process_peak_rss_bytes": 209125376
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.8485642920131795,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "knn-8000x32-c2-k5",
+    "algorithm": "knn",
+    "samples": 8000,
+    "features": 32,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 841254912,
+    "memory_budget_bytes": 7305196339,
+    "parameters": {
+      "n_neighbors": 5,
+      "algorithm": "brute",
+      "metric": "euclidean",
+      "weights": "uniform",
+      "n_jobs": 15
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.00030808296287432313,
+    "predict_s": 0.006558625027537346,
+    "pipeline_s": 0.006877583975438029,
+    "after": {
+      "rss_bytes": 209141760,
+      "process_peak_rss_bytes": 209141760
+    },
+    "repetition": 4,
+    "prep_s": 0.006883916968945414,
+    "dataset_sha256": "c925724a75331c76a615af0897eaa1a3d4b182f92950c8a3aa51c485df12430f",
+    "before": {
+      "rss_bytes": 209141760,
+      "process_peak_rss_bytes": 209141760
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.8485646250192076,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "svc-4000x256-c3",
+    "algorithm": "svc",
+    "samples": 4000,
+    "features": 256,
+    "classes": 3,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 794406912,
+    "memory_budget_bytes": 7268646912,
+    "parameters": {
+      "kernel": "rbf",
+      "gamma": 0.00390625,
+      "C": 1.0,
+      "tol": 0.001,
+      "cache_size": 64,
+      "max_iter": 100000,
+      "shrinking": false,
+      "decision_function_shape": "ovo",
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "cold",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.3581538329599425,
+    "predict_s": 0.16872150002745911,
+    "pipeline_s": 0.5268972500343807,
+    "after": {
+      "rss_bytes": 236175360,
+      "process_peak_rss_bytes": 236175360
+    },
+    "repetition": 0,
+    "prep_s": 0.017994916008319706,
+    "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 15,
+        "prefix": "libomp",
+        "filepath": "/Users/REDACTED/repos/mlx-m5-bench/.venv/lib/python3.13/site-packages/sklearn/.dylibs/libomp.dylib",
+        "version": null
+      }
+    ],
+    "before": {
+      "rss_bytes": 222871552,
+      "process_peak_rss_bytes": 222871552
+    },
+    "iterations": [
+      2413,
+      2541,
+      2411
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 4.019847167015541,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "svc-4000x256-c3",
+    "algorithm": "svc",
+    "samples": 4000,
+    "features": 256,
+    "classes": 3,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 794406912,
+    "memory_budget_bytes": 7268646912,
+    "parameters": {
+      "kernel": "rbf",
+      "gamma": 0.00390625,
+      "C": 1.0,
+      "tol": 0.001,
+      "cache_size": 64,
+      "max_iter": 100000,
+      "shrinking": false,
+      "decision_function_shape": "ovo",
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "warmup",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.3752414580085315,
+    "predict_s": 0.16919424996012822,
+    "pipeline_s": 0.5444586249650456,
+    "after": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "repetition": 1,
+    "prep_s": 0.017994916008319706,
+    "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+    "before": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 4.019847917021252,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "svc-4000x256-c3",
+    "algorithm": "svc",
+    "samples": 4000,
+    "features": 256,
+    "classes": 3,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 794406912,
+    "memory_budget_bytes": 7268646912,
+    "parameters": {
+      "kernel": "rbf",
+      "gamma": 0.00390625,
+      "C": 1.0,
+      "tol": 0.001,
+      "cache_size": 64,
+      "max_iter": 100000,
+      "shrinking": false,
+      "decision_function_shape": "ovo",
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.35684879100881517,
+    "predict_s": 0.16891079198103398,
+    "pipeline_s": 0.52578004199313,
+    "after": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "repetition": 2,
+    "prep_s": 0.017994916008319706,
+    "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+    "before": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "iterations": [
+      2413,
+      2541,
+      2411
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 4.019848291995004,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "svc-4000x256-c3",
+    "algorithm": "svc",
+    "samples": 4000,
+    "features": 256,
+    "classes": 3,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 794406912,
+    "memory_budget_bytes": 7268646912,
+    "parameters": {
+      "kernel": "rbf",
+      "gamma": 0.00390625,
+      "C": 1.0,
+      "tol": 0.001,
+      "cache_size": 64,
+      "max_iter": 100000,
+      "shrinking": false,
+      "decision_function_shape": "ovo",
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.3583449170109816,
+    "predict_s": 0.16959412500727922,
+    "pipeline_s": 0.5279635830083862,
+    "after": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "repetition": 3,
+    "prep_s": 0.017994916008319706,
+    "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+    "before": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "iterations": [
+      2413,
+      2541,
+      2411
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 4.019848541996907,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "svc-4000x256-c3",
+    "algorithm": "svc",
+    "samples": 4000,
+    "features": 256,
+    "classes": 3,
+    "neighbors": 5,
+    "components": 3,
+    "profile": "threads-15",
+    "estimated_bytes": 794406912,
+    "memory_budget_bytes": 7268646912,
+    "parameters": {
+      "kernel": "rbf",
+      "gamma": 0.00390625,
+      "C": 1.0,
+      "tol": 0.001,
+      "cache_size": 64,
+      "max_iter": 100000,
+      "shrinking": false,
+      "decision_function_shape": "ovo",
+      "class_weight": null
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "predict_backend": "CPU_BASELINE",
+    "fit_s": 0.3578827089513652,
+    "predict_s": 0.16884916700655594,
+    "pipeline_s": 0.5267520829802379,
+    "after": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "repetition": 4,
+    "prep_s": 0.017994916008319706,
+    "dataset_sha256": "b40a60c61b9ea31e6e66ca3f2636acb692087b3bbc09aed5f01cc8fa091c2f80",
+    "before": {
+      "rss_bytes": 236208128,
+      "process_peak_rss_bytes": 236208128
+    },
+    "iterations": [
+      2413,
+      2541,
+      2411
+    ],
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 4.0198487500310875,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "pca-12000x256-c2-p8",
+    "algorithm": "pca",
+    "samples": 12000,
+    "features": 256,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 8,
+    "profile": "threads-15",
+    "estimated_bytes": 737673216,
+    "memory_budget_bytes": 7257155174,
+    "parameters": {
+      "n_components": 8,
+      "svd_solver": "covariance_eigh",
+      "whiten": false
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "cold",
+    "fit_backend": "CPU_BASELINE",
+    "transform_backend": "CPU_BASELINE",
+    "fit_s": 0.004407207947224379,
+    "transform_s": 0.00023737497394904494,
+    "pipeline_s": 0.004661208018660545,
+    "after": {
+      "rss_bytes": 262438912,
+      "process_peak_rss_bytes": 262438912
+    },
+    "repetition": 0,
+    "prep_s": 0.02058608300285414,
+    "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+    "threadpools": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 15,
+        "prefix": "libomp",
+        "filepath": "/Users/REDACTED/repos/mlx-m5-bench/.venv/lib/python3.13/site-packages/sklearn/.dylibs/libomp.dylib",
+        "version": null
+      }
+    ],
+    "before": {
+      "rss_bytes": 260784128,
+      "process_peak_rss_bytes": 260784128
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7418482920038514,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "pca-12000x256-c2-p8",
+    "algorithm": "pca",
+    "samples": 12000,
+    "features": 256,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 8,
+    "profile": "threads-15",
+    "estimated_bytes": 737673216,
+    "memory_budget_bytes": 7257155174,
+    "parameters": {
+      "n_components": 8,
+      "svd_solver": "covariance_eigh",
+      "whiten": false
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "warmup",
+    "fit_backend": "CPU_BASELINE",
+    "transform_backend": "CPU_BASELINE",
+    "fit_s": 0.004068583017215133,
+    "transform_s": 0.00021420902339741588,
+    "pipeline_s": 0.004293541016522795,
+    "after": {
+      "rss_bytes": 265551872,
+      "process_peak_rss_bytes": 265551872
+    },
+    "repetition": 1,
+    "prep_s": 0.02058608300285414,
+    "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+    "before": {
+      "rss_bytes": 265535488,
+      "process_peak_rss_bytes": 265535488
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7418490420095623,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "pca-12000x256-c2-p8",
+    "algorithm": "pca",
+    "samples": 12000,
+    "features": 256,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 8,
+    "profile": "threads-15",
+    "estimated_bytes": 737673216,
+    "memory_budget_bytes": 7257155174,
+    "parameters": {
+      "n_components": 8,
+      "svd_solver": "covariance_eigh",
+      "whiten": false
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "transform_backend": "CPU_BASELINE",
+    "fit_s": 0.004030583950225264,
+    "transform_s": 0.00020391697762534022,
+    "pipeline_s": 0.004241292015649378,
+    "after": {
+      "rss_bytes": 265551872,
+      "process_peak_rss_bytes": 265551872
+    },
+    "repetition": 2,
+    "prep_s": 0.02058608300285414,
+    "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+    "before": {
+      "rss_bytes": 265551872,
+      "process_peak_rss_bytes": 265551872
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7418495830497704,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "pca-12000x256-c2-p8",
+    "algorithm": "pca",
+    "samples": 12000,
+    "features": 256,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 8,
+    "profile": "threads-15",
+    "estimated_bytes": 737673216,
+    "memory_budget_bytes": 7257155174,
+    "parameters": {
+      "n_components": 8,
+      "svd_solver": "covariance_eigh",
+      "whiten": false
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "transform_backend": "CPU_BASELINE",
+    "fit_s": 0.0040166249964386225,
+    "transform_s": 0.00023537501692771912,
+    "pipeline_s": 0.004261207999661565,
+    "after": {
+      "rss_bytes": 268648448,
+      "process_peak_rss_bytes": 268648448
+    },
+    "repetition": 3,
+    "prep_s": 0.02058608300285414,
+    "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+    "before": {
+      "rss_bytes": 268648448,
+      "process_peak_rss_bytes": 268648448
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7418498330516741,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  },
+  {
+    "case": "pca-12000x256-c2-p8",
+    "algorithm": "pca",
+    "samples": 12000,
+    "features": 256,
+    "classes": 2,
+    "neighbors": 5,
+    "components": 8,
+    "profile": "threads-15",
+    "estimated_bytes": 737673216,
+    "memory_budget_bytes": 7257155174,
+    "parameters": {
+      "n_components": 8,
+      "svd_solver": "covariance_eigh",
+      "whiten": false
+    },
+    "implementation": "sklearn",
+    "status": "ok",
+    "phase": "steady",
+    "fit_backend": "CPU_BASELINE",
+    "transform_backend": "CPU_BASELINE",
+    "fit_s": 0.003991917008534074,
+    "transform_s": 0.00020599999697878957,
+    "pipeline_s": 0.004206832963973284,
+    "after": {
+      "rss_bytes": 268648448,
+      "process_peak_rss_bytes": 268648448
+    },
+    "repetition": 4,
+    "prep_s": 0.02058608300285414,
+    "dataset_sha256": "f287da82e92f83588a0831726e2415aa9c566e0fe6376bae113a43ca6aa151cf",
+    "before": {
+      "rss_bytes": 268648448,
+      "process_peak_rss_bytes": 268648448
+    },
+    "warnings": [],
+    "converged": true,
+    "events": [],
+    "worker_wall_s": 0.7418501250213012,
+    "correctness": {
+      "status": "INCONCLUSIVE"
+    }
+  }
+]

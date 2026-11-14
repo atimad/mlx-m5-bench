@@ -28,7 +28,7 @@ Unit/CPU/report/CLI/dashboard validation and separately marked local GPU integra
 
 ## Phase 4 — expanded experiments
 
-Quick, standard and memory-admitted full profiles executed locally. An early expanded run overlapped a few quality checks. Its outputs remain local exploratory artifacts. Canonical runs are executed sequentially after implementation verification and reference an implementation commit.
+Quick, standard and memory-admitted full profiles executed locally. An early expanded run overlapped a few quality checks. Its outputs remain local exploratory artifacts. Canonical reruns executed sequentially after implementation verification and reference clean implementation commit 2da3300. Follow-up reporting changes retained the timing and correctness evidence.
 
 The standard multiclass logistic case produced a repeatable line-search warning at tolerance 1e-5. Close predictions alone did not satisfy convergence. The case remains INCONCLUSIVE and ratio-ineligible. Its tolerance was retained.
 

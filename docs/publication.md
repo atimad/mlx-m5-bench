@@ -23,4 +23,9 @@ Then inspect public file contents, verify the repository URL and observe the fir
 
 ## Validation record
 
-Final validation results, implementation commit and canonical measurement references are appended after the local verification pass. Independent estimator-level GPU trace verification remains open. Current results label library-reported GPU, mixed execution, CPU paths and unknown index construction.
+- The 44 default tests passed, including CPU adapters, failure and timeout handling, reporting, dashboard rendering and filtering, schemas and CLI smoke. Four separately marked Apple Silicon estimator-pair integration tests passed.
+- Ruff lint and format, mypy, lock validation and source distribution/wheel builds passed.
+- A temporary Python 3.13.18 environment outside the checkout installed locked dependencies and the built wheel. The functional Metal probe and all four quick estimator pairs passed.
+- The localhost dashboard opened in the browser and loaded stored standard results. Streamlit AppTest also verified the saved-data and filter paths.
+- Canonical quick, standard, full and CPU thread sensitivity runs reference clean benchmark implementation commit 2da33001222d0f6faf649a0512c71735d966b9e8. Subsequent report and dashboard presentation edits preserve the raw measurements. See [results](results.md).
+- One standard multiclass logistic workload remains INCONCLUSIVE due to a repeatable line-search warning. Full skipped three workloads as designed. Independent estimator-level GPU traces and GitHub-hosted CI are open.

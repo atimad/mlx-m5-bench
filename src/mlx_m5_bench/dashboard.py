@@ -30,7 +30,11 @@ for column, label in (
     ("operation", "Operation"),
 ):
     choices = sorted(data[column].unique())
-    defaults = ["steady"] if column == "phase" and "steady" in choices else choices
+    defaults = (
+        [phase for phase in ("steady", "unmeasured") if phase in choices]
+        if column == "phase"
+        else choices
+    )
     chosen = st.sidebar.multiselect(label, choices, default=defaults)
     data = data[data[column].isin(chosen)]
 profile = st.sidebar.multiselect(
@@ -40,7 +44,7 @@ if not profile:
     data = data.iloc[:0]
 st.warning(
     "Library-reported GPU and mixed paths are independently unverified. "
-    "Ineligible timings have no CPU/candidate ratio."
+    "Ineligible timings have no CPU/candidate ratio. Empty timings identify unmeasured cases."
 )
 st.dataframe(data, hide_index=True, width="stretch")
 if not data.empty and "time_median_s" in data:
