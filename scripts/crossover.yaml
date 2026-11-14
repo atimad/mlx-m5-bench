@@ -1,0 +1,11 @@
+seed: 42
+threads: 4
+repeats: 5
+warmups: 1
+cases:
+  - {algorithm: logistic, samples: 103200, features: 256}
+  - {algorithm: logistic, samples: 105200, features: 256}
+  - {algorithm: svc, samples: 5160, features: 256, classes: 3}
+  - {algorithm: svc, samples: 5256, features: 256, classes: 3}
+  - {algorithm: pca, samples: 41250, features: 256, components: 8}
+  - {algorithm: pca, samples: 42084, features: 256, components: 8}

@@ -1,4 +1,4 @@
-"""Run the seven Metal-traced workloads without tracing in balanced timing blocks."""
+"""Run matched workloads without tracing in balanced timing blocks."""
 
 import argparse
 from pathlib import Path
@@ -20,14 +20,18 @@ CASE_KEYS = (
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--config", type=Path, help="Use a custom workload profile")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     cases = {case.key: case for name in ("standard", "full") for case in load_profile(name).cases}
+    base = (
+        load_profile("custom", args.config)
+        if args.config
+        else Profile(cases=[cases[key] for key in CASE_KEYS], repeats=5, warmups=1)
+    )
     for block, mode in enumerate(("auto", "forced", "forced", "auto"), start=1):
         profile = Profile(
-            cases=[cases[key] for key in CASE_KEYS],
-            repeats=5,
-            warmups=1,
+            **base.model_dump(exclude={"force_mlx", "mlx_device"}),
             force_mlx=mode == "forced",
             mlx_device="auto" if mode == "auto" else "gpu",
         )

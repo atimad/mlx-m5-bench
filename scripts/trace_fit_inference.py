@@ -89,7 +89,8 @@ def capture_operation(path: Path, operation: Callable) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("case", choices=CASES)
+    parser.add_argument("case", help="Built-in alias or workload key from --config")
+    parser.add_argument("--config", type=Path, help="Use a custom workload profile")
     parser.add_argument("output", type=Path)
     parser.add_argument("probe", type=Path)
     parser.add_argument("--mode", choices=("forced", "auto"), default="forced")
@@ -109,8 +110,11 @@ def main() -> None:
     if not probe.trace_install():
         raise RuntimeError("Unable to install Metal command buffer observer")
 
-    profile = load_profile("full" if args.case.endswith("-full") else "standard")
-    case: Case = next(case for case in profile.cases if case.key == CASES[args.case])
+    profile = load_profile("full" if args.case.endswith("-full") else "standard", args.config)
+    key = CASES.get(args.case, args.case)
+    case: Case | None = next((case for case in profile.cases if case.key == key), None)
+    if case is None:
+        parser.error(f"Workload {key} is absent from the selected profile")
     data = generate(case, profile.seed)
     inference = "transform" if case.algorithm == "pca" else "predict"
     outputs = {}
