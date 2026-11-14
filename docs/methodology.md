@@ -38,7 +38,7 @@ SVC uses the same RBF objective, explicit gamma, tolerance, cache and non-shrink
 
 PCA covariance_eigh includes a Gram matrix and host eigensolve in the MLX path. Small inputs can use a complete host solve even with forced MLX. Transform has a separate size/precision gate. An audited pinned private predicate supplies the transform classification. PCA fit is mixed only when final dispatch remains MLX.
 
-The default force_mlx=true sets MLXLEARN_FORCE_BACKEND=mlx in each candidate worker. This is an upstream diagnostic environment override that bypasses crossover heuristics. It does not guarantee that every internal stage uses the GPU. Set force_mlx=false in a custom profile to evaluate public device selection including normal host routing. Direct imports, strict fallback configuration and operation diagnostics are always used. Inherited MLXLEARN tuning overrides are cleared in workers and their parent values remain in the manifest.
+The default force_mlx=true sets MLXLEARN_FORCE_BACKEND=mlx in each candidate worker. This is an upstream diagnostic environment override that bypasses crossover heuristics. It does not guarantee that every internal stage uses the GPU. Set force_mlx=false and mlx_device=auto in a custom profile to evaluate automatic device selection, including workload-dependent KNN query routing. With mlx_device=gpu, force_mlx=false keeps an explicit GPU request and allows the upstream crossover checks. Direct imports, strict fallback configuration and operation diagnostics are always used. Inherited MLXLEARN tuning overrides are cleared in workers and their parent values remain in the manifest.
 
 ## Correctness gates
 

@@ -41,6 +41,10 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 
 Both gains and regressions occurred. Small logistic fits and PCA transforms often favored CPU. KNN query gains grew with sample count on the tested panel. SVC results describe mixed kernel/host-optimizer execution. The two traced KNN fit and index-construction replays had zero Metal submissions. Fit remains ratio-ineligible.
 
+## Uninstrumented automatic versus forced timing
+
+The seven traced workloads were timed in four balanced blocks, with five steady repetitions per implementation per block and a fresh scikit-learn control in each block. All 140 steady timing pairs passed. Automatic KNN predictions took 1.99 ms and 15.18 ms, close to forced MLX at 2.00 ms and 14.91 ms. On SVC, auto CPU prediction took 3.60 ms versus 166.06 ms for its scikit-learn control. Forced MLX took 2.36 ms. On the larger logistic workload, forced fit took 17.78 ms versus 43.39 ms in auto. Automatic PCA was faster than forced MLX for both tested shapes. [Full fit and inference table, raw data, and reproduction commands](evidence/routing-timing/README.md)
+
 ## Automatic selection versus forced MLX
 
 Automatic selection kept both KNN first queries on the GPU. It routed both logistic fits, SVC fit and prediction, and both PCA fits and transforms to CPU. Logistic prediction already used CPU in forced mode. The smaller PCA transform also used CPU in both modes. All seven matched replays passed numerical checks.
