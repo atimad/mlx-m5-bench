@@ -18,7 +18,7 @@ Quick has one steady repetition per case. Standard has three. Full has five. Fir
 
 ## Representative steady medians
 
-Dataset sizes are total samples before the 75/25 split. Ratios compare the four-thread CPU baseline with a reported GPU or mixed candidate. Independent operation-level GPU trace verification remains open.
+Dataset sizes are total samples before the 75/25 split. Ratios compare the four-thread CPU baseline with a reported GPU or mixed candidate. The marked KNN query has independent Metal evidence from a separate matching replay.
 
 | Case | Operation | CPU ms | Candidate ms | CPU/candidate | Evidence | Correctness |
 |---|---|---:|---:|---:|---|---|
@@ -27,7 +27,7 @@ Dataset sizes are total samples before the 75/25 split. Ratios compare the four-
 | knn-2000x32-c2-k5 | fit | 0.164 | 0.231 | ineligible | UNKNOWN | PASS |
 | knn-2000x32-c2-k5 | predict | 1.014 | 1.032 | 0.98 | GPU_REPORTED_UNVERIFIED | PASS |
 | knn-8000x128-c3-k5 | fit | 0.535 | 0.496 | ineligible | UNKNOWN | PASS |
-| knn-8000x128-c3-k5 | predict | 12.784 | 2.420 | 5.28 | GPU_REPORTED_UNVERIFIED | PASS |
+| knn-8000x128-c3-k5 | predict | 12.784 | 2.420 | 5.28 | [GPU_VERIFIED in matched replay](evidence/metal-knn-8000x128-c3-k5/README.md) | PASS |
 | svc-4000x256-c3 | fit | 348.609 | 34.218 | 10.19 | MIXED_CPU_GPU_REPORTED | PASS |
 | svc-4000x256-c3 | predict | 164.797 | 2.270 | 72.59 | MIXED_CPU_GPU_REPORTED | PASS |
 | pca-12000x256-c2-p8 | fit | 4.053 | 4.135 | 0.98 | MIXED_CPU_GPU_REPORTED | PASS |
@@ -82,4 +82,4 @@ Full fit ratios retain workload-admission skips.
 
 ## Reproduce
 
-Run uv sync --locked --extra dashboard, then mlx-m5-bench doctor, mlx-m5-bench run --profile quick, --profile standard and --profile full through uv run. The packaged profiles and committed lock specify the inputs and dependencies. Every run writes fresh timings. Independent GPU tracing and remote CI execution remain open.
+Run uv sync --locked --extra dashboard, then mlx-m5-bench doctor, mlx-m5-bench run --profile quick, --profile standard and --profile full through uv run. The packaged profiles and committed lock specify the inputs and dependencies. Every run writes fresh timings. Independent traces for other workloads remain open.

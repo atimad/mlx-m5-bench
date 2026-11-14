@@ -1,0 +1,28 @@
+{
+  "case": "knn-8000x128-c3-k5",
+  "dataset_sha256": "3b0132f0818f32e05c0f5aecb217b855126b32a470daeb1a7d89e1311ba6cebc",
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "matching_predictions": 2000,
+  "predictions_sha256": "5bec81e8b9550fa2a7d0fde256698a55970af6a94374830f0e3c5cf9726d693a",
+  "captured_frames": 1,
+  "vote_shader_artifacts": [
+    "FA8BDCFC302CDE1B"
+  ],
+  "capture_stream_sha256": "2d9fba50442cf95fc6468e2a940c81e94d41ee6c45745f14fe18df8b90e2c8ef",
+  "verification": "GPU_VERIFIED",
+  "operation": "predict",
+  "benchmark_run": "20261114T184308448033Z-84f22b8ebf",
+  "scope": "Separate warm replay of the matching workload. Original timing calls were untraced."
+}
