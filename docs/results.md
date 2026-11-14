@@ -47,6 +47,10 @@ At 256 features, separate Metal traces verified that automatic fit switched from
 
 Automatic fit changed from 42.85 to 16.38 ms for logistic regression and from 65.07 to 52.49 ms for SVC. PCA fit changed from 4.54 to 4.79 ms, while transform rose from 0.481 to 0.978 ms. All 120 steady timing pairs passed numerical checks. [Exact thresholds, full CPU/auto/forced timing table, and Metal evidence](evidence/crossover/README.md)
 
+## Row-count and feature-count crossover gates
+
+Separate Metal traces confirmed the fit switch at the tall logistic 250,000-training-row gate, the SVC 2,048-training-row gate, and covariance PCA's inclusive 512-feature gate. Automatic fit changed from 41.28 to 11.02 ms for tall logistic regression and from 24.73 to 22.55 ms for SVC. PCA fit stayed near 10.5 ms, while its automatic transform rose from 0.371 ms at 511 features to 1.134 ms at 512. All 120 steady timing pairs and six traced pairs passed numerical checks. [Exact workload shapes, full timing table, and Metal evidence](evidence/crossover-shape/README.md)
+
 ## Uninstrumented automatic versus forced timing
 
 The seven traced workloads were timed in four balanced blocks, with five steady repetitions per implementation per block and a fresh scikit-learn control in each block. All 140 steady timing pairs passed. Automatic KNN predictions took 1.99 ms and 15.18 ms, close to forced MLX at 2.00 ms and 14.91 ms. On SVC, auto CPU prediction took 3.60 ms versus 166.06 ms for its scikit-learn control. Forced MLX took 2.36 ms. On the larger logistic workload, forced fit took 17.78 ms versus 43.39 ms in auto. Automatic PCA was faster than forced MLX for both tested shapes. [Full fit and inference table, raw data, and reproduction commands](evidence/routing-timing/README.md)

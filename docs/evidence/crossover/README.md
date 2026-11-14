@@ -8,7 +8,7 @@ This panel brackets one mlx-learn 0.1.2 fit-routing gate per algorithm, keeping 
 | SVC, 1 million element-ops | 3,870 / 3,942 | 990,720 / 1,009,152 | Both exceed 2,048 rows. |
 | PCA covariance, 8 million elements | 30,937 / 31,563 | 7,919,872 / 8,080,128 | Both are below the separate 512-feature gate. |
 
-The thresholds are library routing rules. They do not predict the fastest backend on every workload. This panel isolates the work-size gates and leaves the alternative row-count and feature-count gates outside its scope. [Pinned crossover defaults](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/_common/config.py)
+The thresholds are library routing rules. They do not predict the fastest backend on every workload. This panel isolates the work-size gates. A separate panel covers the [row-count and feature-count gates](../crossover-shape/README.md). [Pinned crossover defaults](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/_common/config.py)
 
 Uninstrumented timing used four blocks ordered auto → forced → forced → auto, each with a fresh scikit-learn control, four requested CPU threads, one warmup, and five steady repetitions. Each implementation ran serially in its own process, with scikit-learn first for each pair. The first call was also recorded separately. Automatic mode sets device=auto without the override. Forced mode requests GPU and sets MLXLEARN_FORCE_BACKEND=mlx.
 

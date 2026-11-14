@@ -1,0 +1,107 @@
+{
+  "case": "pca-12000x512-c2-p8",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "PCA",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          9000,
+          512
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "transform": [
+      {
+        "estimator": "PCA",
+        "operation": "transform",
+        "backend": "mlx",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          3000,
+          512
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "1170d8814d2e0b04fdb66de1a80de03f39e42df78944305ee6638ac55b436b8a",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_components": 8,
+    "svd_solver": "covariance_eigh",
+    "whiten": false
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "min_principal_cosine": 0.9999999916545098,
+    "cpu_rmse": 1.7777605056762695,
+    "candidate_rmse": 1.7777605056762695,
+    "cpu_retained_variance": 0.11590993404388428,
+    "candidate_retained_variance": 0.11591003090143204
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 3,
+      "sum_gpu_buffer_ms": 1.5827909810468554
+    },
+    "mlxlearn-transform": {
+      "completed_buffers": 2,
+      "sum_gpu_buffer_ms": 0.23791706189513206
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-transform": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {
+    "fit": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "2c64283b5e7fbb6daa210f16527fce10de5d3ce2f5ebc564e79c7daac4b2f58e",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_pca_stats__9000_512_16_256_float_float_float_uint32_t"
+      ]
+    },
+    "transform": {
+      "captured_frames": 1,
+      "capture_stream_sha256": "23391694f1e13b4ee479004696ae78216b8cd5d9c9012307c310537e7e98636a",
+      "selected_shader_symbols": [
+        "custom_kernel_mlxlearn_pca_stats__9000_512_16_256_float_float_float_uint32_t"
+      ]
+    }
+  },
+  "timing_run_ids": [
+    "20261114T202046280477Z-f3f452de2b",
+    "20261114T202158511061Z-f3f452de2b",
+    "20261114T202110775169Z-036d19f5c1",
+    "20261114T202134903408Z-036d19f5c1"
+  ]
+}

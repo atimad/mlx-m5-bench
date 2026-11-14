@@ -1,0 +1,112 @@
+{
+  "case": "svc-2704x512-c3",
+  "mode": "auto",
+  "requested_device": "auto",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "SVC",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          2028,
+          512
+        ],
+        "fallback": false,
+        "extra": {}
+      },
+      {
+        "estimator": "SVC",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "below-crossover",
+        "detail": "2028 samples x 512 features is below the measured SVC crossover (2048 samples and 1000000 element-ops, both required)",
+        "shape": [
+          2028,
+          512
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "SVC",
+        "operation": "predict",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          676,
+          512
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "73c53b13b93c0f52a7091619070c0ae7dd11ed0122034cc8a52ed8243eef8939",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "kernel": "rbf",
+    "gamma": 0.001953125,
+    "C": 1.0,
+    "tol": 0.001,
+    "cache_size": 64,
+    "max_iter": 100000,
+    "shrinking": false,
+    "decision_function_shape": "ovo",
+    "class_weight": null
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.8609467455621301,
+    "candidate_accuracy": 0.8609467455621301,
+    "agreement": 1.0,
+    "decision_max_error": 0.0003712714697698405,
+    "cpu_support_count": 1972,
+    "candidate_support_count": 1972
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "timing_run_ids": [
+    "20261114T202046280477Z-f3f452de2b",
+    "20261114T202158511061Z-f3f452de2b",
+    "20261114T202110775169Z-036d19f5c1",
+    "20261114T202134903408Z-036d19f5c1"
+  ]
+}
