@@ -12,7 +12,7 @@ from contextlib import contextmanager, nullcontext
 from functools import partial
 from importlib.metadata import distributions
 from pathlib import Path
-from typing import Any
+from typing import Any, TextIO
 
 import numpy as np
 from threadpoolctl import threadpool_info, threadpool_limits
@@ -56,6 +56,44 @@ def load_engine(engine: str) -> tuple[Any, dict[str, Any]]:
 
 def no_sync() -> None:
     pass
+
+
+def predict_batches(
+    predict: Callable[[np.ndarray], np.ndarray],
+    test: np.ndarray,
+    reference: np.ndarray,
+    sizes: list[int],
+    repeats: int,
+    stream: TextIO,
+    observer: "MetalObserver | None",
+) -> None:
+    for size in sizes:
+        action = partial(predict, test[:size])
+        for _ in range(2):
+            action()
+        operation = f"predict-q{size}"
+        with observer.observe(operation) if observer is not None else nullcontext():
+            measurements = [
+                measure(action, no_sync) for _ in range(1 if observer is not None else repeats)
+            ]
+        for index, (prediction, elapsed) in enumerate(measurements):
+            if prediction.shape != reference[:size].shape:
+                raise RuntimeError(f"Incorrect prediction shape for {size} queries")
+            np.testing.assert_allclose(prediction, reference[:size], rtol=1e-6, atol=1e-7)
+            if observer is None:
+                stream.write(
+                    json.dumps(
+                        {
+                            "phase": "steady_predict",
+                            "query_rows": size,
+                            "repetition": index,
+                            "predict_s": elapsed,
+                        },
+                        allow_nan=False,
+                    )
+                    + "\n"
+                )
+        stream.flush()
 
 
 class MetalObserver:
@@ -108,6 +146,7 @@ def run(request: dict[str, Any], output: Path) -> None:
         MetalObserver(Path(request["probe"]), output) if request.get("probe") is not None else None
     )
     engine = request["engine"]
+    query_sizes = request.get("query_sizes", [])
     xgb, metadata = load_engine(engine)
     threads = request["threads"]
     parameters = {**request["parameters"], "device": engine, "nthread": threads}
@@ -122,14 +161,17 @@ def run(request: dict[str, Any], output: Path) -> None:
         with observer.observe(operation) if observer is not None and trace else nullcontext():
             return measure(action, no_sync)
 
-    def predict() -> Any:
-        return np.asarray(booster.inplace_predict(arrays["test"]))
+    def predict(batch: np.ndarray = arrays["test"]) -> np.ndarray:
+        return np.asarray(booster.inplace_predict(batch))
 
     predictions = []
     with threadpool_limits(limits=threads):
         metadata["threadpools"] = threadpool_info()
         with (output / "measurements.jsonl").open("w") as stream:
-            for index in range(2 if observer is not None else 1 + request["fit_repeats"]):
+            fit_count = (
+                1 if query_sizes else 2 if observer is not None else 1 + request["fit_repeats"]
+            )
+            for index in range(fit_count):
                 train_matrix, train_ingest = measure(
                     lambda: xgb.DMatrix(arrays["train"], label=arrays["y_train"], nthread=threads),
                     no_sync,
@@ -142,7 +184,7 @@ def run(request: dict[str, Any], output: Path) -> None:
                 if booster.num_boosted_rounds() != request["rounds"]:
                     raise RuntimeError("Trained booster has a different number of rounds")
                 first, first_prediction = measure(predict, no_sync)
-                if index > 0:
+                if index > 0 or query_sizes:
                     predictions.append(first.copy())
                 stream.write(
                     json.dumps(
@@ -160,23 +202,38 @@ def run(request: dict[str, Any], output: Path) -> None:
                 )
                 stream.flush()
                 del train_matrix
-            predict()
-            prediction, elapsed = call("predict", predict, trace=True)
-            np.testing.assert_array_equal(prediction, predictions[-1])
-            if observer is None:
-                times = [elapsed]
-                for _ in range(request["predict_repeats"] - 1):
-                    repeated, elapsed = measure(predict, no_sync)
-                    np.testing.assert_array_equal(repeated, prediction)
-                    times.append(elapsed)
-                for index, elapsed in enumerate(times):
-                    stream.write(
-                        json.dumps(
-                            {"phase": "steady_predict", "repetition": index, "predict_s": elapsed},
-                            allow_nan=False,
+            if query_sizes:
+                predict_batches(
+                    predict,
+                    arrays["test"],
+                    predictions[-1],
+                    query_sizes,
+                    request["predict_repeats"],
+                    stream,
+                    observer,
+                )
+            else:
+                predict()
+                prediction, elapsed = call("predict", predict, trace=True)
+                np.testing.assert_array_equal(prediction, predictions[-1])
+                if observer is None:
+                    times = [elapsed]
+                    for _ in range(request["predict_repeats"] - 1):
+                        repeated, elapsed = measure(predict, no_sync)
+                        np.testing.assert_array_equal(repeated, prediction)
+                        times.append(elapsed)
+                    for index, elapsed in enumerate(times):
+                        stream.write(
+                            json.dumps(
+                                {
+                                    "phase": "steady_predict",
+                                    "repetition": index,
+                                    "predict_s": elapsed,
+                                },
+                                allow_nan=False,
+                            )
+                            + "\n"
                         )
-                        + "\n"
-                    )
 
     np.save(output / "prediction.npy", np.stack(predictions), allow_pickle=False)
     metadata["parameters"] = parameters
@@ -184,8 +241,11 @@ def run(request: dict[str, Any], output: Path) -> None:
         1 if sys.platform == "darwin" else 1024
     )
     if observer is not None:
+        operations = (
+            [f"predict-q{size}" for size in query_sizes] if query_sizes else ["train", "predict"]
+        )
         metadata["metal_trace"] = {
-            operation: observer.summarize(operation) for operation in ("train", "predict")
+            operation: observer.summarize(operation) for operation in operations
         }
     (output / "metadata.json").write_text(json.dumps(metadata, indent=2, allow_nan=False) + "\n")
 

@@ -23,10 +23,12 @@ TASKS = {"classification": "binary:logistic", "regression": "reg:squarederror"}
 SEED = 42
 SAMPLES = 100_000
 TRAIN_ROWS = SAMPLES * 3 // 4
+TEST_ROWS = SAMPLES - TRAIN_ROWS
 FEATURES = 32
 ROUNDS = 100
 FIT_REPEATS = 3
 PREDICT_REPEATS = 10
+BATCH_REPEATS = 30
 PARAMETERS = {
     "tree_method": "hist",
     "max_depth": 6,
@@ -146,8 +148,13 @@ def worker(
     return metadata, rows, predictions
 
 
-def verify_trace(engine: str, metadata: dict[str, Any], chip: str) -> str:
-    for operation in ("train", "predict"):
+def verify_trace(
+    engine: str,
+    metadata: dict[str, Any],
+    chip: str,
+    operations: tuple[str, ...] = ("train", "predict"),
+) -> str:
+    for operation in operations:
         trace = metadata["metal_trace"][operation]
         if engine == "cpu":
             valid = trace["completed_buffers"] == trace["dispatches"] == 0
@@ -169,11 +176,20 @@ def run(
     threads: int,
     probe: Path | None = None,
     train_sizes: tuple[int, ...] = (TRAIN_ROWS,),
+    query_sizes: tuple[int, ...] = (),
 ) -> bool:
     if not train_sizes or len(set(train_sizes)) != len(train_sizes):
         raise ValueError("Training sizes must be nonempty and distinct")
     if any(not 2 <= size <= TRAIN_ROWS for size in train_sizes):
         raise ValueError(f"Training sizes must be between 2 and {TRAIN_ROWS}")
+    if len(set(query_sizes)) != len(query_sizes) or any(
+        not 1 <= size <= TEST_ROWS for size in query_sizes
+    ):
+        raise ValueError(f"Query sizes must be distinct and between 1 and {TEST_ROWS}")
+    if query_sizes and train_sizes != (TRAIN_ROWS,):
+        raise ValueError("The prediction batch sweep uses the full training split")
+    predict_repeats = BATCH_REPEATS if query_sizes else PREDICT_REPEATS
+    operations = tuple(f"predict-q{size}" for size in query_sizes) or ("train", "predict")
     output = output.resolve()
     output.mkdir(parents=True)
     experiment = manifest()
@@ -185,14 +201,16 @@ def run(
         samples=SAMPLES,
         features=FEATURES,
         train_sizes=train_sizes,
-        query_rows=SAMPLES - TRAIN_ROWS,
+        query_rows=TEST_ROWS,
         boosting_rounds=ROUNDS,
-        fit_repeats_per_block=1 if probe is not None else FIT_REPEATS,
-        predict_repeats_per_block=1 if probe is not None else PREDICT_REPEATS,
+        fit_repeats_per_block=0 if query_sizes else 1 if probe is not None else FIT_REPEATS,
+        predict_repeats_per_block=1 if probe is not None else predict_repeats,
         quality_thresholds=THRESHOLDS,
         blocks=[],
         state="running",
     )
+    if query_sizes:
+        experiment["query_sizes"] = query_sizes
     write_json(output / "manifest.json", experiment)
     measurements: list[dict[str, Any]] = []
     comparisons: list[dict[str, Any]] = []
@@ -229,9 +247,13 @@ def run(
                         "parameters": {**PARAMETERS, "objective": TASKS[task]},
                         "rounds": ROUNDS,
                         "fit_repeats": FIT_REPEATS,
-                        "predict_repeats": PREDICT_REPEATS,
+                        "predict_repeats": predict_repeats,
                         "probe": str(probe.resolve()) if probe is not None else None,
                     }
+                    if query_sizes:
+                        request["query_sizes"] = (
+                            query_sizes if pass_index == 1 else query_sizes[::-1]
+                        )
                     directory = task_path / f"pass-{pass_index}-{engine}"
                     metadata, rows, outputs[engine] = worker(
                         interpreters[engine], request, directory
@@ -240,7 +262,7 @@ def run(
                         raise RuntimeError(f"Input fingerprint mismatch for {task} {engine}")
                     backend = GPU if engine == "metal" else CPU
                     if probe is not None:
-                        backend = verify_trace(engine, metadata, experiment["chip"])
+                        backend = verify_trace(engine, metadata, experiment["chip"], operations)
                     experiment["blocks"].append(
                         {**block, "engine": engine, "backend": backend, **metadata}
                     )
@@ -262,12 +284,17 @@ def run(
         finally:
             data_path.unlink()
 
-    metrics = ("train_ingest_s", "train_s", "first_prediction_s", "end_to_end_s", "predict_s")
+    metrics = (
+        ("predict_s",)
+        if query_sizes
+        else ("train_ingest_s", "train_s", "first_prediction_s", "end_to_end_s", "predict_s")
+    )
     summary = [
         {
             "task": task,
             "train_rows": size,
             "engine": engine,
+            **({"query_rows": query_rows} if query_rows is not None else {}),
             **{
                 metric: statistics(
                     row[metric]
@@ -275,6 +302,7 @@ def run(
                     if row["task"] == task
                     and row["train_rows"] == size
                     and row["engine"] == engine
+                    and row.get("query_rows") == query_rows
                     and row["phase"] != "warmup"
                     and metric in row
                 )
@@ -284,6 +312,7 @@ def run(
         for task in TASKS
         for size in train_sizes
         for engine in interpreters
+        for query_rows in query_sizes or (None,)
         if probe is None
     ]
     write_json(output / "summary.json", summary)
@@ -301,19 +330,30 @@ def main() -> None:
     parser.add_argument(
         "--probe", type=Path, help="Run a separate replay using a compiled observer"
     )
-    parser.add_argument(
+    sweep = parser.add_mutually_exclusive_group()
+    sweep.add_argument(
         "--train-rows",
         type=int,
         nargs="+",
         default=[TRAIN_ROWS],
         help="Training-prefix sizes, with the original test batch fixed",
     )
+    sweep.add_argument(
+        "--query-rows", type=int, nargs="+", default=[], help="Prediction sizes on one fitted model"
+    )
     args = parser.parse_args()
     if args.threads < 1:
         parser.error("--threads must be positive")
     # Keep virtualenv symlinks intact so Python locates each environment's pyvenv.cfg.
     interpreters = {"cpu": args.cpu_python.absolute(), "metal": args.metal_python.absolute()}
-    if not run(args.output, interpreters, args.threads, args.probe, tuple(args.train_rows)):
+    if not run(
+        args.output,
+        interpreters,
+        args.threads,
+        args.probe,
+        tuple(args.train_rows),
+        tuple(args.query_rows),
+    ):
         raise SystemExit("Quality checks failed. See correctness.json in the output directory.")
 
 
