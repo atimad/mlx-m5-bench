@@ -14,6 +14,8 @@ At the first forced-GPU two-pass wins, forced GPU versus pinned CPU was 0.689 ve
 
 Separate Metal traces confirmed the automatic switch from four to five queries at 1,536 and 3,072 rows, and from two to three at 8,192 rows. The pinned routing rule admits CPU at no more than four query rows and 16,384 training/query row pairs for this setup. The 8,192-row case reaches that product cap at two queries. [Pinned routing source](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/_kernels/distance.py#L151-L175)
 
+A follow-up holds training at 3,072 rows and [varies width across the 32-feature routing gate](../knn-feature-sweep/README.md).
+
 ## Workload and timing design
 
 All cases start from one seed-42, 16,384-row synthetic binary dataset with 32 features and a fixed 75/25 split. The training sizes 1,536, 3,072, and 8,192 are prefixes of the same unscaled training split. Each prefix gets its own training-only standardization. The query batches are prefixes of the same held-out rows, standardized using the corresponding training prefix. Training is byte-identical across query sizes within each group. The 3,072-row reference is drawn from this new shared split. Its data differ from the earlier [single-training-size sweep](../knn-warm/README.md). All cases use Euclidean distance, uniform voting and k=5.

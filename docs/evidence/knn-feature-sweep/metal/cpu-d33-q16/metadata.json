@@ -1,0 +1,94 @@
+{
+  "case": "knn-16384x33-c2-k5-t3072-s33-q16",
+  "mode": "cpu",
+  "reuse_model": true,
+  "requested_device": "cpu",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          3072,
+          33
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "kneighbors",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          16,
+          33
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "96c65b8eef9fc7da11a8d726d22f6b9c63141634d9f6901286ce8f1a08738366",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_neighbors": 5,
+    "algorithm": "brute",
+    "metric": "euclidean",
+    "weights": "uniform",
+    "n_jobs": 4
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.8125,
+    "candidate_accuracy": 0.8125,
+    "agreement": 1.0,
+    "probability_mae": 3.72529029152302e-09,
+    "probability_max": 2.384185793236071e-08
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "training_sha256": "b628b1c2d74bf06914746e6e7edc79a32709dc8919d3b83ab3c4b293ce1722a0",
+  "timing_run_ids": [
+    "20261115T080524130175Z-8a9abbeaa2",
+    "20261115T080650712551Z-8a9abbeaa2"
+  ]
+}
