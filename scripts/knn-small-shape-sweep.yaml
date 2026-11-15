@@ -1,0 +1,12 @@
+seed: 42
+threads: 4
+repeats: 15
+warmups: 1
+reuse_model: true
+cases:
+  - {algorithm: knn, samples: 16384, features: 32, source_features: 33, neighbors: 8, train_rows: 2047, query_rows: 128}
+  - {algorithm: knn, samples: 16384, features: 32, source_features: 33, neighbors: 8, train_rows: 2048, query_rows: 128}
+  - {algorithm: knn, samples: 16384, features: 32, source_features: 33, neighbors: 8, train_rows: 2049, query_rows: 128}
+  - {algorithm: knn, samples: 16384, features: 32, source_features: 33, neighbors: 8, train_rows: 2048, query_rows: 255}
+  - {algorithm: knn, samples: 16384, features: 32, source_features: 33, neighbors: 8, train_rows: 2048, query_rows: 256}
+  - {algorithm: knn, samples: 16384, features: 32, source_features: 33, neighbors: 8, train_rows: 2048, query_rows: 257}
