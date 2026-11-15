@@ -139,6 +139,8 @@ def run(request: dict[str, Any], output: Path) -> None:
                     partial(xgb.train, parameters, train_matrix, num_boost_round=request["rounds"]),
                     trace=index == 1,
                 )
+                if booster.num_boosted_rounds() != request["rounds"]:
+                    raise RuntimeError("Trained booster has a different number of rounds")
                 first, first_prediction = measure(predict, no_sync)
                 if index > 0:
                     predictions.append(first.copy())

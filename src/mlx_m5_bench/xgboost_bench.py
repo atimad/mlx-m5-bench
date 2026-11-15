@@ -232,6 +232,11 @@ def run(
                     comparisons.append(
                         {**block, "repetition": index, **quality(task, data.y_test, cpu, metal)}
                     )
+                write_json(output / "correctness.json", comparisons)
+        except BaseException:
+            experiment["state"] = "interrupted"
+            write_json(output / "manifest.json", experiment)
+            raise
         finally:
             data_path.unlink()
 
@@ -257,7 +262,6 @@ def run(
         if probe is None
     ]
     write_json(output / "summary.json", summary)
-    write_json(output / "correctness.json", comparisons)
     experiment["state"] = "complete"
     write_json(output / "manifest.json", experiment)
     return all(row["status"] == "PASS" for row in comparisons)
