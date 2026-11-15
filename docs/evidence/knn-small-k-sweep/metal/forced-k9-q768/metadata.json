@@ -1,0 +1,96 @@
+{
+  "case": "knn-16384x32-c2-k9-t3072-s33-q768",
+  "mode": "forced",
+  "reuse_model": true,
+  "requested_device": "gpu",
+  "force_backend": "mlx",
+  "routing": {
+    "fit": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "forced",
+        "detail": "",
+        "shape": [
+          3072,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "kneighbors",
+        "backend": "mlx",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          768,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "18fb95e0332b548d8c1a47f36912608e6527cf50df6a013cdf2e5dc857cac1fa",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_neighbors": 9,
+    "algorithm": "brute",
+    "metric": "euclidean",
+    "weights": "uniform",
+    "n_jobs": 4
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.9153645833333334,
+    "candidate_accuracy": 0.9153645833333334,
+    "agreement": 1.0,
+    "probability_mae": 5.209585660971051e-09,
+    "probability_max": 2.6490953208835322e-08
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 1,
+      "sum_gpu_buffer_ms": 1.4924999559298158
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "prediction_search_path": "fused_screen",
+  "prediction_dispatch_count": 5,
+  "training_sha256": "66a195c88bf61c5e3fcf276898f984c76a2fca04b72069f56bbcaffc2eff000b",
+  "timing_run_ids": [
+    "20261115T102217277148Z-70ec8a7205",
+    "20261115T102618420055Z-70ec8a7205"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "case": "knn-16384x32-c2-k9-t3072-s33-q32",
+  "mode": "cpu",
+  "reuse_model": true,
+  "requested_device": "cpu",
+  "force_backend": null,
+  "routing": {
+    "fit": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "fit",
+        "backend": "cpu",
+        "reason": "selected",
+        "detail": "",
+        "shape": [
+          3072,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "kneighbors",
+        "backend": "cpu",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          32,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "198bc69bc5680b02defcd966fd89ea21a6b7d1ae0410632b7280b9a5dd226d29",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_neighbors": 9,
+    "algorithm": "brute",
+    "metric": "euclidean",
+    "weights": "uniform",
+    "n_jobs": 4
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.90625,
+    "candidate_accuracy": 0.90625,
+    "agreement": 1.0,
+    "probability_mae": 3.725290305400808e-09,
+    "probability_max": 2.6490953208835322e-08
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "prediction_search_path": "cpu",
+  "prediction_dispatch_count": 0,
+  "training_sha256": "66a195c88bf61c5e3fcf276898f984c76a2fca04b72069f56bbcaffc2eff000b",
+  "timing_run_ids": [
+    "20261115T102322476663Z-367fb75607",
+    "20261115T102450319604Z-367fb75607"
+  ]
+}
