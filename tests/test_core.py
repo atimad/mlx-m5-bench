@@ -383,3 +383,10 @@ def test_knn_query_prefix_preserves_training_set():
         Case.model_validate({**common, "query_rows": 26})
     with pytest.raises(ValidationError, match="query_rows"):
         Case.model_validate({**common, "algorithm": "svc", "query_rows": 4})
+
+
+def test_explicit_mlx_cpu_profile():
+    case = Case(algorithm="knn", samples=100, features=8)
+    assert Profile(repeats=1, cases=[case], force_mlx=False, mlx_device="cpu").mlx_device == "cpu"
+    with pytest.raises(ValidationError, match="force_mlx requires mlx_device=gpu"):
+        Profile(repeats=1, cases=[case], mlx_device="cpu")

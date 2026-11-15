@@ -52,13 +52,13 @@ class Profile(Settings):
     threads: Annotated[int, Field(ge=1, le=128)] = 4
     timeout_s: Positive = 180
     force_mlx: bool = True
-    mlx_device: Literal["gpu", "auto"] = "gpu"
+    mlx_device: Literal["gpu", "auto", "cpu"] = "gpu"
     cases: Annotated[list[Case], Field(min_length=1)]
 
     @model_validator(mode="after")
     def unique_cases(self) -> Self:
-        if self.force_mlx and self.mlx_device == "auto":
-            raise ValueError("automatic device selection requires force_mlx=false")
+        if self.force_mlx and self.mlx_device != "gpu":
+            raise ValueError("force_mlx requires mlx_device=gpu")
         if len({case.key for case in self.cases}) != len(self.cases):
             raise ValueError("duplicate workload")
         return self

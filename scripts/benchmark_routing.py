@@ -21,6 +21,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path)
     parser.add_argument("--config", type=Path, help="Use a custom workload profile")
+    parser.add_argument("--with-mlx-cpu", action="store_true", help="Include explicit MLX CPU")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     cases = {case.key: case for name in ("standard", "full") for case in load_profile(name).cases}
@@ -29,11 +30,12 @@ def main() -> None:
         if args.config
         else Profile(cases=[cases[key] for key in CASE_KEYS], repeats=5, warmups=1)
     )
-    for block, mode in enumerate(("auto", "forced", "forced", "auto"), start=1):
+    modes = ("auto", "forced", "cpu") if args.with_mlx_cpu else ("auto", "forced")
+    for block, mode in enumerate((*modes, *reversed(modes)), start=1):
         profile = Profile(
             **base.model_dump(exclude={"force_mlx", "mlx_device"}),
             force_mlx=mode == "forced",
-            mlx_device="auto" if mode == "auto" else "gpu",
+            mlx_device="gpu" if mode == "forced" else mode,
         )
         print(run(profile, f"routing-{block}-{mode}", args.output), flush=True)
 

@@ -93,7 +93,7 @@ def main() -> None:
     parser.add_argument("--config", type=Path, help="Use a custom workload profile")
     parser.add_argument("output", type=Path)
     parser.add_argument("probe", type=Path)
-    parser.add_argument("--mode", choices=("forced", "auto"), default="forced")
+    parser.add_argument("--mode", choices=("forced", "auto", "cpu"), default="forced")
     parser.add_argument(
         "--completion-only",
         action="store_true",
@@ -105,9 +105,9 @@ def main() -> None:
     override = os.environ.get("MLXLEARN_FORCE_BACKEND")
     if args.mode == "forced" and override != "mlx":
         parser.error("Set MLXLEARN_FORCE_BACKEND=mlx for forced mode")
-    if args.mode == "auto" and override is not None:
-        parser.error("Unset MLXLEARN_FORCE_BACKEND for auto mode")
-    device = "auto" if args.mode == "auto" else "gpu"
+    if args.mode != "forced" and override is not None:
+        parser.error("Unset MLXLEARN_FORCE_BACKEND for auto and CPU modes")
+    device = "gpu" if args.mode == "forced" else args.mode
     args.output.mkdir(parents=True, exist_ok=False)
     probe = ctypes.CDLL(str(args.probe.resolve()))
     probe.trace_begin.argtypes = [ctypes.c_char_p]
