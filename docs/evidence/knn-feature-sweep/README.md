@@ -12,6 +12,8 @@ A two-pass win requires a lower median than the corresponding CPU baseline in bo
 
 The pinned routing rule admits the small CPU query when features and k are both at most 32, query rows are at most four, and the training/query product is at most 16,384. The separate 33–64-feature CPU path requires at most 2,048 training rows. All cases here have 3,072 training rows, so at 33 features the small-query CPU routes do not apply. [Pinned routing source](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/_kernels/distance.py#L151-L175)
 
+A follow-up reuses the exact 32-feature inputs and [varies k across 31, 32 and 33](../knn-neighbor-sweep/README.md).
+
 ## Workload and timing design
 
 A single seed-42, 16,384-row synthetic binary dataset provides 33 source columns and a fixed 75/25 split. The same 3,072 training rows and the same query prefixes are used across widths. Cases take the first 31, 32, or 33 columns. Shared standardized columns, labels, and row order are byte-identical. Scaling is fitted on those 3,072 training rows. This creates a new shared-source 32-feature reference, distinct from the earlier [training-size sweep](../knn-training-sweep/README.md). All modes use five neighbors, Euclidean distance and uniform voting.
