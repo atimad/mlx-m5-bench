@@ -170,6 +170,10 @@ On the M5 Pro, with 75,000 training rows, 25,000 held-out rows, and 32 features 
 
 With 32 features and a fixed 25,000-row prediction batch, Metal first beat CPU training in both passes at 464 rows for classification and 208 for regression. CPU won every pass at the preceding tested sizes, 448 and 192, respectively. Metal already won warmed prediction at three training rows for both tasks and won at every larger tested size. All 384 benchmark pairs and 20 Metal replay pairs passed the quality checks. The traces verified GPU work during training and prediction, including on both sides of the training crossovers. [Full sweep, speedup plot, and Metal traces](evidence/xgboost-training-sweep/README.md)
 
+## XGBoost prediction-batch scaling
+
+At 75,000 training rows and 32 features, Metal first beat four-thread CPU XGBoost in all measured passes at 3,360 queries for both workloads. It won every pass at 3,648 and above for classification and 3,424 and above for regression on the tested grid. Metal dispatches changed from the ordinary prediction kernel to tree-cached traversal at 512 queries, while CPU was still faster there. Separate traces verified GPU prediction at all 15 replayed sizes per task and zero GPU submissions in the CPU controls. [Full sweep, speedup plot, and Metal traces](evidence/xgboost-query-sweep/README.md)
+
 ## Reproduce
 
 Run uv sync --locked --extra dashboard, then mlx-m5-bench doctor, mlx-m5-bench run --profile quick, --profile standard and --profile full through uv run. The packaged profiles and committed lock specify the inputs and dependencies. Every run writes fresh timings. Independent traces for other workloads remain open.

@@ -1,4 +1,5 @@
 import json
+from io import StringIO
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -87,3 +88,28 @@ def test_training_size_sweep_keeps_the_test_batch_fixed(tmp_path, monkeypatch):
     assert {(r["task"], r["train_rows"], r["engine"]) for r in summary} == {
         (task, size, engine) for task in source for size in (20, 40) for engine in interpreters
     }
+
+
+def test_prediction_size_sweep_uses_prefixes_and_checks_warmed_outputs():
+    test = np.arange(8).reshape(4, 2)
+    calls = []
+
+    def predict(batch):
+        np.testing.assert_array_equal(batch, test[: len(batch)])
+        calls.append(len(batch))
+        return batch.sum(axis=1)
+
+    stream = StringIO()
+    full_prediction = test.sum(axis=1)
+    xgboost_worker.predict_batches(predict, test, full_prediction, [4, 1], 3, stream, None)
+    assert calls == [4] * 5 + [1] * 5
+    assert [json.loads(line)["query_rows"] for line in stream.getvalue().splitlines()] == [
+        4,
+        4,
+        4,
+        1,
+        1,
+        1,
+    ]
+    with pytest.raises(AssertionError):
+        xgboost_worker.predict_batches(predict, test, full_prediction + 1, [1], 1, stream, None)

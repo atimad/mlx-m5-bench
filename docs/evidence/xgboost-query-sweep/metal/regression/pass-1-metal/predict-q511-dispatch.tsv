@@ -1,0 +1,3 @@
+dispatch	pipeline	grid	threads_per_group
+threadgroups	ingest_contiguous_f32	16x1x1	256x1x1
+threadgroups	predict	2x1x1	256x1x1
