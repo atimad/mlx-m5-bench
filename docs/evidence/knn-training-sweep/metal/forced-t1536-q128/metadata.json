@@ -1,0 +1,94 @@
+{
+  "case": "knn-16384x32-c2-k5-t1536-q128",
+  "mode": "forced",
+  "reuse_model": true,
+  "requested_device": "gpu",
+  "force_backend": "mlx",
+  "routing": {
+    "fit": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "forced",
+        "detail": "",
+        "shape": [
+          1536,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "kneighbors",
+        "backend": "mlx",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          128,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "ccc696e81fa3589f6da789d80821239bdc5ded9ff19722cfe449ad4780274ea6",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_neighbors": 5,
+    "algorithm": "brute",
+    "metric": "euclidean",
+    "weights": "uniform",
+    "n_jobs": 4
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.8359375,
+    "candidate_accuracy": 0.8359375,
+    "agreement": 1.0,
+    "probability_mae": 5.064066490581207e-09,
+    "probability_max": 2.384185793236071e-08
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 1,
+      "sum_gpu_buffer_ms": 0.1616250374354422
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "training_sha256": "b05776daf9243ce95aa45156cc92d20fd7df68eb758c950bd56ffef03147411a",
+  "timing_run_ids": [
+    "20261115T074005934043Z-e15e84ef8d",
+    "20261115T074403013824Z-e15e84ef8d"
+  ]
+}

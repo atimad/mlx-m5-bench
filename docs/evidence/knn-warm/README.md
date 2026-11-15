@@ -6,6 +6,8 @@ Automatic mode still used its separate host path through four rows. At four rows
 
 Against scikit-learn, the broad warmed sweep found two-pass wins at 384 and 512 rows for forced GPU, with a split automatic result at each. The separate 384-row refinement produced split or losing results against scikit-learn. Both GPU modes beat scikit-learn in both broad-sweep passes at 768 and 1,024 rows. These are observed bounds for the tested workload and runtime conditions. Each mode has two blocks, so the study does not estimate a confidence interval or a general crossover.
 
+A follow-up compares [three nested training-set sizes at the same feature count and k](../knn-training-sweep/README.md).
+
 ## Workload and method
 
 The broad sweep, refinement and small-batch profiles repeat the same 21 distinct query sizes and all dataset fingerprints from the [first-prediction panel](../knn-explicit-cpu/README.md). Training is fixed at 3,072 rows with 32 float32 features, binary labels, Euclidean distance, uniform voting and k=5. Query batches are ordered prefixes of the same held-out split.

@@ -87,6 +87,10 @@ On the same 3,072-row training set, forced GPU beat explicit MLX CPU in both pas
 
 With one fitted model reused per batch size, forced GPU lost to pinned MLX CPU at three rows (0.645 vs 0.547 ms) and won at four (0.669 vs 0.784 ms). It won both passes at all larger tested sizes. Auto's host path was still fastest at four rows and Metal confirmed its switch to GPU at five. Against scikit-learn, both GPU modes won both broad-sweep passes at 768 and 1,024 rows. At smaller sizes the result depended on mode and block. [Full timing sweep, block-level comparisons and warmed Metal traces](evidence/knn-warm/README.md)
 
+## KNN warmed crossover across training sizes
+
+With nested training sets of 1,536, 3,072 and 8,192 rows at 32 features and k=5, forced GPU first beat pinned MLX CPU in both passes at batches of 12, five and two queries, respectively. Auto's verified GPU routing started at five, five and three queries. Against scikit-learn, the first tested batches where both GPU modes won both passes were 768, 768 and 256 queries. All 3,960 timing pairs and 126 warmed Metal replay comparisons passed numerical checks. [Training-size sweep, refinement and complete evidence](evidence/knn-training-sweep/README.md)
+
 ## KNN fit and index construction
 
 No Metal command buffers were submitted during fit for the 8,000 × 128 and 30,000 × 64 workloads. The first predictions on those fresh models completed one and seven GPU buffers, respectively. Fit owns and stages the training arrays. Search and any lazy query preparation are measured with prediction. All observed labels matched scikit-learn. [Fit traces, first-query traces, and controls](evidence/metal-knn-fit/README.md)
