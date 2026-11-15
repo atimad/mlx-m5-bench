@@ -1,0 +1,3598 @@
+{
+  "system": "Darwin",
+  "machine": "arm64",
+  "os_version": "27.2.1",
+  "logical_cpu": 15,
+  "physical_cpu": 15,
+  "memory_bytes": 25769803776,
+  "available_memory_bytes": 10075668480,
+  "load_average": [
+    3.52783203125,
+    2.76806640625,
+    1.87646484375
+  ],
+  "python": "3.13.18",
+  "dependencies": {
+    "uvicorn": "0.54.0",
+    "scikit-learn": "1.9.1",
+    "mlx": "0.32.4",
+    "cloudpickle": "3.1.2",
+    "kiwisolver": "1.5.1",
+    "starlette": "1.10.0",
+    "pandas": "3.1.1",
+    "streamlit": "1.67.0",
+    "packaging": "26.3",
+    "narwhals": "2.28.0",
+    "joblib": "1.6.0",
+    "protobuf": "7.36.2",
+    "websockets": "17.4",
+    "Pygments": "2.21.0",
+    "jsonschema-specifications": "2025.9.1",
+    "requests": "2.34.2",
+    "certifi": "2026.10.23",
+    "jsonschema": "4.26.0",
+    "pydantic": "2.14.3",
+    "itsdangerous": "2.2.0",
+    "click": "8.5.1",
+    "iniconfig": "2.3.1",
+    "pyarrow": "26.0.1",
+    "ruff": "0.17.5",
+    "numpy": "2.5.4",
+    "types-PyYAML": "6.0.12.20261113",
+    "pydantic_core": "2.50.4",
+    "pillow": "13.0.0",
+    "contourpy": "1.4.0",
+    "pluggy": "1.7.0",
+    "typing-inspection": "0.4.5",
+    "urllib3": "2.8.0",
+    "mypy_extensions": "1.2.0",
+    "h11": "0.16.0",
+    "mlx-metal": "0.32.4",
+    "PyYAML": "6.0.3",
+    "altair": "6.3.0",
+    "matplotlib": "3.11.2",
+    "pydeck": "0.9.3",
+    "pytest": "9.2.0",
+    "cycler": "0.12.1",
+    "Jinja2": "3.1.6",
+    "annotated-types": "0.8.0",
+    "referencing": "0.37.0",
+    "fonttools": "4.68.0",
+    "tzdata": "2026.6",
+    "rpds-py": "2026.9.1",
+    "ast_serialize": "0.13.1",
+    "anyio": "4.16.0",
+    "attrs": "26.1.0",
+    "pathspec": "1.1.1",
+    "librt": "0.16.0",
+    "python-multipart": "0.0.33",
+    "typing_extensions": "4.16.0",
+    "MarkupSafe": "3.0.4",
+    "python-dateutil": "4.0.0",
+    "psutil": "7.2.2",
+    "threadpoolctl": "3.8.0",
+    "mypy": "2.4.1",
+    "charset-normalizer": "3.5.2",
+    "pyparsing": "3.3.3",
+    "scipy": "1.18.1",
+    "mlx-learn": "0.1.2",
+    "idna": "3.20",
+    "mlx-m5-bench": "0.1.0"
+  },
+  "numpy_build": {
+    "Compilers": {
+      "c": {
+        "name": "clang",
+        "linker": "ld64",
+        "version": "15.0.0",
+        "commands": "cc"
+      },
+      "cython": {
+        "name": "cython",
+        "linker": "cython",
+        "version": "3.3.0",
+        "commands": "cython"
+      },
+      "c++": {
+        "name": "clang",
+        "linker": "ld64",
+        "version": "15.0.0",
+        "commands": "c++"
+      }
+    },
+    "Machine Information": {
+      "host": {
+        "cpu": "aarch64",
+        "family": "aarch64",
+        "endian": "little",
+        "system": "darwin"
+      },
+      "build": {
+        "cpu": "aarch64",
+        "family": "aarch64",
+        "endian": "little",
+        "system": "darwin"
+      }
+    },
+    "Build Dependencies": {
+      "blas": {
+        "name": "accelerate",
+        "found": true,
+        "version": "unknown",
+        "detection method": "system",
+        "include directory": "unknown",
+        "lib directory": "unknown",
+        "openblas configuration": "unknown",
+        "pc file directory": "unknown"
+      },
+      "lapack": {
+        "name": "accelerate",
+        "found": true,
+        "version": "unknown",
+        "detection method": "system",
+        "include directory": "unknown",
+        "lib directory": "unknown",
+        "openblas configuration": "unknown",
+        "pc file directory": "unknown"
+      }
+    },
+    "Python Information": {
+      "path": "<temporary-path>",
+      "version": "3.13"
+    },
+    "SIMD Extensions": {
+      "baseline": [
+        "NEON",
+        "NEON_FP16",
+        "NEON_VFPV4",
+        "ASIMD"
+      ],
+      "found": [
+        "ASIMDHP",
+        "ASIMDDP"
+      ],
+      "not found": [
+        "ASIMDFHM"
+      ]
+    }
+  },
+  "threadpools": [
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 15,
+      "prefix": "libomp",
+      "filepath": "/Users/REDACTED/repos/mlx-m5-bench/.venv/lib/python3.13/site-packages/sklearn/.dylibs/libomp.dylib",
+      "version": null
+    }
+  ],
+  "thread_environment": {},
+  "git_commit": "b4786d1b254476cde69a3b80aebfdb8e3dfe43ef",
+  "git_dirty": false,
+  "os_build": "26B131",
+  "chip": "Apple M5 Pro",
+  "cpu_topology": "hw.perflevel0.physicalcpu: 5\nhw.perflevel1.physicalcpu: 10",
+  "gpu_cores": 16,
+  "metal": "Metal 4",
+  "power": [
+    "Now drawing from 'AC Power'"
+  ],
+  "thermal": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded",
+  "experiment": "xgboost",
+  "mode": "metal_trace",
+  "seed": 42,
+  "threads": 4,
+  "samples": 100000,
+  "train_sizes": [
+    75000
+  ],
+  "query_rows": 25000,
+  "boosting_rounds": 100,
+  "fit_repeats_per_block": 1,
+  "predict_repeats_per_block": 1,
+  "quality_thresholds": {
+    "classification": {
+      "log_loss": 0.02,
+      "roc_auc": 0.01
+    },
+    "regression": {
+      "rmse": 0.05
+    }
+  },
+  "blocks": [
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 32,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "9b15d2f71bd23ee92561ef5099ea8fa7a84948490598bf7edbdd02eba387b29c",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 160399360,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 32,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "9b15d2f71bd23ee92561ef5099ea8fa7a84948490598bf7edbdd02eba387b29c",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 106938368,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 33,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "ce2d176ee3025ca8c5ab421a42f3d1ac43785a48002fe2557a9a809c4965de21",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 162349056,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 33,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "ce2d176ee3025ca8c5ab421a42f3d1ac43785a48002fe2557a9a809c4965de21",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 107315200,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 48,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "7138dbccb46bfe858e238e09d903b4ab19850ef69e1993a6286da6259d54a3ac",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 196689920,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 48,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "7138dbccb46bfe858e238e09d903b4ab19850ef69e1993a6286da6259d54a3ac",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 113229824,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 64,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "8934b1da992255ac35b5d67f381b11c3f24f09245be9ed3d48cb75c5dbf4476f",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 231063552,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 64,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "8934b1da992255ac35b5d67f381b11c3f24f09245be9ed3d48cb75c5dbf4476f",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 119635968,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 96,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "e17f7fba7980147547f149d9de4906c7cc6cdec841d6319b27173df7fd358ba4",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 306069504,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 96,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "e17f7fba7980147547f149d9de4906c7cc6cdec841d6319b27173df7fd358ba4",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 132513792,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 128,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "fbc2ff3dea055642a3abdd17b80e15466a22315a4c929f909309ebd43a726f92",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 375619584,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 128,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "fbc2ff3dea055642a3abdd17b80e15466a22315a4c929f909309ebd43a726f92",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 145358848,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 192,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "eca7a49de71653e4fcb5911fc54706a62945b4b41a2cbc8c25b9674c2b482347",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 520323072,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 192,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "eca7a49de71653e4fcb5911fc54706a62945b4b41a2cbc8c25b9674c2b482347",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 171081728,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 256,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "3cd35f746408485b6a0672718b5edc9f21d4095c8b4477edfc3e2f18c76b5688",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 667025408,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 256,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "3cd35f746408485b6a0672718b5edc9f21d4095c8b4477edfc3e2f18c76b5688",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 196722688,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 384,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "69d432c1e0c200bbfa5699f923b52c27ad8c65719db136c4a792e69c5d8255d2",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 956645376,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 384,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "69d432c1e0c200bbfa5699f923b52c27ad8c65719db136c4a792e69c5d8255d2",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 247873536,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 512,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "65f350b5dc675f1bf49649756241f79efe5cb1e12cbb6d246cb14df5f849e5b4",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 1249771520,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "classification",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 512,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "65f350b5dc675f1bf49649756241f79efe5cb1e12cbb6d246cb14df5f849e5b4",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "binary:logistic",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 299122688,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1520,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 3,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached",
+            "transform_copy"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 32,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "008a7988a2a2a5c2778a84d7ae10c08757a091706845f6c97a79ca023f313fcf",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 158941184,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 32,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "008a7988a2a2a5c2778a84d7ae10c08757a091706845f6c97a79ca023f313fcf",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 106299392,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 33,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "b808ccf4aec11425fd398eaa760db612cf6b6a42e78d9ec0240de80ac7522d52",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 161693696,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 33,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "b808ccf4aec11425fd398eaa760db612cf6b6a42e78d9ec0240de80ac7522d52",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 106594304,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 48,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "d7fa34d1a0522d01e62241095392ce15665616c087da11a056059149c607f23b",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 195526656,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 48,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "d7fa34d1a0522d01e62241095392ce15665616c087da11a056059149c607f23b",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 112607232,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 64,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "c3a91aa14e40ea0923bb6a887864d110e800624031758339c252990b9e49a061",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 231522304,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 64,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "c3a91aa14e40ea0923bb6a887864d110e800624031758339c252990b9e49a061",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 119013376,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 96,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "4ed59f4fd34ae882caca8f01ae1b563b3e7fbb96c331f81a2df2ef8b2c428a0c",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 306331648,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 96,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "4ed59f4fd34ae882caca8f01ae1b563b3e7fbb96c331f81a2df2ef8b2c428a0c",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 131858432,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 128,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "ebd031c6e6a17ae7e647f1d3a0ee5c378b8cfd1314520a188664996aa0373989",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 376111104,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 128,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "ebd031c6e6a17ae7e647f1d3a0ee5c378b8cfd1314520a188664996aa0373989",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 144637952,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 192,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "a3e9c18ae60331b9e2d8f118368f0a842ef8076c2b3fad6aa7c2dacb854601f5",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 520372224,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 192,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "a3e9c18ae60331b9e2d8f118368f0a842ef8076c2b3fad6aa7c2dacb854601f5",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 170295296,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 256,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "1e68a60c77907afd6af5b1cf443b78cd3c882ca8cbc6a5b3ddfc448a7700c961",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 667910144,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 256,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "1e68a60c77907afd6af5b1cf443b78cd3c882ca8cbc6a5b3ddfc448a7700c961",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 196050944,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 384,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "2076bedb56edb9586dd4fb97421767d24954b3bbaef80d09d536cef1c4b6b5b4",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 960299008,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 384,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "2076bedb56edb9586dd4fb97421767d24954b3bbaef80d09d536cef1c4b6b5b4",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 248070144,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 512,
+      "engine": "cpu",
+      "backend": "CPU_BASELINE",
+      "distribution": "xgboost",
+      "distribution_version": "3.4.1",
+      "api_version": "3.4.1",
+      "build": {
+        "BUILTIN_PREFETCH_PRESENT": true,
+        "CLANG_VERSION": [
+          15,
+          0,
+          0
+        ],
+        "DEBUG": false,
+        "MM_PREFETCH_PRESENT": false,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_FEDERATED": false,
+        "USE_NCCL": false,
+        "USE_OPENMP": true,
+        "USE_RMM": false
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "7f59e21616ca2809bd8ecaca825035bf10ce6c014e172bfb0ebaa413f8b95b37",
+      "threadpools": [
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 4,
+          "prefix": "libomp",
+          "filepath": "/opt/homebrew/Cellar/libomp/23.1.5/lib/libomp.dylib",
+          "version": null
+        }
+      ],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "cpu",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 1247051776,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        },
+        "predict": {
+          "completed_buffers": 0,
+          "dispatches": 0,
+          "devices": [],
+          "pipelines": []
+        }
+      }
+    },
+    {
+      "task": "regression",
+      "train_rows": 75000,
+      "pass": 1,
+      "features": 512,
+      "engine": "metal",
+      "backend": "GPU_VERIFIED",
+      "distribution": "xgboost-metal",
+      "distribution_version": "0.1.1",
+      "api_version": "3.5.0-dev",
+      "build": {
+        "BACKEND": "metal",
+        "BUILTIN_PREFETCH_PRESENT": false,
+        "DEBUG": false,
+        "METAL_DEVICE": "Apple M5 Pro",
+        "METAL_MAX_BUFFER_LENGTH": 14302248960,
+        "METAL_MAX_THREADGROUP_MEMORY": 32768,
+        "METAL_RECOMMENDED_WORKING_SET": 19069665280,
+        "METAL_UNIFIED_MEMORY": true,
+        "USE_CUDA": false,
+        "USE_DLOPEN_NCCL": false,
+        "USE_METAL": true,
+        "USE_NCCL": false,
+        "USE_OPENMP": false,
+        "USE_RMM": false,
+        "XGBOOST_REFERENCE": "6d2dbe19a099aa046178be8cfc303bfec1a623a6"
+      },
+      "python": "3.13.18",
+      "numpy": "2.5.4",
+      "dataset_sha256": "7f59e21616ca2809bd8ecaca825035bf10ce6c014e172bfb0ebaa413f8b95b37",
+      "threadpools": [],
+      "parameters": {
+        "tree_method": "hist",
+        "max_depth": 6,
+        "max_bin": 256,
+        "eta": 0.1,
+        "min_child_weight": 1,
+        "lambda": 1,
+        "alpha": 0,
+        "gamma": 0,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "seed": 42,
+        "objective": "reg:squarederror",
+        "device": "metal",
+        "nthread": 4
+      },
+      "process_peak_rss_bytes": 299155456,
+      "metal_trace": {
+        "train": {
+          "completed_buffers": 206,
+          "dispatches": 1720,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "base_finalize",
+            "base_partial",
+            "base_reduce",
+            "fill_zero",
+            "gradient_partial_sums",
+            "gradient_scales",
+            "gradients",
+            "histogram_unit_hessian_check",
+            "pack_histogram_bins",
+            "predict",
+            "quantize",
+            "quantize_gradients",
+            "sketch_cut_carries",
+            "sketch_cut_gather",
+            "sketch_cut_queries",
+            "sketch_input_blocks",
+            "sketch_input_compact",
+            "sketch_input_offsets",
+            "sketch_input_runs",
+            "sketch_merge_sorted",
+            "sketch_reduce_parallel",
+            "sketch_sort_blocks",
+            "sketch_summarize",
+            "tree_driver_applied_statistics",
+            "tree_driver_apply_prepare_parallel",
+            "tree_driver_init_prepare_parallel",
+            "tree_rows_init"
+          ]
+        },
+        "predict": {
+          "completed_buffers": 2,
+          "dispatches": 2,
+          "devices": [
+            "Apple M5 Pro"
+          ],
+          "pipelines": [
+            "ingest_contiguous_f32",
+            "predict_tree_cached"
+          ]
+        }
+      }
+    }
+  ],
+  "state": "complete",
+  "base_features": 32,
+  "feature_counts": [
+    32,
+    33,
+    48,
+    64,
+    96,
+    128,
+    192,
+    256,
+    384,
+    512
+  ]
+}

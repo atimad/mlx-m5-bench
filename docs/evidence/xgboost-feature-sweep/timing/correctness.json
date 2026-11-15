@@ -1,0 +1,2222 @@
+[
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 32,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 32,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 32,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 32,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 32,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 32,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 33,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606495344682
+    },
+    "metal": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606463344683
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 3.19999993170228e-09
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 33,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606495344682
+    },
+    "metal": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606463344683
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 3.19999993170228e-09
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 33,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606495344682
+    },
+    "metal": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606463344683
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 3.19999993170228e-09
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 33,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606495344682
+    },
+    "metal": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606463344683
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 3.19999993170228e-09
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 33,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606495344682
+    },
+    "metal": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606463344683
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 3.19999993170228e-09
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 33,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606495344682
+    },
+    "metal": {
+      "log_loss": 0.13063012063503265,
+      "roc_auc": 0.9897606463344683
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 3.19999993170228e-09
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 48,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376539
+    },
+    "metal": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376541
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 48,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376539
+    },
+    "metal": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376541
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 48,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376539
+    },
+    "metal": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376541
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 48,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376539
+    },
+    "metal": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376541
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 48,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376539
+    },
+    "metal": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376541
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 48,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376539
+    },
+    "metal": {
+      "log_loss": 0.12654969096183777,
+      "roc_auc": 0.9902584351376541
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 64,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399874
+    },
+    "metal": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399875
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 64,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399874
+    },
+    "metal": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399875
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 64,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399874
+    },
+    "metal": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399875
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 64,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399874
+    },
+    "metal": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399875
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 64,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399874
+    },
+    "metal": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399875
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 64,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399874
+    },
+    "metal": {
+      "log_loss": 0.12288335710763931,
+      "roc_auc": 0.9906230367399875
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 96,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "metal": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 96,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "metal": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 96,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "metal": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 96,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "metal": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 96,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "metal": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 96,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "metal": {
+      "log_loss": 0.12124189734458923,
+      "roc_auc": 0.990947654342065
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 128,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394625
+    },
+    "metal": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394627
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 128,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394625
+    },
+    "metal": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394627
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 128,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394625
+    },
+    "metal": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394627
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 128,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394625
+    },
+    "metal": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394627
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 128,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394625
+    },
+    "metal": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394627
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 128,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394625
+    },
+    "metal": {
+      "log_loss": 0.12395300716161728,
+      "roc_auc": 0.9905410559394627
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 2.220446049250313e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 192,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396038
+    },
+    "metal": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396037
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 192,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396038
+    },
+    "metal": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396037
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 192,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396038
+    },
+    "metal": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396037
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 192,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396038
+    },
+    "metal": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396037
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 192,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396038
+    },
+    "metal": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396037
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 192,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396038
+    },
+    "metal": {
+      "log_loss": 0.12305384874343872,
+      "roc_auc": 0.9905630879396037
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 256,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.9901457983369331
+    },
+    "metal": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.990145798336933
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 256,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.9901457983369331
+    },
+    "metal": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.990145798336933
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 256,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.9901457983369331
+    },
+    "metal": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.990145798336933
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 256,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.9901457983369331
+    },
+    "metal": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.990145798336933
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 256,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.9901457983369331
+    },
+    "metal": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.990145798336933
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 256,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.9901457983369331
+    },
+    "metal": {
+      "log_loss": 0.1277732253074646,
+      "roc_auc": 0.990145798336933
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 384,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.99020934713734
+    },
+    "metal": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.9902093471373399
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 384,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.99020934713734
+    },
+    "metal": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.9902093471373399
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 384,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.99020934713734
+    },
+    "metal": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.9902093471373399
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 384,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.99020934713734
+    },
+    "metal": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.9902093471373399
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 384,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.99020934713734
+    },
+    "metal": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.9902093471373399
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 384,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.99020934713734
+    },
+    "metal": {
+      "log_loss": 0.12779755890369415,
+      "roc_auc": 0.9902093471373399
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 512,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "metal": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 512,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "metal": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 512,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "metal": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 512,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "metal": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 512,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "metal": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "classification",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 512,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "metal": {
+      "log_loss": 0.1289810687303543,
+      "roc_auc": 0.990082035136525
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 32,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 32,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 32,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 32,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 32,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 32,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 33,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0636132955551147
+    },
+    "metal": {
+      "rmse": 1.0636132955551147
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 33,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0636132955551147
+    },
+    "metal": {
+      "rmse": 1.0636132955551147
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 33,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0636132955551147
+    },
+    "metal": {
+      "rmse": 1.0636132955551147
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 33,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0636132955551147
+    },
+    "metal": {
+      "rmse": 1.0636132955551147
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 33,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0636132955551147
+    },
+    "metal": {
+      "rmse": 1.0636132955551147
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 33,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0636132955551147
+    },
+    "metal": {
+      "rmse": 1.0636132955551147
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 48,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0657380819320679
+    },
+    "metal": {
+      "rmse": 1.0657380819320679
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 48,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0657380819320679
+    },
+    "metal": {
+      "rmse": 1.0657380819320679
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 48,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0657380819320679
+    },
+    "metal": {
+      "rmse": 1.0657380819320679
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 48,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0657380819320679
+    },
+    "metal": {
+      "rmse": 1.0657380819320679
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 48,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0657380819320679
+    },
+    "metal": {
+      "rmse": 1.0657380819320679
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 48,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0657380819320679
+    },
+    "metal": {
+      "rmse": 1.0657380819320679
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 64,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0666978359222412
+    },
+    "metal": {
+      "rmse": 1.0666978359222412
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 64,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0666978359222412
+    },
+    "metal": {
+      "rmse": 1.0666978359222412
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 64,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0666978359222412
+    },
+    "metal": {
+      "rmse": 1.0666978359222412
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 64,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0666978359222412
+    },
+    "metal": {
+      "rmse": 1.0666978359222412
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 64,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0666978359222412
+    },
+    "metal": {
+      "rmse": 1.0666978359222412
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 64,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0666978359222412
+    },
+    "metal": {
+      "rmse": 1.0666978359222412
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 96,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0631588697433472
+    },
+    "metal": {
+      "rmse": 1.0631588697433472
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 96,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0631588697433472
+    },
+    "metal": {
+      "rmse": 1.0631588697433472
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 96,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0631588697433472
+    },
+    "metal": {
+      "rmse": 1.0631588697433472
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 96,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0631588697433472
+    },
+    "metal": {
+      "rmse": 1.0631588697433472
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 96,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0631588697433472
+    },
+    "metal": {
+      "rmse": 1.0631588697433472
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 96,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0631588697433472
+    },
+    "metal": {
+      "rmse": 1.0631588697433472
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 128,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0662449598312378
+    },
+    "metal": {
+      "rmse": 1.0662449598312378
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 128,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0662449598312378
+    },
+    "metal": {
+      "rmse": 1.0662449598312378
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 128,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0662449598312378
+    },
+    "metal": {
+      "rmse": 1.0662449598312378
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 128,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0662449598312378
+    },
+    "metal": {
+      "rmse": 1.0662449598312378
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 128,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0662449598312378
+    },
+    "metal": {
+      "rmse": 1.0662449598312378
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 128,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0662449598312378
+    },
+    "metal": {
+      "rmse": 1.0662449598312378
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 192,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0711779594421387
+    },
+    "metal": {
+      "rmse": 1.0711779594421387
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 192,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0711779594421387
+    },
+    "metal": {
+      "rmse": 1.0711779594421387
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 192,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0711779594421387
+    },
+    "metal": {
+      "rmse": 1.0711779594421387
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 192,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0711779594421387
+    },
+    "metal": {
+      "rmse": 1.0711779594421387
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 192,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0711779594421387
+    },
+    "metal": {
+      "rmse": 1.0711779594421387
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 192,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0711779594421387
+    },
+    "metal": {
+      "rmse": 1.0711779594421387
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 256,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.071787714958191
+    },
+    "metal": {
+      "rmse": 1.071787714958191
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 256,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.071787714958191
+    },
+    "metal": {
+      "rmse": 1.071787714958191
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 256,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.071787714958191
+    },
+    "metal": {
+      "rmse": 1.071787714958191
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 256,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.071787714958191
+    },
+    "metal": {
+      "rmse": 1.071787714958191
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 256,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.071787714958191
+    },
+    "metal": {
+      "rmse": 1.071787714958191
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 256,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.071787714958191
+    },
+    "metal": {
+      "rmse": 1.071787714958191
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 384,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.069639801979065
+    },
+    "metal": {
+      "rmse": 1.069639801979065
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 384,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.069639801979065
+    },
+    "metal": {
+      "rmse": 1.069639801979065
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 384,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.069639801979065
+    },
+    "metal": {
+      "rmse": 1.069639801979065
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 384,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.069639801979065
+    },
+    "metal": {
+      "rmse": 1.069639801979065
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 384,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.069639801979065
+    },
+    "metal": {
+      "rmse": 1.069639801979065
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 384,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.069639801979065
+    },
+    "metal": {
+      "rmse": 1.069639801979065
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 512,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0701189041137695
+    },
+    "metal": {
+      "rmse": 1.0701189041137695
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 512,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0701189041137695
+    },
+    "metal": {
+      "rmse": 1.0701189041137695
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 1,
+    "features": 512,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0701189041137695
+    },
+    "metal": {
+      "rmse": 1.0701189041137695
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 512,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0701189041137695
+    },
+    "metal": {
+      "rmse": 1.0701189041137695
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 512,
+    "repetition": 2,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0701189041137695
+    },
+    "metal": {
+      "rmse": 1.0701189041137695
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  },
+  {
+    "task": "regression",
+    "train_rows": 75000,
+    "pass": 2,
+    "features": 512,
+    "repetition": 3,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0701189041137695
+    },
+    "metal": {
+      "rmse": 1.0701189041137695
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  }
+]

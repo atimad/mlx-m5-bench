@@ -113,3 +113,21 @@ def test_prediction_size_sweep_uses_prefixes_and_checks_warmed_outputs():
     ]
     with pytest.raises(AssertionError):
         xgboost_worker.predict_batches(predict, test, full_prediction + 1, [1], 1, stream, None)
+
+
+@pytest.mark.parametrize("task", ["classification", "regression"])
+def test_feature_sweep_preserves_base_columns_and_nests_noise(task):
+    base = dataset(task, samples=80)
+    narrow = xgboost_bench.with_features(base, 33)
+    wide = xgboost_bench.with_features(base, 48)
+    assert xgboost_bench.with_features(base, 32).fingerprint() == base.fingerprint()
+    assert wide.train.shape == (60, 48)
+    assert wide.test.shape == (20, 48)
+    for split in ("train", "test"):
+        original = getattr(base, split)
+        extended = getattr(wide, split)
+        np.testing.assert_array_equal(extended[:, :32], original)
+        np.testing.assert_array_equal(extended[:, :33], getattr(narrow, split))
+        np.testing.assert_array_equal(getattr(wide, f"y_{split}"), getattr(base, f"y_{split}"))
+        assert extended.dtype == np.float32 and extended.flags.c_contiguous
+    assert not np.array_equal(wide.train[:20, 32:], wide.test[:, 32:])

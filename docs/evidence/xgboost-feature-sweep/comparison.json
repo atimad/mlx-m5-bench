@@ -1,0 +1,2062 @@
+[
+  {
+    "task": "classification",
+    "features": 32,
+    "dataset_sha256": "9b15d2f71bd23ee92561ef5099ea8fa7a84948490598bf7edbdd02eba387b29c",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 4.563978989608586,
+      "metal_ms": 0.8760204946156591,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.5682499767281115,
+          "metal_ms": 0.9084159974008799,
+          "cpu_over_metal": 5.028808376116877
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.55970800248906,
+          "metal_ms": 0.8436249918304384,
+          "cpu_over_metal": 5.404899151453213
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 245.55739600327797,
+      "metal_ms": 124.80852051521651,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 244.74070803262293,
+          "metal_ms": 125.27595803840086,
+          "cpu_over_metal": 1.9536127431378536
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 246.374083973933,
+          "metal_ms": 124.34108299203217,
+          "cpu_over_metal": 1.9814374947154092
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.346927245729603,
+      "metal_ms": 0.9921977325575426,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.336937486892566,
+          "metal_ms": 0.9855204843915999,
+          "cpu_over_metal": 3.3859646143759123
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.3569170045666397,
+          "metal_ms": 0.9988749807234854,
+          "cpu_over_metal": 3.360697854435421
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.5311040119268,
+      "metal_ms": 1.2363749847281724,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.547916014213115,
+          "metal_ms": 1.209624984767288,
+          "cpu_over_metal": 2.933071041762316
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.514292009640485,
+          "metal_ms": 1.2631249846890569,
+          "cpu_over_metal": 2.7822203283435147
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 253.56927150278352,
+      "metal_ms": 126.85227097244933,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 252.82937503652647,
+          "metal_ms": 127.2762919543311,
+          "cpu_over_metal": 1.9864608809254591
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 254.30916796904057,
+          "metal_ms": 126.42824999056756,
+          "cpu_over_metal": 2.0114900584957383
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 33,
+    "dataset_sha256": "ce2d176ee3025ca8c5ab421a42f3d1ac43785a48002fe2557a9a809c4965de21",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 4.744188045151532,
+      "metal_ms": 0.8539165137335658,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.738167044706643,
+          "metal_ms": 0.9360830299556255,
+          "cpu_over_metal": 5.06169526962929
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.750209045596421,
+          "metal_ms": 0.7717499975115061,
+          "cpu_over_metal": 6.155113781552814
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 250.41487501584925,
+      "metal_ms": 127.88106300286017,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 250.05491700721905,
+          "metal_ms": 127.50704202335328,
+          "cpu_over_metal": 1.961106720375654
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 250.77483302447945,
+          "metal_ms": 128.25508398236707,
+          "cpu_over_metal": 1.9552818121342994
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.343604490510188,
+      "metal_ms": 0.9607082611182705,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.3379584783688188,
+          "metal_ms": 0.9269794973079115,
+          "cpu_over_metal": 3.6008978494807646
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.3492505026515573,
+          "metal_ms": 0.9944370249286294,
+          "cpu_over_metal": 3.367986527746121
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.5471039882395416,
+      "metal_ms": 1.1638329888228327,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.568999993149191,
+          "metal_ms": 1.1932079796679318,
+          "cpu_over_metal": 2.9910963167900024
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.525207983329892,
+          "metal_ms": 1.1344579979777336,
+          "cpu_over_metal": 3.107394006313033
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 258.6937085434329,
+      "metal_ms": 129.76550101302564,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 258.33716703346,
+          "metal_ms": 129.3460430460982,
+          "cpu_over_metal": 1.997256050124317
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 259.05025005340576,
+          "metal_ms": 130.18495897995308,
+          "cpu_over_metal": 1.9898631307576506
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 48,
+    "dataset_sha256": "7138dbccb46bfe858e238e09d903b4ab19850ef69e1993a6286da6259d54a3ac",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 4.512687533861026,
+      "metal_ms": 1.1916669900529087,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.393250041175634,
+          "metal_ms": 1.2075839913450181,
+          "cpu_over_metal": 3.6380492559216453
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.632125026546419,
+          "metal_ms": 1.1757499887607992,
+          "cpu_over_metal": 3.9397193883272092
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 358.22597952210344,
+      "metal_ms": 150.59233299689367,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 367.9795000352897,
+          "metal_ms": 147.0972080132924,
+          "cpu_over_metal": 2.5016076443955164
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 348.4724590089172,
+          "metal_ms": 154.08745798049495,
+          "cpu_over_metal": 2.2615238357234
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.587947998312302,
+      "metal_ms": 1.03768749977462,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.704958508023992,
+          "metal_ms": 1.0794374975375831,
+          "cpu_over_metal": 3.4323048036368546
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.4709374886006117,
+          "metal_ms": 0.9959375020116568,
+          "cpu_over_metal": 3.485095682801175
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.7462284963112324,
+      "metal_ms": 1.4691870310343802,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.8630409981124103,
+          "metal_ms": 1.4545410522259772,
+          "cpu_over_metal": 2.6558487243797977
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.6294159945100546,
+          "metal_ms": 1.4838330098427832,
+          "cpu_over_metal": 2.4459733476980694
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 366.4973750419449,
+      "metal_ms": 153.25318701798096,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 376.2607500539161,
+          "metal_ms": 149.7593330568634,
+          "cpu_over_metal": 2.512436069083257
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 356.7340000299737,
+          "metal_ms": 156.74704097909853,
+          "cpu_over_metal": 2.2758579543300117
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 64,
+    "dataset_sha256": "8934b1da992255ac35b5d67f381b11c3f24f09245be9ed3d48cb75c5dbf4476f",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 5.630645522614941,
+      "metal_ms": 1.4827915001660585,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 5.306750012096018,
+          "metal_ms": 1.6732499934732914,
+          "cpu_over_metal": 3.171522505779543
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 5.954541033133864,
+          "metal_ms": 1.2923330068588257,
+          "cpu_over_metal": 4.607590304922343
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 439.29008350824006,
+      "metal_ms": 168.9311879745219,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 439.02175000403076,
+          "metal_ms": 167.89929196238518,
+          "cpu_over_metal": 2.6147921463682273
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 439.55841701244935,
+          "metal_ms": 169.9630839866586,
+          "cpu_over_metal": 2.586199348129932
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.5680834989761934,
+      "metal_ms": 1.0728019988164306,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.5657709813676775,
+          "metal_ms": 1.0687499889172614,
+          "cpu_over_metal": 3.336393935292687
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.5703960165847093,
+          "metal_ms": 1.0768540087155998,
+          "cpu_over_metal": 3.3155803736508735
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.8373335264623165,
+      "metal_ms": 1.4498124946840107,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.8377080345526338,
+          "metal_ms": 1.5241249930113554,
+          "cpu_over_metal": 2.5179746097924145
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.8369590183719993,
+          "metal_ms": 1.375499996356666,
+          "cpu_over_metal": 2.7895012930098755
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 448.80375001230277,
+      "metal_ms": 171.63689649896696,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 448.444958019536,
+          "metal_ms": 170.76920898398384,
+          "cpu_over_metal": 2.6260293684536236
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 449.16254200506955,
+          "metal_ms": 172.50458401395008,
+          "cpu_over_metal": 2.6037716306063308
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 96,
+    "dataset_sha256": "e17f7fba7980147547f149d9de4906c7cc6cdec841d6319b27173df7fd358ba4",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 8.14989599166438,
+      "metal_ms": 1.7583330045454204,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 8.003583992831409,
+          "metal_ms": 1.7707080114632845,
+          "cpu_over_metal": 4.519990840396874
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 8.29620799049735,
+          "metal_ms": 1.7459579976275563,
+          "cpu_over_metal": 4.751665275894614
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 633.8682704954408,
+      "metal_ms": 214.89524998469278,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 633.6622079834342,
+          "metal_ms": 215.40424996055663,
+          "cpu_over_metal": 2.941734938375014
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 634.0743330074474,
+          "metal_ms": 214.38625000882894,
+          "cpu_over_metal": 2.9576259344120004
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.606885496992618,
+      "metal_ms": 1.1889997258549556,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.588604013202712,
+          "metal_ms": 1.185062457807362,
+          "cpu_over_metal": 3.028198209774069
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.6251669807825238,
+          "metal_ms": 1.1929369939025491,
+          "cpu_over_metal": 3.038858715348602
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.877979499520734,
+      "metal_ms": 1.4873335312586278,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.9082919829525054,
+          "metal_ms": 1.5225420356728137,
+          "cpu_over_metal": 2.56695177629393
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.8476670160889626,
+          "metal_ms": 1.452125026844442,
+          "cpu_over_metal": 2.6496802582145302
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 645.9585409611464,
+      "metal_ms": 218.13439650577493,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 645.7078329403885,
+          "metal_ms": 218.69750000769272,
+          "cpu_over_metal": 2.9525158399966878
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 646.2092489819042,
+          "metal_ms": 217.57129300385714,
+          "cpu_over_metal": 2.9701034546430174
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 128,
+    "dataset_sha256": "fbc2ff3dea055642a3abdd17b80e15466a22315a4c929f909309ebd43a726f92",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 10.540521005168557,
+      "metal_ms": 2.1244584931991994,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 10.483084013685584,
+          "metal_ms": 2.155416994355619,
+          "cpu_over_metal": 4.863599034960562
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 10.59795799665153,
+          "metal_ms": 2.09349999204278,
+          "cpu_over_metal": 5.062315756834722
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 829.433999984758,
+      "metal_ms": 261.00179203785956,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 829.1543750092387,
+          "metal_ms": 260.90591703541577,
+          "cpu_over_metal": 3.177982256710138
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 829.7136249602772,
+          "metal_ms": 261.09766704030335,
+          "cpu_over_metal": 3.177790266629237
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.7856664857827127,
+      "metal_ms": 1.3255207450129092,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.7341249699238688,
+          "metal_ms": 1.3436249864753336,
+          "cpu_over_metal": 2.779142251380289
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.8372080016415566,
+          "metal_ms": 1.3074165035504848,
+          "cpu_over_metal": 2.934954539139628
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.0281874826177955,
+      "metal_ms": 1.9427500083111227,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.99537495104596,
+          "metal_ms": 2.0019590156152844,
+          "cpu_over_metal": 1.9957326398203097
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.061000014189631,
+          "metal_ms": 1.8835410010069609,
+          "cpu_over_metal": 2.156045454820775
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 844.2806249950081,
+      "metal_ms": 264.96008309186436,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 844.1886670188978,
+          "metal_ms": 264.96658311225474,
+          "cpu_over_metal": 3.1860193730967654
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 844.3725829711184,
+          "metal_ms": 264.953583071474,
+          "cpu_over_metal": 3.1868698403045945
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 192,
+    "dataset_sha256": "eca7a49de71653e4fcb5911fc54706a62945b4b41a2cbc8c25b9674c2b482347",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 15.47847900656052,
+      "metal_ms": 3.5753335105255246,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 15.71695803431794,
+          "metal_ms": 3.679624991491437,
+          "cpu_over_metal": 4.271347778825552
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 15.239999978803098,
+          "metal_ms": 3.4710420295596123,
+          "cpu_over_metal": 4.390612343215179
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 1234.0823749837,
+      "metal_ms": 356.9358120439574,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 1224.549833976198,
+          "metal_ms": 358.23308303952217,
+          "cpu_over_metal": 3.418304707053254
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 1243.614915991202,
+          "metal_ms": 355.63854104839265,
+          "cpu_over_metal": 3.4968507977935386
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 4.063197469804436,
+      "metal_ms": 1.5668022388126701,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.9667704550083727,
+          "metal_ms": 1.5309379959944636,
+          "cpu_over_metal": 2.59107192151936
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.159624484600499,
+          "metal_ms": 1.6026664816308767,
+          "cpu_over_metal": 2.5954398699145793
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.309103998821229,
+      "metal_ms": 2.2228125017136335,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.23204101389274,
+          "metal_ms": 2.2831669775769114,
+          "cpu_over_metal": 1.8535836649074775
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.3861669837497175,
+          "metal_ms": 2.1624580258503556,
+          "cpu_over_metal": 2.0283246802096517
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 1254.008416988654,
+      "metal_ms": 362.84685449209064,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 1244.5074589923024,
+          "metal_ms": 364.55200001364574,
+          "cpu_over_metal": 3.413799564796568
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 1263.5093749850057,
+          "metal_ms": 361.14170897053555,
+          "cpu_over_metal": 3.49865258872132
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 256,
+    "dataset_sha256": "3cd35f746408485b6a0672718b5edc9f21d4095c8b4477edfc3e2f18c76b5688",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 20.538500510156155,
+      "metal_ms": 4.44056247943081,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 20.864667021669447,
+          "metal_ms": 4.411250003613532,
+          "cpu_over_metal": 4.729876339943982
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 20.212333998642862,
+          "metal_ms": 4.469874955248088,
+          "cpu_over_metal": 4.52190144042207
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 1910.8098754950333,
+      "metal_ms": 452.8241249790881,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 1904.0031670010649,
+          "metal_ms": 453.0474999919534,
+          "cpu_over_metal": 4.202656823037059
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 1917.6165839890018,
+          "metal_ms": 452.6007499662228,
+          "cpu_over_metal": 4.236883354992478
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 4.551312493276782,
+      "metal_ms": 1.8720104999374598,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.526562493992969,
+          "metal_ms": 1.840437005739659,
+          "cpu_over_metal": 2.4595041720397135
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.576062492560595,
+          "metal_ms": 1.9035839941352606,
+          "cpu_over_metal": 2.403919399752759
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.738125542644411,
+      "metal_ms": 2.597645972855389,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.74854203639552,
+          "metal_ms": 2.806624979712069,
+          "cpu_over_metal": 1.6919047149942603
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.727709048893303,
+          "metal_ms": 2.388666965998709,
+          "cpu_over_metal": 1.9792248631514995
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 1937.132813502103,
+      "metal_ms": 460.55908341077156,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 1931.7115420126356,
+          "metal_ms": 461.7370419437066,
+          "cpu_over_metal": 4.183574992989502
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 1942.5540849915706,
+          "metal_ms": 459.38112487783656,
+          "cpu_over_metal": 4.228632783961585
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 384,
+    "dataset_sha256": "69d432c1e0c200bbfa5699f923b52c27ad8c65719db136c4a792e69c5d8255d2",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 29.280437476700172,
+      "metal_ms": 7.080291514284909,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 29.80562497396022,
+          "metal_ms": 7.642083044629544,
+          "cpu_over_metal": 3.9001964254897823
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 28.755249979440123,
+          "metal_ms": 6.5184999839402735,
+          "cpu_over_metal": 4.411329301263307
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 3046.6335834935308,
+      "metal_ms": 648.6500625032932,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3040.546167001594,
+          "metal_ms": 653.0196249950677,
+          "cpu_over_metal": 4.656132910285137
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3052.7209999854676,
+          "metal_ms": 644.2805000115186,
+          "cpu_over_metal": 4.738186240202661
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 5.174874750082381,
+      "metal_ms": 2.3630002688150853,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.922082996927202,
+          "metal_ms": 2.3674585099797696,
+          "cpu_over_metal": 2.079057764340403
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 5.42766650323756,
+          "metal_ms": 2.358542027650401,
+          "cpu_over_metal": 2.3012803840704277
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 5.493833479704335,
+      "metal_ms": 3.346062498167157,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 5.469333962537348,
+          "metal_ms": 3.3986250055022538,
+          "cpu_over_metal": 1.6092784445717576
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 5.518332996871322,
+          "metal_ms": 3.2934999908320606,
+          "cpu_over_metal": 1.6755223963055748
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 3081.4139794383664,
+      "metal_ms": 658.4259999508504,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3075.8572509512305,
+          "metal_ms": 662.7594999154098,
+          "cpu_over_metal": 4.64098553297812
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3086.970707925502,
+          "metal_ms": 654.0924999862909,
+          "cpu_over_metal": 4.7194711879286215
+        }
+      ]
+    }
+  },
+  {
+    "task": "classification",
+    "features": 512,
+    "dataset_sha256": "65f350b5dc675f1bf49649756241f79efe5cb1e12cbb6d246cb14df5f849e5b4",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 42.28204148239456,
+      "metal_ms": 9.687521000159904,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 41.618082963395864,
+          "metal_ms": 9.724957984872162,
+          "cpu_over_metal": 4.279512880995028
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 42.94600000139326,
+          "metal_ms": 9.650084015447646,
+          "cpu_over_metal": 4.450323948749692
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 3883.2756044866983,
+      "metal_ms": 844.0167500230018,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3885.919541993644,
+          "metal_ms": 842.2572910203598,
+          "cpu_over_metal": 4.613696531241675
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3880.6316669797525,
+          "metal_ms": 845.7762090256438,
+          "cpu_over_metal": 4.5882487891807
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 6.217114758328535,
+      "metal_ms": 2.871385499020107,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 6.082145991967991,
+          "metal_ms": 2.8774999955203384,
+          "cpu_over_metal": 2.113691051759031
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 6.352083524689078,
+          "metal_ms": 2.8652710025198758,
+          "cpu_over_metal": 2.216922419939583
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 6.238499510800466,
+      "metal_ms": 4.179978976026177,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 6.249708007089794,
+          "metal_ms": 4.447332990821451,
+          "cpu_over_metal": 1.4052709837532162
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 6.227291014511138,
+          "metal_ms": 3.912624961230904,
+          "cpu_over_metal": 1.5915890421943342
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 3930.6844794773497,
+      "metal_ms": 857.9264800064266,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3934.2212509945966,
+          "metal_ms": 855.2468339912593,
+          "cpu_over_metal": 4.600100339026574
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3927.1477079601027,
+          "metal_ms": 860.6061260215938,
+          "cpu_over_metal": 4.5632346659144805
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 32,
+    "dataset_sha256": "008a7988a2a2a5c2778a84d7ae10c08757a091706845f6c97a79ca023f313fcf",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 4.530124977463856,
+      "metal_ms": 0.7166664872784168,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.531749989837408,
+          "metal_ms": 0.7482499931938946,
+          "cpu_over_metal": 6.0564651267067795
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.528499965090305,
+          "metal_ms": 0.6850829813629389,
+          "cpu_over_metal": 6.610148096338748
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 239.69960448448546,
+      "metal_ms": 118.14893750124611,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 240.89516699314117,
+          "metal_ms": 120.59691699687392,
+          "cpu_over_metal": 1.9975234275631242
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 238.50404197582975,
+          "metal_ms": 115.7009580056183,
+          "cpu_over_metal": 2.061383467233247
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.612906497437507,
+      "metal_ms": 0.93618749815505,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.914417000487447,
+          "metal_ms": 0.9160209738183767,
+          "cpu_over_metal": 4.2732831587583
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.311395994387567,
+          "metal_ms": 0.9563540224917233,
+          "cpu_over_metal": 3.4625211130078406
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.409729484701529,
+      "metal_ms": 1.0886669915635139,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.4074169816449285,
+          "metal_ms": 1.0786670027300715,
+          "cpu_over_metal": 3.1589146353980104
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.41204198775813,
+          "metal_ms": 1.0986669803969562,
+          "cpu_over_metal": 3.105619854457931
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 247.69020845997147,
+      "metal_ms": 119.8974589642603,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 248.9049999276176,
+          "metal_ms": 122.31929297558963,
+          "cpu_over_metal": 2.0348793217541714
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 246.47541699232534,
+          "metal_ms": 117.47562495293096,
+          "cpu_over_metal": 2.098098367989792
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 33,
+    "dataset_sha256": "b808ccf4aec11425fd398eaa760db612cf6b6a42e78d9ec0240de80ac7522d52",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 4.75310449837707,
+      "metal_ms": 0.7164165144786239,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.689334018621594,
+          "metal_ms": 0.731916050426662,
+          "cpu_over_metal": 6.4069287944812805
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.816874978132546,
+          "metal_ms": 0.7009169785305858,
+          "cpu_over_metal": 6.872247535265481
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 250.72974999784492,
+      "metal_ms": 121.05949950637296,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 245.65637501655146,
+          "metal_ms": 121.76954100141302,
+          "cpu_over_metal": 2.0173877062877397
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 255.80312497913837,
+          "metal_ms": 120.3494580113329,
+          "cpu_over_metal": 2.1255029246168293
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.7561979988822713,
+      "metal_ms": 0.9824482403928414,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.781667008297518,
+          "metal_ms": 0.9777920204214752,
+          "cpu_over_metal": 3.8675576495985706
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.730728989467025,
+          "metal_ms": 0.9871044603642076,
+          "cpu_over_metal": 3.779467259311658
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.4578329941723496,
+      "metal_ms": 1.148187497165054,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.430625016335398,
+          "metal_ms": 1.1603750172071159,
+          "cpu_over_metal": 2.9564795565768924
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.485040972009301,
+          "metal_ms": 1.1359999771229923,
+          "cpu_over_metal": 3.067817818830804
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 258.96241699228995,
+      "metal_ms": 122.92718701064587,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 253.93649999750778,
+          "metal_ms": 123.64954105578363,
+          "cpu_over_metal": 2.053679276358544
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 263.9883339870721,
+          "metal_ms": 122.2048329655081,
+          "cpu_over_metal": 2.160211896542438
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 48,
+    "dataset_sha256": "d7fa34d1a0522d01e62241095392ce15665616c087da11a056059149c607f23b",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 4.176541493507102,
+      "metal_ms": 0.9521255269646645,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.212915955577046,
+          "metal_ms": 1.0280840215273201,
+          "cpu_over_metal": 4.097832343817915
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.140167031437159,
+          "metal_ms": 0.8761670324020088,
+          "cpu_over_metal": 4.725317066640713
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 350.4651040129829,
+      "metal_ms": 144.17977098491974,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 351.5378750162199,
+          "metal_ms": 143.97958398330957,
+          "cpu_over_metal": 2.441581405437114
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 349.3923330097459,
+          "metal_ms": 144.37995798652992,
+          "cpu_over_metal": 2.419950371798438
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.9148439973359928,
+      "metal_ms": 1.0033855069195852,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.929125494323671,
+          "metal_ms": 1.001728989649564,
+          "cpu_over_metal": 3.922343802487139
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.9005625003483146,
+          "metal_ms": 1.0050420241896063,
+          "cpu_over_metal": 3.880994432539722
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.5146875015925616,
+      "metal_ms": 1.2116044817958027,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.5040000220760703,
+          "metal_ms": 1.2711669551208615,
+          "cpu_over_metal": 2.7565222710992456
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.525374981109053,
+          "metal_ms": 1.152042008470744,
+          "cpu_over_metal": 3.0601097487657976
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 358.15458252909593,
+      "metal_ms": 146.25508297467604,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 359.08316605491564,
+          "metal_ms": 146.16770896827802,
+          "cpu_over_metal": 2.4566518048992987
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 357.22599900327623,
+          "metal_ms": 146.34245698107406,
+          "cpu_over_metal": 2.441027753480147
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 64,
+    "dataset_sha256": "c3a91aa14e40ea0923bb6a887864d110e800624031758339c252990b9e49a061",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 5.936395522439852,
+      "metal_ms": 1.1411664891056716,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 5.780333012808114,
+          "metal_ms": 1.1726249940693378,
+          "cpu_over_metal": 4.929396049071696
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 6.09245803207159,
+          "metal_ms": 1.1097079841420054,
+          "cpu_over_metal": 5.490145262658541
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 446.4821039873641,
+      "metal_ms": 167.8858124942053,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 446.34941598633304,
+          "metal_ms": 168.5740000102669,
+          "cpu_over_metal": 2.64779512830655
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 446.61479198839515,
+          "metal_ms": 167.19762497814372,
+          "cpu_over_metal": 2.6711790436423795
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 4.203604243230075,
+      "metal_ms": 1.0519999923417345,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.271312500350177,
+          "metal_ms": 1.0575414926279336,
+          "cpu_over_metal": 4.038907721470291
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.135895986109972,
+          "metal_ms": 1.0464584920555353,
+          "cpu_over_metal": 3.9522790607641998
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.02485448285006,
+      "metal_ms": 1.3129790022503585,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3.7703749840147793,
+          "metal_ms": 1.4189999783411622,
+          "cpu_over_metal": 2.6570648636812657
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.27933398168534,
+          "metal_ms": 1.2069580261595547,
+          "cpu_over_metal": 3.5455532743767764
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 456.5551459963899,
+      "metal_ms": 170.3025214956142,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 456.12370799062774,
+          "metal_ms": 171.09304200857878,
+          "cpu_over_metal": 2.665939553332375
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 456.9865840021521,
+          "metal_ms": 169.51200098264962,
+          "cpu_over_metal": 2.695895165846853
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 96,
+    "dataset_sha256": "4ed59f4fd34ae882caca8f01ae1b563b3e7fbb96c331f81a2df2ef8b2c428a0c",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 9.440271009225398,
+      "metal_ms": 1.6651670157443732,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 9.78675001533702,
+          "metal_ms": 1.6953340382315218,
+          "cpu_over_metal": 5.772756161697793
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 9.093792003113776,
+          "metal_ms": 1.6349999932572246,
+          "cpu_over_metal": 5.561952318420044
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 665.4827079910319,
+      "metal_ms": 222.72752097342163,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 662.0213330024853,
+          "metal_ms": 221.1807079729624,
+          "cpu_over_metal": 2.993124215351604
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 668.9440829795785,
+          "metal_ms": 224.27433397388086,
+          "cpu_over_metal": 2.9827045793723514
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.9951979997567832,
+      "metal_ms": 1.19586473738309,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.241562477545813,
+          "metal_ms": 1.1986249883193523,
+          "cpu_over_metal": 3.538690181566383
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.7488335219677538,
+          "metal_ms": 1.1931044864468277,
+          "cpu_over_metal": 3.1420831658525707
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 3.951437451178208,
+      "metal_ms": 1.6226455045398325,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.045249952469021,
+          "metal_ms": 1.6401659813709557,
+          "cpu_over_metal": 2.466366208307614
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.857624949887395,
+          "metal_ms": 1.6051250277087092,
+          "cpu_over_metal": 2.4033174259291776
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 679.2954789998475,
+      "metal_ms": 226.43483299179934,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 675.9143330855295,
+          "metal_ms": 225.35145696019754,
+          "cpu_over_metal": 2.9993785804762387
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 682.6766249141656,
+          "metal_ms": 227.51820902340114,
+          "cpu_over_metal": 3.0005362113409992
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 128,
+    "dataset_sha256": "ebd031c6e6a17ae7e647f1d3a0ee5c378b8cfd1314520a188664996aa0373989",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 11.451728991232812,
+      "metal_ms": 1.9455210131127387,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 11.602999991737306,
+          "metal_ms": 1.9580000080168247,
+          "cpu_over_metal": 5.925944813192055
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 11.300457990728319,
+          "metal_ms": 1.9330420182086527,
+          "cpu_over_metal": 5.845945346392645
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 887.4684375186916,
+      "metal_ms": 256.3728539971635,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 887.4073750339448,
+          "metal_ms": 257.135332969483,
+          "cpu_over_metal": 3.4511296630683694
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 887.5295000034384,
+          "metal_ms": 255.61037502484396,
+          "cpu_over_metal": 3.4721966974821554
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 3.9755627658450976,
+      "metal_ms": 1.28789602604229,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.007562529295683,
+          "metal_ms": 1.2832505162805319,
+          "cpu_over_metal": 3.122977531239573
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3.9435630023945123,
+          "metal_ms": 1.2925415358040482,
+          "cpu_over_metal": 3.0510145269268656
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.790374980075285,
+      "metal_ms": 1.5605414810124785,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 5.455166974570602,
+          "metal_ms": 1.597333000972867,
+          "cpu_over_metal": 3.4151720218940533
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.1255829855799675,
+          "metal_ms": 1.52374996105209,
+          "cpu_over_metal": 2.7075196659768332
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 903.6638965189923,
+      "metal_ms": 259.9183744750917,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 903.7185840425082,
+          "metal_ms": 260.7030409271829,
+          "cpu_over_metal": 3.466467367731726
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 903.6092089954764,
+          "metal_ms": 259.1337080230005,
+          "cpu_over_metal": 3.4870384709474873
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 192,
+    "dataset_sha256": "a3e9c18ae60331b9e2d8f118368f0a842ef8076c2b3fad6aa7c2dacb854601f5",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 16.38347897096537,
+      "metal_ms": 2.8263329877518117,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 16.486415988765657,
+          "metal_ms": 2.8310829657129943,
+          "cpu_over_metal": 5.8233602435644745
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 16.280541953165084,
+          "metal_ms": 2.821583009790629,
+          "cpu_over_metal": 5.7700028305646605
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 1317.4801249697339,
+      "metal_ms": 348.0089165386744,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 1318.6518749571405,
+          "metal_ms": 347.7229170384817,
+          "cpu_over_metal": 3.792248972796948
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 1316.3083749823272,
+          "metal_ms": 348.2949160388671,
+          "cpu_over_metal": 3.7792925316068557
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 4.410156238009222,
+      "metal_ms": 1.6104164824355394,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.3107084929943085,
+          "metal_ms": 1.606687466846779,
+          "cpu_over_metal": 2.682978850550402
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.509603983024135,
+          "metal_ms": 1.6141454980242997,
+          "cpu_over_metal": 2.793802658151853
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.454188019735739,
+      "metal_ms": 1.942874485393986,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.402334045153111,
+          "metal_ms": 1.9766659825108945,
+          "cpu_over_metal": 2.2271512152806765
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.506041994318366,
+          "metal_ms": 1.9090829882770777,
+          "cpu_over_metal": 2.360317504261567
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 1338.3160629600752,
+      "metal_ms": 352.8219375293702,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 1339.5406249910593,
+          "metal_ms": 352.59508300805464,
+          "cpu_over_metal": 3.7990904852194407
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 1337.0915009290911,
+          "metal_ms": 353.04879205068573,
+          "cpu_over_metal": 3.787271139387245
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 256,
+    "dataset_sha256": "1e68a60c77907afd6af5b1cf443b78cd3c882ca8cbc6a5b3ddfc448a7700c961",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 22.573916998226196,
+      "metal_ms": 4.1466045076958835,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 22.14404195547104,
+          "metal_ms": 4.270459001418203,
+          "cpu_over_metal": 5.185400901429351
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 23.003792040981352,
+          "metal_ms": 4.022750013973564,
+          "cpu_over_metal": 5.718424451202432
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 2008.506520971423,
+      "metal_ms": 442.3694165016059,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 2006.8993329769,
+          "metal_ms": 442.0470829936676,
+          "cpu_over_metal": 4.540012614460911
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 2010.113708965946,
+          "metal_ms": 442.6917500095442,
+          "cpu_over_metal": 4.540662230372734
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 4.548281474853866,
+      "metal_ms": 1.8584582430776209,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.626583482604474,
+          "metal_ms": 1.8648539844434708,
+          "cpu_over_metal": 2.4809360524733988
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.469979467103258,
+          "metal_ms": 1.852062501711771,
+          "cpu_over_metal": 2.4135143727449124
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 4.704791528638452,
+      "metal_ms": 2.320958534255624,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4.726083017885685,
+          "metal_ms": 2.1946250344626606,
+          "cpu_over_metal": 2.153480865145984
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4.68350003939122,
+          "metal_ms": 2.447292034048587,
+          "cpu_over_metal": 1.913747919835805
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 2035.2426044701133,
+      "metal_ms": 448.7046655267477,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 2033.34870794788,
+          "metal_ms": 448.527749045752,
+          "cpu_over_metal": 4.533384416624954
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 2037.1365009923466,
+          "metal_ms": 448.8815820077434,
+          "cpu_over_metal": 4.538249245782611
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 384,
+    "dataset_sha256": "2076bedb56edb9586dd4fb97421767d24954b3bbaef80d09d536cef1c4b6b5b4",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 31.62810401408933,
+      "metal_ms": 5.9693955117836595,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 32.7559580327943,
+          "metal_ms": 5.978875036817044,
+          "cpu_over_metal": 5.478615597597853
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 30.500249995384365,
+          "metal_ms": 5.959915986750275,
+          "cpu_over_metal": 5.117563748078107
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 3253.44829147798,
+      "metal_ms": 640.1317495037802,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3244.871290982701,
+          "metal_ms": 640.336083015427,
+          "cpu_over_metal": 5.067450323433555
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3262.0252919732593,
+          "metal_ms": 639.9274159921333,
+          "cpu_over_metal": 5.097492638154699
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 5.3393857524497434,
+      "metal_ms": 2.4086352495942265,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 5.564979510381818,
+          "metal_ms": 2.406145998975262,
+          "cpu_over_metal": 2.3128187203735147
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 5.113791994517669,
+          "metal_ms": 2.411124500213191,
+          "cpu_over_metal": 2.1209157777068373
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 5.562791484408081,
+      "metal_ms": 2.7410204929765314,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 5.5578749743290246,
+          "metal_ms": 2.7532909880392253,
+          "cpu_over_metal": 2.0186297047690926
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 5.567707994487137,
+          "metal_ms": 2.7287499979138374,
+          "cpu_over_metal": 2.040387722856149
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 3290.878208470531,
+      "metal_ms": 648.7015410093591,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 3283.9362919330597,
+          "metal_ms": 648.9817490219139,
+          "cpu_over_metal": 5.060136586093999
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 3297.820125008002,
+          "metal_ms": 648.4213329968043,
+          "cpu_over_metal": 5.085921695028895
+        }
+      ]
+    }
+  },
+  {
+    "task": "regression",
+    "features": 512,
+    "dataset_sha256": "7f59e21616ca2809bd8ecaca825035bf10ce6c014e172bfb0ebaa413f8b95b37",
+    "quality": {
+      "PASS": 6
+    },
+    "train_ingest_s": {
+      "cpu_ms": 41.89543749089353,
+      "metal_ms": 8.169812499545515,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 42.54212498199195,
+          "metal_ms": 8.667582995258272,
+          "cpu_over_metal": 4.9081877849067315
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 41.24874999979511,
+          "metal_ms": 7.6720420038327575,
+          "cpu_over_metal": 5.376502107155863
+        }
+      ]
+    },
+    "train_s": {
+      "cpu_ms": 4232.504833489656,
+      "metal_ms": 833.2123960135505,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4226.708000001963,
+          "metal_ms": 831.8880420411006,
+          "cpu_over_metal": 5.080861590018068
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4238.30166697735,
+          "metal_ms": 834.5367499860004,
+          "cpu_over_metal": 5.078627953830012
+        }
+      ]
+    },
+    "predict_s": {
+      "cpu_ms": 6.274406507145613,
+      "metal_ms": 2.9060312372166663,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 6.30022949189879,
+          "metal_ms": 2.9042914684396237,
+          "cpu_over_metal": 2.169282787338038
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 6.248583522392437,
+          "metal_ms": 2.907771005993709,
+          "cpu_over_metal": 2.1489255892270753
+        }
+      ]
+    },
+    "first_prediction_s": {
+      "cpu_ms": 6.402604485629126,
+      "metal_ms": 4.163249483099207,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 6.448542000725865,
+          "metal_ms": 4.395083000417799,
+          "cpu_over_metal": 1.4672173426788218
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 6.3566669705323875,
+          "metal_ms": 3.931415965780616,
+          "cpu_over_metal": 1.6168899515750472
+        }
+      ]
+    },
+    "end_to_end_s": {
+      "cpu_ms": 4280.975708476035,
+      "metal_ms": 845.653770986246,
+      "metal_wins": 2,
+      "passes": [
+        {
+          "pass": 1,
+          "cpu_ms": 4276.044333004393,
+          "metal_ms": 845.1673340168782,
+          "cpu_over_metal": 5.059405588573067
+        },
+        {
+          "pass": 2,
+          "cpu_ms": 4285.907083947677,
+          "metal_ms": 846.1402079556137,
+          "cpu_over_metal": 5.065244558349252
+        }
+      ]
+    }
+  }
+]
