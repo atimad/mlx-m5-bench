@@ -1,4 +1,4 @@
-"""Run one implementation in an isolated process, one fresh model per repetition."""
+"""Run one implementation in an isolated process, optionally reusing the fitted model."""
 
 import json
 import os
@@ -72,6 +72,8 @@ def bench(
         pools = threadpool_info()
         data, prep_s = measure(lambda: generate(case, profile.seed), no_sync)
         fingerprint = data.fingerprint()
+        fitted_model = None
+        predictions: dict[int, Any] = {}
         for index in range(1 + profile.warmups + profile.repeats):
             phase = "cold" if index == 0 else "warmup" if index <= profile.warmups else "steady"
             row: dict[str, Any] = {
@@ -90,7 +92,11 @@ def bench(
                 with warnings.catch_warnings(record=True) as notes:
                     warnings.simplefilter("always")
                     start = perf_counter()
-                    model = create(case, implementation, profile.threads)
+                    model = (
+                        fitted_model
+                        if profile.reuse_model and fitted_model is not None
+                        else create(case, implementation, profile.threads)
+                    )
                     operations = {
                         "fit": lambda model=model: model.fit(data.train, data.y_train),
                         "transform" if case.algorithm == "pca" else "predict": (
@@ -101,6 +107,9 @@ def bench(
                             )
                         ),
                     }
+                    if profile.reuse_model and fitted_model is not None:
+                        del operations["fit"]
+                    row["reused_model"] = "fit" not in operations
                     for operation, call in operations.items():
                         if candidate:
                             mlxlearn.clear_backend_diagnostics()
@@ -124,10 +133,14 @@ def bench(
                             )
                         else:
                             row[f"{operation}_backend"] = CPU
+                    if profile.reuse_model:
+                        fitted_model = model
                     row["pipeline_s"] = perf_counter() - start
                     row["before"] = before
                     row["after"] = snapshot(mx)
-                    if phase in {"cold", "steady"}:
+                    if profile.reuse_model and phase in {"cold", "steady"}:
+                        predictions[index] = result
+                    elif phase in {"cold", "steady"}:
                         values = extract(model, case.algorithm, data, result)
                         synchronize()
                         np.savez(output.parent / f"{implementation}-{index}.npz", **values)
@@ -152,6 +165,13 @@ def bench(
                     ]
             row["events"] = events
             write_row(output, row)
+        if profile.reuse_model and predictions:
+            # Defer ancillary inference so steady calls only warm the measured operation.
+            values = extract(fitted_model, case.algorithm, data, next(iter(predictions.values())))
+            synchronize()
+            for index, prediction in predictions.items():
+                values["output"] = np.asarray(prediction)
+                np.savez(output.parent / f"{implementation}-{index}.npz", **values)
 
 
 def write_row(path: Path, row: dict[str, Any]) -> None:

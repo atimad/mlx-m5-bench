@@ -32,6 +32,7 @@ class Measurement(BaseModel):
     predict_backend: Backend | None = None
     transform_backend: Backend | None = None
     correctness: Correctness | None = None
+    reused_model: bool = False
     fit_s: float | None = Field(default=None, ge=0)
     predict_s: float | None = Field(default=None, ge=0)
     transform_s: float | None = Field(default=None, ge=0)
@@ -41,10 +42,13 @@ class Measurement(BaseModel):
     @model_validator(mode="after")
     def measured_operations(self) -> "Measurement":
         if self.status == "ok" and (
-            self.fit_s is None
-            or (self.predict_s is None and self.transform_s is None)
-            or self.fit_backend is None
+            (self.predict_s is None and self.transform_s is None)
+            or (
+                self.reused_model
+                and (self.phase not in {"warmup", "steady"} or self.fit_s is not None)
+            )
+            or (not self.reused_model and (self.fit_s is None or self.fit_backend is None))
             or self.after is None
         ):
-            raise ValueError("successful measurements require fit, inference and memory fields")
+            raise ValueError("require inference and memory fields, plus fit for fresh models")
         return self

@@ -21,7 +21,7 @@ def aggregate(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     groups: dict[tuple[Any, ...], list[dict[str, Any]]] = {}
     for row in rows:
         operation = "transform" if row["algorithm"] == "pca" else "predict"
-        for op in ("fit", operation):
+        for op in (operation,) if row.get("reused_model") else ("fit", operation):
             key = (row["case"], row["implementation"], row.get("phase", "unmeasured"), op)
             groups.setdefault(key, []).append(row)
     output = []
@@ -211,7 +211,7 @@ def charts(directory: Path, summary: list[dict[str, Any]], raw: list[dict[str, A
                         color="red",
                     )
         ax.set_xticks(range(len(labels)), labels, rotation=70, ha="right", fontsize=7)
-        if any(row.get(metric, 0) > 0 for row in steady):
+        if any(row["operation"] == "fit" and row.get(metric, 0) > 0 for row in steady):
             ax.set_yscale("log")
         else:
             ax.text(0.5, 0.5, "No measured values", transform=ax.transAxes, ha="center")

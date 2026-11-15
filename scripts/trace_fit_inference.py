@@ -99,6 +99,7 @@ def main() -> None:
         action="store_true",
         help="Record Metal command completions without saving full GPU capture bundles",
     )
+    parser.add_argument("--reuse-model", action="store_true", help="Trace a warmed prediction")
     args = parser.parse_args()
     if os.environ.get("MTL_CAPTURE_ENABLED") != "1":
         parser.error("Start Python with MTL_CAPTURE_ENABLED=1")
@@ -143,6 +144,9 @@ def main() -> None:
             )
             if implementation == "mlxlearn":
                 routing["fit"] = [event.as_dict() for event in mlxlearn.get_backend_diagnostics()]
+            if args.reuse_model:
+                for _ in range(1 + profile.warmups):
+                    getattr(model, inference)(data.test)
             mlxlearn.clear_backend_diagnostics()
             result = observe(
                 probe,
@@ -162,6 +166,9 @@ def main() -> None:
                 ("fit", lambda: captured_model.fit(data.train, data.y_train)),
                 (inference, lambda: getattr(captured_model, inference)(data.test)),
             ):
+                if name == inference and args.reuse_model:
+                    for _ in range(1 + profile.warmups):
+                        getattr(captured_model, inference)(data.test)
                 if summarize(args.output / f"mlxlearn-{name}.tsv")["completed_buffers"]:
                     captures[name] = capture_operation(args.output / f"{name}.gputrace", operation)
                 else:
@@ -180,6 +187,7 @@ def main() -> None:
             {
                 "case": case.key,
                 "mode": args.mode,
+                "reuse_model": args.reuse_model,
                 "requested_device": device,
                 "force_backend": override,
                 "routing": routing,

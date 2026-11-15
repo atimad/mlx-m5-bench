@@ -22,6 +22,9 @@ def main() -> None:
     parser.add_argument("output", type=Path)
     parser.add_argument("--config", type=Path, help="Use a custom workload profile")
     parser.add_argument("--with-mlx-cpu", action="store_true", help="Include explicit MLX CPU")
+    parser.add_argument(
+        "--reuse-model", action="store_true", help="Warm and reuse one fitted model"
+    )
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     cases = {case.key: case for name in ("standard", "full") for case in load_profile(name).cases}
@@ -33,7 +36,8 @@ def main() -> None:
     modes = ("auto", "forced", "cpu") if args.with_mlx_cpu else ("auto", "forced")
     for block, mode in enumerate((*modes, *reversed(modes)), start=1):
         profile = Profile(
-            **base.model_dump(exclude={"force_mlx", "mlx_device"}),
+            **base.model_dump(exclude={"force_mlx", "mlx_device", "reuse_model"}),
+            reuse_model=args.reuse_model or base.reuse_model,
             force_mlx=mode == "forced",
             mlx_device="gpu" if mode == "forced" else mode,
         )

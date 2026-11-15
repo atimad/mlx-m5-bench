@@ -38,13 +38,15 @@ def main() -> None:
     for case in dict.fromkeys(row["case"] for row in blocks[0][2]):
         fingerprints = set()
         operations = ("fit", "transform" if case.startswith("pca-") else "predict")
+        if first.get("reuse_model", False):
+            operations = operations[1:]
         for operation in operations:
             by_mode = {mode: [] for mode in modes}
             for mode, manifest, rows in blocks:
                 config = manifest["config"]
                 if any(
-                    config[key] != first[key]
-                    for key in ("seed", "threads", "repeats", "warmups", "cases")
+                    config.get(key) != first.get(key)
+                    for key in ("seed", "threads", "repeats", "warmups", "cases", "reuse_model")
                 ):
                     raise ValueError("Blocks use different workload settings")
                 pair = {}

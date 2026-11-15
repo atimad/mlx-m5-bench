@@ -51,12 +51,15 @@ class Profile(Settings):
     warmups: Annotated[int, Field(ge=0, le=10)] = 1
     threads: Annotated[int, Field(ge=1, le=128)] = 4
     timeout_s: Positive = 180
+    reuse_model: bool = False
     force_mlx: bool = True
     mlx_device: Literal["gpu", "auto", "cpu"] = "gpu"
     cases: Annotated[list[Case], Field(min_length=1)]
 
     @model_validator(mode="after")
     def unique_cases(self) -> Self:
+        if self.reuse_model and any(case.algorithm != "knn" for case in self.cases):
+            raise ValueError("reuse_model currently requires KNN workloads")
         if self.force_mlx and self.mlx_device != "gpu":
             raise ValueError("force_mlx requires mlx_device=gpu")
         if len({case.key for case in self.cases}) != len(self.cases):

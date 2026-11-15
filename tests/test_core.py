@@ -390,3 +390,18 @@ def test_explicit_mlx_cpu_profile():
     assert Profile(repeats=1, cases=[case], force_mlx=False, mlx_device="cpu").mlx_device == "cpu"
     with pytest.raises(ValidationError, match="force_mlx requires mlx_device=gpu"):
         Profile(repeats=1, cases=[case], mlx_device="cpu")
+
+
+def test_warmed_knn_reuses_one_fit(tmp_path):
+    profile = Profile(
+        repeats=2,
+        warmups=1,
+        reuse_model=True,
+        cases=[Case(algorithm="knn", samples=100, features=8)],
+    )
+    path = run(profile, "quick", tmp_path, ("sklearn",))
+    records = json.loads((path / "measurements.json").read_text())
+    assert [r["phase"] for r in records] == ["cold", "warmup", "steady", "steady"]
+    assert all(record["status"] == "ok" for record in records)
+    assert "fit_s" in records[0] and all("fit_s" not in r for r in records[1:])
+    assert [r["reused_model"] for r in records] == [False, True, True, True]
