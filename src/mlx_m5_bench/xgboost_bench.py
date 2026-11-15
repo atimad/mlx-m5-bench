@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import subprocess
+from itertools import product
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +22,7 @@ from .timing import statistics
 TASKS = {"classification": "binary:logistic", "regression": "reg:squarederror"}
 SEED = 42
 SAMPLES = 100_000
+TRAIN_ROWS = SAMPLES * 3 // 4
 FEATURES = 32
 ROUNDS = 100
 FIT_REPEATS = 3
@@ -162,8 +164,16 @@ def verify_trace(engine: str, metadata: dict[str, Any], chip: str) -> str:
 
 
 def run(
-    output: Path, interpreters: dict[str, Path], threads: int, probe: Path | None = None
+    output: Path,
+    interpreters: dict[str, Path],
+    threads: int,
+    probe: Path | None = None,
+    train_sizes: tuple[int, ...] = (TRAIN_ROWS,),
 ) -> bool:
+    if not train_sizes or len(set(train_sizes)) != len(train_sizes):
+        raise ValueError("Training sizes must be nonempty and distinct")
+    if any(not 2 <= size <= TRAIN_ROWS for size in train_sizes):
+        raise ValueError(f"Training sizes must be between 2 and {TRAIN_ROWS}")
     output = output.resolve()
     output.mkdir(parents=True)
     experiment = manifest()
@@ -174,6 +184,8 @@ def run(
         threads=threads,
         samples=SAMPLES,
         features=FEATURES,
+        train_sizes=train_sizes,
+        query_rows=SAMPLES - TRAIN_ROWS,
         boosting_rounds=ROUNDS,
         fit_repeats_per_block=1 if probe is not None else FIT_REPEATS,
         predict_repeats_per_block=1 if probe is not None else PREDICT_REPEATS,
@@ -185,26 +197,36 @@ def run(
     measurements: list[dict[str, Any]] = []
     comparisons: list[dict[str, Any]] = []
     orders = [("cpu", "metal")] if probe is not None else [("cpu", "metal"), ("metal", "cpu")]
-    for task, objective in TASKS.items():
-        data = dataset(task)
+    datasets = {task: dataset(task) for task in TASKS}
+    for task, size in product(TASKS, train_sizes):
+        full = datasets[task]
+        data = Dataset(full.train[:size], full.test, full.y_train[:size], full.y_test)
+        if task == "classification" and np.unique(data.y_train).size != 2:
+            raise ValueError(f"The {size}-row training prefix requires both classes")
         fingerprint = data.fingerprint()
         task_path = output / task
-        task_path.mkdir()
+        if train_sizes != (TRAIN_ROWS,):
+            task_path /= f"train-{size}"
+        task_path.mkdir(parents=True)
         data_path = task_path / "data.npz"
         np.savez(
-            data_path, train=data.train, test=data.test, y_train=data.y_train, y_test=data.y_test
+            data_path,
+            train=data.train,
+            test=data.test,
+            y_train=data.y_train,
+            y_test=data.y_test,
         )
         try:
             for pass_index, order in enumerate(orders, start=1):
-                block = {"task": task, "pass": pass_index}
+                block = {"task": task, "train_rows": size, "pass": pass_index}
                 outputs: dict[str, np.ndarray] = {}
                 for engine in order:
-                    print(f"{task} pass {pass_index} {engine}", flush=True)
+                    print(f"{task} train={size} pass {pass_index} {engine}", flush=True)
                     request = {
                         "engine": engine,
                         "dataset": str(data_path),
                         "threads": threads,
-                        "parameters": {**PARAMETERS, "objective": objective},
+                        "parameters": {**PARAMETERS, "objective": TASKS[task]},
                         "rounds": ROUNDS,
                         "fit_repeats": FIT_REPEATS,
                         "predict_repeats": PREDICT_REPEATS,
@@ -244,12 +266,14 @@ def run(
     summary = [
         {
             "task": task,
+            "train_rows": size,
             "engine": engine,
             **{
                 metric: statistics(
                     row[metric]
                     for row in measurements
                     if row["task"] == task
+                    and row["train_rows"] == size
                     and row["engine"] == engine
                     and row["phase"] != "warmup"
                     and metric in row
@@ -258,6 +282,7 @@ def run(
             },
         }
         for task in TASKS
+        for size in train_sizes
         for engine in interpreters
         if probe is None
     ]
@@ -276,12 +301,19 @@ def main() -> None:
     parser.add_argument(
         "--probe", type=Path, help="Run a separate replay using a compiled observer"
     )
+    parser.add_argument(
+        "--train-rows",
+        type=int,
+        nargs="+",
+        default=[TRAIN_ROWS],
+        help="Training-prefix sizes, with the original test batch fixed",
+    )
     args = parser.parse_args()
     if args.threads < 1:
         parser.error("--threads must be positive")
     # Keep virtualenv symlinks intact so Python locates each environment's pyvenv.cfg.
     interpreters = {"cpu": args.cpu_python.absolute(), "metal": args.metal_python.absolute()}
-    if not run(args.output, interpreters, args.threads, args.probe):
+    if not run(args.output, interpreters, args.threads, args.probe, tuple(args.train_rows)):
         raise SystemExit("Quality checks failed. See correctness.json in the output directory.")
 
 
