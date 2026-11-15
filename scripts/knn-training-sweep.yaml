@@ -1,0 +1,45 @@
+seed: 42
+threads: 4
+repeats: 15
+warmups: 1
+reuse_model: true
+cases:
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 1}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 2}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 3}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 4}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 5}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 8}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 32}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 128}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 256}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 384}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 512}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 768}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 1536, query_rows: 1024}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 1}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 2}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 3}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 4}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 5}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 8}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 32}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 128}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 256}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 384}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 512}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 768}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 3072, query_rows: 1024}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 1}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 2}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 3}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 4}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 5}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 8}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 32}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 128}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 256}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 384}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 512}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 768}
+  - {algorithm: knn, samples: 16384, features: 32, neighbors: 5, train_rows: 8192, query_rows: 1024}

@@ -49,6 +49,9 @@ def generate(case: Case, seed: int) -> Dataset:
     train, test, y_train, y_test = train_test_split(
         X, y, test_size=0.25, random_state=seed, stratify=stratify
     )
+    if case.train_rows is not None:
+        train = train[: case.train_rows]
+        y_train = y_train[: case.train_rows]
     if case.algorithm != "pca":
         scaler = StandardScaler(copy=False).fit(train)
         train, test = scaler.transform(train), scaler.transform(test)

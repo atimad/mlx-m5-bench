@@ -405,3 +405,20 @@ def test_warmed_knn_reuses_one_fit(tmp_path):
     assert all(record["status"] == "ok" for record in records)
     assert "fit_s" in records[0] and all("fit_s" not in r for r in records[1:])
     assert [r["reused_model"] for r in records] == [False, True, True, True]
+
+
+def test_knn_explicit_training_prefix():
+    common = {"algorithm": "knn", "samples": 100, "features": 8, "query_rows": 4}
+    lhs = Case.model_validate({**common, "train_rows": 20})
+    rhs = Case.model_validate({**common, "train_rows": 30})
+    first, second = generate(lhs, 42), generate(rhs, 42)
+    assert lhs.key != rhs.key
+    assert first.train.shape == (20, 8)
+    assert second.train.shape == (30, 8)
+    np.testing.assert_array_equal(first.y_train, second.y_train[:20])
+    np.testing.assert_array_equal(first.y_test, second.y_test)
+    np.testing.assert_allclose(first.train.mean(axis=0), 0, atol=1e-6)
+    with pytest.raises(ValidationError, match="train_rows"):
+        Case.model_validate({**common, "train_rows": 76})
+    with pytest.raises(ValidationError, match="neighbors"):
+        Case.model_validate({**common, "train_rows": 4})
