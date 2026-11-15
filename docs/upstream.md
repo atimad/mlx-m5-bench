@@ -27,11 +27,11 @@ BackendEvent includes estimator, operation, backend, reason, detail, shape, fall
 
 Logistic predict and predict_proba delegate to inherited NumPy/scikit-learn methods. PCA covariance_eigh uses mx.linalg.eigh with stream=mx.cpu for GPU Gram solves, while smaller inputs can finish fully on the host. PCA projection uses a separate size/precision predicate. SVC kernel operations and native host optimization form a mixed path. [Logistic source](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/linear_model/_logistic.py), [PCA solver source](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/_solvers/pca.py), [SVC source](https://github.com/tabulai/mlx-learn/blob/v0.1.2/src/mlxlearn/svm/_classes.py)
 
-## Future XGBoost comparison
+## XGBoost comparison planned for v0.2.0
 
 xgboost-metal's reviewed README recommends GitHub release wheels and deprecates its PyPI installation path. Its requirements include Apple Silicon, macOS >=14 and Python >=3.10. Source builds require full Xcode with Metal and CMake >=3.24. It exports the xgboost import name, so a future comparison must use separate CPU and Metal environments to avoid package collision. CPU and CUDA execution are unsupported in the Metal package. The explicit target is device="metal", tree_method="hist". [Reviewed README](https://github.com/tabulai/xgboost-metal/blob/3a84667dc57c3517588b6e7794c003f98bbc47e3/README.md)
 
-Future adapters can preserve the current isolated-worker JSON contracts while selecting separate interpreter paths. This release implements the four requested scikit-learn/mlx-learn families. XGBoost numerical compatibility and backend verification require their own experiments before inclusion.
+The second major experiment will use independent adapters and preserve the current isolated-worker JSON contracts while selecting separate interpreter paths. See the [release plan](roadmap.md#v020--xgboost-versus-xgboost-metal) for the comparison and scaling protocol.
 
 ## License review
 

@@ -66,6 +66,13 @@ uv run mlx-m5-bench dashboard --root results/custom --port 8502
 
 Each UTC timestamped run directory contains manifest.json, measurements.json and CSV, summary.json and CSV, summary.md, seven PNG charts, and per-worker JSONL logs and requests. Raw and aggregated records are separate. Generated outputs and environments are Git-ignored. A timestamp plus configuration hash identifies each execution. Dataset fingerprints identify the exact inputs.
 
+## Release roadmap
+
+- **v0.1.0** establishes the benchmark methodology with verified scikit-learn and mlx-learn CPU/GPU comparisons.
+- **v0.2.0** adds the second major experiment, CPU XGBoost versus the experimental xgboost-metal backend, through independent adapters. It also expands the scaling experiments.
+
+See the [release plan](docs/roadmap.md).
+
 ## Development
 
 ```sh
