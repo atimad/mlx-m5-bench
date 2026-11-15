@@ -1,8 +1,12 @@
+import json
+from pathlib import Path
 from types import SimpleNamespace
 
+import numpy as np
 import pytest
 
-from mlx_m5_bench import xgboost_worker
+from mlx_m5_bench import xgboost_bench, xgboost_worker
+from mlx_m5_bench.datasets import Dataset
 from mlx_m5_bench.xgboost_bench import dataset, quality, verify_trace
 
 
@@ -47,3 +51,39 @@ def test_xgboost_trace_requires_gpu_work_in_both_operations():
         verify_trace("metal", {"metal_trace": dict(train=working, predict=empty)}, "Apple M5 Pro")
     with pytest.raises(RuntimeError, match="cpu train"):
         verify_trace("cpu", {"metal_trace": dict(train=working, predict=empty)}, "Apple M5 Pro")
+
+
+def test_training_size_sweep_keeps_the_test_batch_fixed(tmp_path, monkeypatch):
+    source = {task: dataset(task, samples=80) for task in xgboost_bench.TASKS}
+    monkeypatch.setattr(xgboost_bench, "dataset", source.__getitem__)
+    monkeypatch.setattr(xgboost_bench, "manifest", dict)
+
+    def fake_worker(executable, request, directory):
+        task = directory.parent.parent.name
+        size = int(directory.parent.name.removeprefix("train-"))
+        data = source[task]
+        with np.load(request["dataset"], allow_pickle=False) as archive:
+            np.testing.assert_array_equal(archive["train"], data.train[:size])
+            np.testing.assert_array_equal(archive["y_train"], data.y_train[:size])
+            np.testing.assert_array_equal(archive["test"], data.test)
+            np.testing.assert_array_equal(archive["y_test"], data.y_test)
+        subset = Dataset(data.train[:size], data.test, data.y_train[:size], data.y_test)
+        timings = {
+            "phase": "steady",
+            "train_ingest_s": 0.1,
+            "train_s": 0.2,
+            "first_prediction_s": 0.3,
+            "end_to_end_s": 0.6,
+            "predict_s": 0.3,
+        }
+        predictions = data.y_test.astype(float)[None, :]
+        return {"dataset_sha256": subset.fingerprint()}, [timings], predictions
+
+    monkeypatch.setattr(xgboost_bench, "worker", fake_worker)
+    interpreters = {"cpu": Path("cpu"), "metal": Path("metal")}
+    output = tmp_path / "sweep"
+    assert xgboost_bench.run(output, interpreters, 4, train_sizes=(20, 40))
+    summary = json.loads((output / "summary.json").read_text())
+    assert {(r["task"], r["train_rows"], r["engine"]) for r in summary} == {
+        (task, size, engine) for task in source for size in (20, 40) for engine in interpreters
+    }

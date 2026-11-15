@@ -166,6 +166,10 @@ Full fit ratios retain workload-admission skips.
 
 On the M5 Pro, with 75,000 training rows, 25,000 held-out rows, and 32 features per task, xgboost-metal trained 1.96× faster for binary classification and 2.05× faster for regression than the four-thread XGBoost CPU baseline. Warmed prediction was 3.53× and 3.41× faster, respectively. All 12 paired fits passed the held-out quality gates. Separate Metal traces verified GPU work in training and prediction for both tasks. CPU controls recorded zero Metal submissions. [Full timings, quality checks, and trace evidence](evidence/xgboost-baseline/README.md)
 
+## XGBoost training-set scaling
+
+With 32 features and a fixed 25,000-row prediction batch, Metal first beat CPU training in both passes at 464 rows for classification and 208 for regression. CPU won every pass at the preceding tested sizes, 448 and 192, respectively. Metal already won warmed prediction at three training rows for both tasks and won at every larger tested size. All 384 benchmark pairs and 20 Metal replay pairs passed the quality checks. The traces verified GPU work during training and prediction, including on both sides of the training crossovers. [Full sweep, speedup plot, and Metal traces](evidence/xgboost-training-sweep/README.md)
+
 ## Reproduce
 
 Run uv sync --locked --extra dashboard, then mlx-m5-bench doctor, mlx-m5-bench run --profile quick, --profile standard and --profile full through uv run. The packaged profiles and committed lock specify the inputs and dependencies. Every run writes fresh timings. Independent traces for other workloads remain open.
