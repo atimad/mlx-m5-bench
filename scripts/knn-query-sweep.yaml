@@ -1,0 +1,20 @@
+seed: 42
+threads: 4
+repeats: 15
+warmups: 1
+cases:
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 4}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 5}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 8}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 16}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 32}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 48}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 64}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 96}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 128}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 192}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 256}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 384}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 512}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 768}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 1024}
