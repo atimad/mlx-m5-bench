@@ -94,6 +94,11 @@ def main() -> None:
     parser.add_argument("output", type=Path)
     parser.add_argument("probe", type=Path)
     parser.add_argument("--mode", choices=("forced", "auto"), default="forced")
+    parser.add_argument(
+        "--completion-only",
+        action="store_true",
+        help="Record Metal command completions without saving full GPU capture bundles",
+    )
     args = parser.parse_args()
     if os.environ.get("MTL_CAPTURE_ENABLED") != "1":
         parser.error("Start Python with MTL_CAPTURE_ENABLED=1")
@@ -150,16 +155,17 @@ def main() -> None:
                 ]
             outputs[implementation] = extract(model, case.algorithm, data, result)
 
-        # Capture separate replays. Fit and the first inference on the new model are isolated.
-        captured_model = create(case, "mlxlearn", profile.threads)
-        for name, operation in (
-            ("fit", lambda: captured_model.fit(data.train, data.y_train)),
-            (inference, lambda: getattr(captured_model, inference)(data.test)),
-        ):
-            if summarize(args.output / f"mlxlearn-{name}.tsv")["completed_buffers"]:
-                captures[name] = capture_operation(args.output / f"{name}.gputrace", operation)
-            else:
-                operation()
+        if not args.completion_only:
+            # Capture separate replays. Fit and the first inference on the new model are isolated.
+            captured_model = create(case, "mlxlearn", profile.threads)
+            for name, operation in (
+                ("fit", lambda: captured_model.fit(data.train, data.y_train)),
+                (inference, lambda: getattr(captured_model, inference)(data.test)),
+            ):
+                if summarize(args.output / f"mlxlearn-{name}.tsv")["completed_buffers"]:
+                    captures[name] = capture_operation(args.output / f"{name}.gputrace", operation)
+                else:
+                    operation()
 
     result = compare(case.algorithm, outputs["sklearn"], outputs["mlxlearn"], data)
     if result["status"] != "PASS":

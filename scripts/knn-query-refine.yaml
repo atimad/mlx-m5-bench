@@ -1,0 +1,10 @@
+seed: 42
+threads: 4
+repeats: 15
+warmups: 1
+cases:
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 256}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 288}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 320}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 352}
+  - {algorithm: knn, samples: 4096, features: 32, neighbors: 5, query_rows: 384}
