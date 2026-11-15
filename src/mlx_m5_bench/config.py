@@ -24,6 +24,7 @@ class Case(Settings):
     components: Positive = 3
     query_rows: Positive | None = None
     train_rows: Positive | None = None
+    source_features: Annotated[int, Field(ge=4, le=8192)] | None = None
 
     @model_validator(mode="after")
     def dimensions(self) -> Self:
@@ -34,6 +35,10 @@ class Case(Settings):
             raise ValueError("query_rows requires KNN and must fit within the test set")
         if self.train_rows is not None and (self.algorithm != "knn" or self.train_rows > train):
             raise ValueError("train_rows requires KNN and must fit within the training set")
+        if self.source_features is not None and (
+            self.algorithm != "knn" or self.source_features < self.features
+        ):
+            raise ValueError("source_features requires KNN and must cover all selected features")
         if self.algorithm == "knn" and self.neighbors > (self.train_rows or train):
             raise ValueError("neighbors must fit within the training set")
         if self.algorithm == "pca" and self.components > min(train, self.features):
@@ -45,6 +50,7 @@ class Case(Settings):
         return f"{self.algorithm}-{self.samples}x{self.features}-c{self.classes}" + {
             "knn": f"-k{self.neighbors}"
             + (f"-t{self.train_rows}" if self.train_rows else "")
+            + (f"-s{self.source_features}" if self.source_features else "")
             + (f"-q{self.query_rows}" if self.query_rows else ""),
             "pca": f"-p{self.components}",
         }.get(self.algorithm, "")

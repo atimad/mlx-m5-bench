@@ -36,15 +36,17 @@ def generate(case: Case, seed: int) -> Dataset:
         y = np.zeros(case.samples, dtype=np.int64)
         stratify = None
     else:
+        source_features = case.source_features or case.features
         X, y = make_classification(
             n_samples=case.samples,
-            n_features=case.features,
-            n_informative=max(3, case.features // 2),
+            n_features=source_features,
+            n_informative=max(3, source_features // 2),
             n_redundant=0,
             n_classes=case.classes,
             n_clusters_per_class=1,
             random_state=seed,
         )
+        X = X[:, : case.features]
         stratify = y
     train, test, y_train, y_test = train_test_split(
         X, y, test_size=0.25, random_state=seed, stratify=stratify

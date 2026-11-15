@@ -422,3 +422,17 @@ def test_knn_explicit_training_prefix():
         Case.model_validate({**common, "train_rows": 76})
     with pytest.raises(ValidationError, match="neighbors"):
         Case.model_validate({**common, "train_rows": 4})
+
+
+def test_knn_shared_source_feature_prefix():
+    common = {"algorithm": "knn", "samples": 100, "query_rows": 5, "source_features": 33}
+    narrow = Case.model_validate({**common, "features": 31})
+    wide = Case.model_validate({**common, "features": 33})
+    lhs, rhs = generate(narrow, 42), generate(wide, 42)
+    np.testing.assert_array_equal(lhs.train, rhs.train[:, :31])
+    np.testing.assert_array_equal(lhs.test, rhs.test[:, :31])
+    np.testing.assert_array_equal(lhs.y_train, rhs.y_train)
+    np.testing.assert_array_equal(lhs.y_test, rhs.y_test)
+    assert narrow.key != Case(algorithm="knn", samples=100, features=31, query_rows=5).key
+    with pytest.raises(ValidationError, match="source_features"):
+        Case.model_validate({**common, "features": 34})

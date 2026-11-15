@@ -15,7 +15,7 @@ MIB = 1024**2
 def estimate_bytes(case: Case) -> int:
     train = case.samples - (case.samples + 3) // 4
     test = case.samples - train
-    base = 512 * MIB + case.samples * case.features * 64
+    base = 512 * MIB + case.samples * (case.source_features or case.features) * 64
     if case.algorithm == "svc":
         base += min(4 * train**2, SVC_CACHE_MIB * MIB) * 4 + train * test * 16
     if case.algorithm == "pca":
