@@ -10,7 +10,7 @@ Each implementation executes in a fresh subprocess. Workloads run serially with 
 
 The first model fit and prediction/transform are recorded as cold. Imports, estimator module discovery and dataset preparation precede this call. Cold therefore describes first estimator execution. OS filesystem caches and already initialized runtime components can persist.
 
-The worker then fits and queries fresh model instances for the requested warmups and steady repetitions. Standard uses one warmup and three steady repeats. Full uses one warmup and five steady repeats. Quick uses zero additional warmups and one steady repeat, after the recorded first call.
+By default the worker fits and queries fresh model instances for the requested warmups and steady repetitions. KNN profiles with reuse_model=true fit once, then warm and repeatedly query that fitted model. In these profiles, probabilities are checked only after the measured sequence and steady rows contain prediction timings. Standard uses one warmup and three steady repeats. Full uses one warmup and five steady repeats. Quick uses zero additional warmups and one steady repeat, after the recorded first call.
 
 perf_counter measures wall time. MLX candidate calls synchronize the default GPU and CPU streams before starting and after returning. Current pinned upstream paths evaluate results and use their device's default streams. Both synchronizations remain inside the completion boundary, including CPU paths. Creating NumPy outputs materializes lazy MLX work. CPU timings use synchronous public methods.
 
@@ -18,7 +18,7 @@ Fit includes estimator validation, internal dtype conversion and array staging. 
 
 Pipeline timing includes model construction, fit, inference, synchronization, diagnostic collection and per-operation bookkeeping. Memory snapshots and correctness evaluation follow this interval. Worker wall time includes imports, preparation, all repetitions, correctness extraction and process exit. Whole-run wall time is recorded in the manifest. Preparation time appears on each repetition as a shared worker-level value and must be counted once when reconstructing totals.
 
-Correctness extraction, probabilities, SVC decision values and PCA reconstruction are outside measured inference. Subsequent calls may benefit from library allocator and compiled-kernel caches. Models are released between repetitions. Process allocator caches remain warm.
+Correctness extraction, probabilities, SVC decision values and PCA reconstruction are outside measured inference. Subsequent calls may benefit from library allocator and compiled-kernel caches. Fresh-model profiles release the model between repetitions. Process allocator caches remain warm.
 
 Median, minimum, maximum and median absolute deviation are reported separately for cold, warmup and steady phases. Warmup values remain in machine-readable records and are omitted from the Markdown summary. A single quick repeat has zero MAD and carries little statistical information.
 

@@ -4,6 +4,8 @@ Forced GPU beat explicitly pinned MLX CPU in both passes at every tested batch s
 
 Automatic mode used its own CPU path for batches of one through four rows. It was faster than forced GPU and pinned CPU at each of those sizes. At five rows, automatic mode used GPU and beat pinned CPU in both passes, as it did at every larger tested size. The automatic routing switch was at five rows. The earlier [scikit-learn comparison](../knn-query-sweep/README.md) measures a different baseline. For example, at five rows scikit-learn still beat both GPU modes in this repeat.
 
+A follow-up repeats the panel with [warmed predictions on the same fitted model](../knn-warm/README.md).
+
 ## Workload and method
 
 All modes use the same 3,072 training rows, 32 float32 features, binary labels, Euclidean distance, uniform voting and k=5. The query sets are nested prefixes of the same held-out pool. Training-feature and label fingerprints match across all sizes. The 18 shared query cases also match the complete dataset fingerprints from the [earlier sweep](../knn-query-sweep/README.md). The only new batch sizes are 1, 2 and 3, with 4 repeated as an anchor.

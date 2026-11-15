@@ -83,6 +83,10 @@ On the same 3,072-row training set, automatic GPU prediction first beat scikit-l
 
 On the same 3,072-row training set, forced GPU beat explicit MLX CPU in both passes at every tested batch size from one to 1,024 rows. At one row it took 0.334 ms versus 0.360 ms for pinned CPU. Auto used a separate CPU path, taking 0.097 ms at one row and winning at all sizes up to four. At five rows, auto switched to GPU and took 0.514 ms versus 0.866 ms pinned CPU and 0.233 ms for the paired scikit-learn control. Separate Metal traces verified each mode at all 21 distinct sizes. [Full comparison, raw timings, and trace evidence](evidence/knn-explicit-cpu/README.md)
 
+## KNN warmed prediction crossover
+
+With one fitted model reused per batch size, forced GPU lost to pinned MLX CPU at three rows (0.645 vs 0.547 ms) and won at four (0.669 vs 0.784 ms). It won both passes at all larger tested sizes. Auto's host path was still fastest at four rows and Metal confirmed its switch to GPU at five. Against scikit-learn, both GPU modes won both broad-sweep passes at 768 and 1,024 rows. At smaller sizes the result depended on mode and block. [Full timing sweep, block-level comparisons and warmed Metal traces](evidence/knn-warm/README.md)
+
 ## KNN fit and index construction
 
 No Metal command buffers were submitted during fit for the 8,000 × 128 and 30,000 × 64 workloads. The first predictions on those fresh models completed one and seven GPU buffers, respectively. Fit owns and stages the training arrays. Search and any lazy query preparation are measured with prediction. All observed labels matched scikit-learn. [Fit traces, first-query traces, and controls](evidence/metal-knn-fit/README.md)
