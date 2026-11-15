@@ -10,22 +10,28 @@ from mlx_m5_bench.timing import statistics
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("runs", nargs=4, type=Path, metavar="RUN")
+    parser.add_argument("runs", nargs="+", type=Path, metavar="RUN")
     args = parser.parse_args()
+    if len(args.runs) not in (4, 6):
+        parser.error("Expected four blocks or six blocks including explicit MLX CPU")
+    modes = ("auto", "forced", "cpu") if len(args.runs) == 6 else ("auto", "forced")
+    order = [*modes, *reversed(modes)]
     blocks = []
     for run in args.runs:
         manifest = json.loads((run / "manifest.json").read_text())
         if manifest["state"] != "complete":
             raise ValueError(f"Incomplete run {run}")
-        mode = "forced" if manifest["config"]["force_mlx"] else "auto"
-        if mode == "auto" and manifest["config"]["mlx_device"] != "auto":
-            raise ValueError(f"Run {run} did not use automatic routing")
+        device = manifest["config"]["mlx_device"]
+        forced = manifest["config"]["force_mlx"]
+        mode = "forced" if forced and device == "gpu" else device
+        if mode not in modes or (forced and mode != "forced"):
+            raise ValueError(f"Run {run} used an unexpected routing configuration")
         raw = json.loads((run / "measurements.json").read_text())
         if any(row["status"] != "ok" for row in raw):
             raise ValueError(f"Run {run} contains a failed or skipped row")
         blocks.append((mode, manifest, [row for row in raw if row.get("phase") == "steady"]))
-    if [mode for mode, _, _ in blocks] != ["auto", "forced", "forced", "auto"]:
-        raise ValueError("Expected chronological auto, forced, forced, auto blocks")
+    if [mode for mode, _, _ in blocks] != order:
+        raise ValueError(f"Expected chronological blocks: {order}")
 
     first = blocks[0][1]["config"]
     output = []
@@ -33,7 +39,7 @@ def main() -> None:
         fingerprints = set()
         operations = ("fit", "transform" if case.startswith("pca-") else "predict")
         for operation in operations:
-            by_mode = {"auto": [], "forced": []}
+            by_mode = {mode: [] for mode in modes}
             for mode, manifest, rows in blocks:
                 config = manifest["config"]
                 if any(
@@ -80,6 +86,13 @@ def main() -> None:
                     "cpu_over_candidate": median(item["cpu_over_candidate"] for item in values),
                     "blocks": values,
                 }
+            if "cpu" in by_mode:
+                for mode in ("auto", "forced"):
+                    result[mode]["mlx_cpu_over_candidate_by_pass"] = [
+                        cpu["mlxlearn"]["stats_s"]["median"]
+                        / candidate["mlxlearn"]["stats_s"]["median"]
+                        for cpu, candidate in zip(by_mode["cpu"], by_mode[mode], strict=True)
+                    ]
             output.append(result)
     print(json.dumps(output, indent=2))
 

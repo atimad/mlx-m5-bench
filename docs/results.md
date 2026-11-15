@@ -79,6 +79,10 @@ With the same 3,072 training rows, 32 features and five neighbors, automatic KNN
 
 On the same 3,072-row training set, automatic GPU prediction first beat scikit-learn in both refinement blocks at 320 query rows (0.683 vs 0.956 ms). At 288 rows, automatic results split between blocks while forced MLX won both refinement blocks. In the broad sweep, forced MLX won both blocks from 384 rows through the largest tested batch, and automatic GPU did so from 512 rows. The 384-row automatic result varied between panels. At 1,024 rows, automatic prediction took 0.842 ms versus 2.605 ms for its scikit-learn control. Separate Metal traces verified automatic GPU work at every tested batch from five rows upward and forced GPU work at every batch. [Full timing sweep, refinement and Metal traces](evidence/knn-query-sweep/README.md)
 
+## KNN same-library CPU versus GPU
+
+On the same 3,072-row training set, forced GPU beat explicit MLX CPU in both passes at every tested batch size from one to 1,024 rows. At one row it took 0.334 ms versus 0.360 ms for pinned CPU. Auto used a separate CPU path, taking 0.097 ms at one row and winning at all sizes up to four. At five rows, auto switched to GPU and took 0.514 ms versus 0.866 ms pinned CPU and 0.233 ms for the paired scikit-learn control. Separate Metal traces verified each mode at all 21 distinct sizes. [Full comparison, raw timings, and trace evidence](evidence/knn-explicit-cpu/README.md)
+
 ## KNN fit and index construction
 
 No Metal command buffers were submitted during fit for the 8,000 × 128 and 30,000 × 64 workloads. The first predictions on those fresh models completed one and seven GPU buffers, respectively. Fit owns and stages the training arrays. Search and any lazy query preparation are measured with prediction. All observed labels matched scikit-learn. [Fit traces, first-query traces, and controls](evidence/metal-knn-fit/README.md)

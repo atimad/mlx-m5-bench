@@ -4,6 +4,8 @@ With 3,072 fixed training rows, 32 features and five neighbors, the first size w
 
 In the broad sweep, forced MLX beat scikit-learn in both blocks from 384 through all larger tested batches. Automatic GPU prediction did so from 512 through all larger tested batches. At 384, the broad automatic blocks split and the refinement automatic blocks both won. An isolated win at 96 in one block per mode did not persist at 128 or 192.
 
+A follow-up uses [explicit MLX CPU on the same training set](../knn-explicit-cpu/README.md) to measure same-library crossover.
+
 ## Workload and method
 
 This uses the same fixed 3,072 training rows, binary labels, 32 float32 features, Euclidean distance, uniform voting and k=5 as the [four-to-five routing experiment](../knn-query-crossover/README.md). Query batches are ordered prefixes of the same held-out pool. The combined training-feature and label SHA-256 is recorded in every trace. The 1,024-row batch uses the entire held-out split.
