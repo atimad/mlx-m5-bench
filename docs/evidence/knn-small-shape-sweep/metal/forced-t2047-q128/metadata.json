@@ -1,0 +1,96 @@
+{
+  "case": "knn-16384x32-c2-k8-t2047-s33-q128",
+  "mode": "forced",
+  "reuse_model": true,
+  "requested_device": "gpu",
+  "force_backend": "mlx",
+  "routing": {
+    "fit": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "fit",
+        "backend": "mlx",
+        "reason": "forced",
+        "detail": "",
+        "shape": [
+          2047,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ],
+    "predict": [
+      {
+        "estimator": "KNeighborsClassifier",
+        "operation": "kneighbors",
+        "backend": "mlx",
+        "reason": "sticky",
+        "detail": "",
+        "shape": [
+          128,
+          32
+        ],
+        "fallback": false,
+        "extra": {}
+      }
+    ]
+  },
+  "dataset_sha256": "207fc1add403c3fd948a9d119d74ac897fdf3ac1c8b62fdd76d15953167697b9",
+  "seed": 42,
+  "threads": 4,
+  "parameters": {
+    "n_neighbors": 8,
+    "algorithm": "brute",
+    "metric": "euclidean",
+    "weights": "uniform",
+    "n_jobs": 4
+  },
+  "device": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "dependencies": {
+    "mlx": "0.32.4",
+    "mlx-learn": "0.1.2",
+    "scikit-learn": "1.9.1"
+  },
+  "correctness": {
+    "status": "PASS",
+    "cpu_accuracy": 0.90625,
+    "candidate_accuracy": 0.90625,
+    "agreement": 1.0,
+    "probability_mae": 0.0,
+    "probability_max": 0.0
+  },
+  "completion_traces": {
+    "mlxlearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "mlxlearn-predict": {
+      "completed_buffers": 1,
+      "sum_gpu_buffer_ms": 0.1764170010574162
+    },
+    "sklearn-fit": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    },
+    "sklearn-predict": {
+      "completed_buffers": 0,
+      "sum_gpu_buffer_ms": 0
+    }
+  },
+  "captures": {},
+  "prediction_search_path": "small_query",
+  "prediction_dispatch_count": 3,
+  "training_sha256": "bfb023b5e503a6fd4432d8e680c4f581296f296835335731fb31ee1cd4596388",
+  "timing_run_ids": [
+    "20261115T104759866524Z-1f0ff743ee",
+    "20261115T104832271952Z-1f0ff743ee"
+  ]
+}

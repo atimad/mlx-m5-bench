@@ -107,6 +107,10 @@ On the same 3,072 training rows and 32 features, Metal dispatch traces verified 
 
 At 3,072 training rows and 32 features, forced GPU dispatched the specialized small-query kernel at k=7 and k=8 for one through four queries. At k=9 it dispatched fused screen search across the full sweep. At five queries, auto switched from CPU to fused GPU search at all three k values. Forced GPU first beat pinned MLX CPU in both passes at five, four, and five queries for k=7, 8, and 9. Auto GPU first beat pinned MLX CPU at five queries for every k. Both GPU modes first beat scikit-learn in both passes at 512, 512, and 768 queries, respectively. All 3,780 timing pairs and 126 Metal trace pairs passed numerical checks. [Full timing tables, latency plot, and dispatch traces](evidence/knn-small-k-sweep/README.md)
 
+## KNN warmed sweep across the small-query GPU shape cutoffs
+
+At 32 features and k=8, auto and forced GPU used the small-query kernel at 2,047 and 2,048 training rows with 128 queries and at 2,048 training rows with 255 and 256 queries. Both switched to fused screen search at 2,049 training rows or 257 queries in the respective sweeps. Both GPU modes beat pinned MLX CPU in both passes at all six shapes. Auto split the scikit-learn comparison at 255 queries. Scikit-learn won both passes in every other GPU comparison. All 540 steady timing pairs and 18 Metal trace pairs passed numerical checks. [Full timings and Metal dispatch evidence](evidence/knn-small-shape-sweep/README.md)
+
 ## KNN fit and index construction
 
 No Metal command buffers were submitted during fit for the 8,000 × 128 and 30,000 × 64 workloads. The first predictions on those fresh models completed one and seven GPU buffers, respectively. Fit owns and stages the training arrays. Search and any lazy query preparation are measured with prediction. All observed labels matched scikit-learn. [Fit traces, first-query traces, and controls](evidence/metal-knn-fit/README.md)
