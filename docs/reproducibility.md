@@ -29,7 +29,7 @@ Build a wheel and install it in a separate temporary virtual environment. Instal
 ```sh
 uv build
 uv venv /tmp/mlx-bench-clean --python 3.13
-uv pip install --python /tmp/mlx-bench-clean/bin/python 'dist/mlx_m5_bench-0.1.0-py3-none-any.whl[dashboard]'
+uv pip install --python /tmp/mlx-bench-clean/bin/python 'dist/mlx_m5_bench-0.2.0-py3-none-any.whl[dashboard]'
 /tmp/mlx-bench-clean/bin/mlx-m5-bench --help
 /tmp/mlx-bench-clean/bin/mlx-m5-bench doctor
 ```

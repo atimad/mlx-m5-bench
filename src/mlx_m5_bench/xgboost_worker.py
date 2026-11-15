@@ -17,7 +17,13 @@ from typing import Any, TextIO
 import numpy as np
 from threadpoolctl import threadpool_info, threadpool_limits
 
-from .timing import measure
+if __package__:
+    from .timing import measure as package_measure
+else:
+    # A direct script launch exposes only this package directory to the engine interpreter.
+    from timing import measure as script_measure
+
+measure = package_measure if __package__ else script_measure
 
 DISTRIBUTIONS = {"cpu": "xgboost", "metal": "xgboost-metal"}
 
