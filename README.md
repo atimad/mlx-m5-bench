@@ -71,7 +71,7 @@ Each UTC timestamped run directory contains manifest.json, measurements.json and
 - **v0.1.0** establishes the benchmark methodology with verified scikit-learn and mlx-learn CPU/GPU comparisons.
 - **v0.2.0** adds the second major experiment, CPU XGBoost versus the experimental xgboost-metal backend, through independent adapters. It also expands the scaling experiments.
 
-See the [release plan](docs/roadmap.md).
+The first XGBoost classification and regression runs are available, with separate worker environments and Metal verification for training and warmed prediction. See the [XGBoost results and reproduction commands](docs/evidence/xgboost-baseline/README.md) and [release plan](docs/roadmap.md).
 
 ## Development
 

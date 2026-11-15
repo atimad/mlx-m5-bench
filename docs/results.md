@@ -162,6 +162,10 @@ Full fit ratios retain workload-admission skips.
 
 ![Full fit ratios](evidence/20261114T184334529634Z-661130fd99/charts/training_speedup.png)
 
+## XGBoost versus xgboost-metal
+
+On the M5 Pro, with 75,000 training rows, 25,000 held-out rows, and 32 features per task, xgboost-metal trained 1.96× faster for binary classification and 2.05× faster for regression than the four-thread XGBoost CPU baseline. Warmed prediction was 3.53× and 3.41× faster, respectively. All 12 paired fits passed the held-out quality gates. Separate Metal traces verified GPU work in training and prediction for both tasks. CPU controls recorded zero Metal submissions. [Full timings, quality checks, and trace evidence](evidence/xgboost-baseline/README.md)
+
 ## Reproduce
 
 Run uv sync --locked --extra dashboard, then mlx-m5-bench doctor, mlx-m5-bench run --profile quick, --profile standard and --profile full through uv run. The packaged profiles and committed lock specify the inputs and dependencies. Every run writes fresh timings. Independent traces for other workloads remain open.

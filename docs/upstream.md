@@ -31,7 +31,7 @@ Logistic predict and predict_proba delegate to inherited NumPy/scikit-learn meth
 
 xgboost-metal's reviewed README recommends GitHub release wheels and deprecates its PyPI installation path. Its requirements include Apple Silicon, macOS >=14 and Python >=3.10. Source builds require full Xcode with Metal and CMake >=3.24. It exports the xgboost import name, so a future comparison must use separate CPU and Metal environments to avoid package collision. CPU and CUDA execution are unsupported in the Metal package. The explicit target is device="metal", tree_method="hist". [Reviewed README](https://github.com/tabulai/xgboost-metal/blob/3a84667dc57c3517588b6e7794c003f98bbc47e3/README.md)
 
-The second major experiment will use independent adapters and preserve the current isolated-worker JSON contracts while selecting separate interpreter paths. See the [release plan](roadmap.md#v020--xgboost-versus-xgboost-metal) for the comparison and scaling protocol.
+The first XGBoost comparison uses native histogram training and in-place prediction in independent worker environments. Both engines receive identical datasets from the coordinator. The CPU worker records XGBoost 3.4.1 and its OpenMP pool. The Metal worker records xgboost-metal 0.1.1 and the separate API baseline it reports. [Benchmark and environment setup](evidence/xgboost-baseline/README.md) · [Release plan](roadmap.md#v020--xgboost-versus-xgboost-metal)
 
 ## License review
 

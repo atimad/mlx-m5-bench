@@ -1,0 +1,994 @@
+[
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.005682791990693659,
+    "train_s": 0.256574958038982,
+    "first_prediction_s": 0.0036523750168271363,
+    "end_to_end_s": 0.2659101250465028
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.004515125008765608,
+    "train_s": 0.24408770794980228,
+    "first_prediction_s": 0.0036312919692136347,
+    "end_to_end_s": 0.2522341249277815
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.0049214999889954925,
+    "train_s": 0.2729105000034906,
+    "first_prediction_s": 0.003546375024598092,
+    "end_to_end_s": 0.2813783750170842
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.004421459045261145,
+    "train_s": 0.24203195900190622,
+    "first_prediction_s": 0.0035057920031249523,
+    "end_to_end_s": 0.2499592100502923
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.003451708995271474
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.0033591249957680702
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.003360249975230545
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.003362207964528352
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.003354791027959436
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.0034686250146478415
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.0033577500144019723
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.0033641670015640557
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.0033236659946851432
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0033225409570150077
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.007164750015363097,
+    "train_s": 0.1402060830150731,
+    "first_prediction_s": 0.0013958339695818722,
+    "end_to_end_s": 0.14876666700001806
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.0007670840132050216,
+    "train_s": 0.12367249996168539,
+    "first_prediction_s": 0.0012792909983545542,
+    "end_to_end_s": 0.12571887497324497
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.000779957976192236,
+    "train_s": 0.1223407500074245,
+    "first_prediction_s": 0.001325917022768408,
+    "end_to_end_s": 0.12444662500638515
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.0008221659809350967,
+    "train_s": 0.12408125004731119,
+    "first_prediction_s": 0.001272583962418139,
+    "end_to_end_s": 0.12617599999066442
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.0009178330074064434
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.0016421249601989985
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.0010260000126436353
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.000906666973605752
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.0009689999860711396
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.0010180419776588678
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.0013080829521641135
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.0009484589681960642
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.0008806250407360494
+  },
+  {
+    "task": "classification",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0010045410017482936
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.005196416983380914,
+    "train_s": 0.13583995797671378,
+    "first_prediction_s": 0.0012917089625261724,
+    "end_to_end_s": 0.14232808392262086
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.0007517090416513383,
+    "train_s": 0.12441754195606336,
+    "first_prediction_s": 0.001306750054936856,
+    "end_to_end_s": 0.12647600105265155
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.0007632499909959733,
+    "train_s": 0.12423549999948591,
+    "first_prediction_s": 0.0013397090369835496,
+    "end_to_end_s": 0.12633845902746543
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.0007932080188766122,
+    "train_s": 0.12386516702827066,
+    "first_prediction_s": 0.0011755829909816384,
+    "end_to_end_s": 0.1258339580381289
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.0009419160196557641
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.0015544589841738343
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.0009255830082111061
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.0010129999718628824
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.0009027080377563834
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.001011375046800822
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.0008917499799281359
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.0009954170091077685
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.0008931250195018947
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0008947920287027955
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.005887540988624096,
+    "train_s": 0.24592716700863093,
+    "first_prediction_s": 0.0038102910039015114,
+    "end_to_end_s": 0.25562499900115654
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.004435916023794562,
+    "train_s": 0.2455081669613719,
+    "first_prediction_s": 0.003567792009562254,
+    "end_to_end_s": 0.2535118749947287
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.00466308300383389,
+    "train_s": 0.24207308294717222,
+    "first_prediction_s": 0.003520666970871389,
+    "end_to_end_s": 0.2502568329218775
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.004486582998652011,
+    "train_s": 0.24134829099057242,
+    "first_prediction_s": 0.0037001249729655683,
+    "end_to_end_s": 0.24953499896219
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.003460583044216037
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.003398458007723093
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.003376959008164704
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.0035814999719150364
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.0034259160165674984
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.0036006669979542494
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.003417583997361362
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.003392209007870406
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.0034928329987451434
+  },
+  {
+    "task": "classification",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0033714590244926512
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.00576366699533537,
+    "train_s": 0.2467620419920422,
+    "first_prediction_s": 0.003563541977200657,
+    "end_to_end_s": 0.25608925096457824
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.004603959037922323,
+    "train_s": 0.2444647090160288,
+    "first_prediction_s": 0.0034592500305734575,
+    "end_to_end_s": 0.25252791808452457
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.004544291005004197,
+    "train_s": 0.24679341597948223,
+    "first_prediction_s": 0.0034568749833852053,
+    "end_to_end_s": 0.25479458196787164
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.004556250001769513,
+    "train_s": 0.24126745900139213,
+    "first_prediction_s": 0.0034787909826263785,
+    "end_to_end_s": 0.24930249998578802
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.003331416053697467
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.0034094160073436797
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.003337708010803908
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.0035248330095782876
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.0032875000033527613
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.0033152499818243086
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.0032545000431127846
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.003261125006247312
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.003299957956187427
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0032617499819025397
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.006125790998339653,
+    "train_s": 0.1299894159892574,
+    "first_prediction_s": 0.0012657089973799884,
+    "end_to_end_s": 0.13738091598497704
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.0008087499882094562,
+    "train_s": 0.11886412499006838,
+    "first_prediction_s": 0.00122637499589473,
+    "end_to_end_s": 0.12089924997417256
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.0007538750069215894,
+    "train_s": 0.118659291008953,
+    "first_prediction_s": 0.0011976670357398689,
+    "end_to_end_s": 0.12061083305161446
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.0007422919734381139,
+    "train_s": 0.11886699998285621,
+    "first_prediction_s": 0.0012734999763779342,
+    "end_to_end_s": 0.12088279193267226
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.0009792919736355543
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.0016629170277155936
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.0010035829618573189
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.0009619999909773469
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.0009105000062845647
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.000836874998640269
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.001017749949824065
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.0008594579994678497
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.0009224580135196447
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0008689169771969318
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.005320249998476356,
+    "train_s": 0.12346983299357817,
+    "first_prediction_s": 0.0013018749887123704,
+    "end_to_end_s": 0.1300919579807669
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.000914249976631254,
+    "train_s": 0.11867029196582735,
+    "first_prediction_s": 0.0013861659681424499,
+    "end_to_end_s": 0.12097070791060105
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.0007862499915063381,
+    "train_s": 0.11960612499387935,
+    "first_prediction_s": 0.0012640829663723707,
+    "end_to_end_s": 0.12165645795175806
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.0007273340015672147,
+    "train_s": 0.11714874999597669,
+    "first_prediction_s": 0.0012307919678278267,
+    "end_to_end_s": 0.11910687596537173
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.0009615420131012797
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.0011154579697176814
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.0009447499760426581
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.0010092919692397118
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.0009697499917820096
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.0010060000349767506
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.0010006660013459623
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.000992499990388751
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.0009363749995827675
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "metal",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.0009379590046592057
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "warmup",
+    "repetition": 0,
+    "train_ingest_s": 0.005737624946050346,
+    "train_s": 0.24539799999911338,
+    "first_prediction_s": 0.0037395000108517706,
+    "end_to_end_s": 0.2548751249560155
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 1,
+    "train_ingest_s": 0.004623166983947158,
+    "train_s": 0.24448266701074317,
+    "first_prediction_s": 0.0034535410231910646,
+    "end_to_end_s": 0.2525593750178814
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 2,
+    "train_ingest_s": 0.0046135830343700945,
+    "train_s": 0.24280958401504904,
+    "first_prediction_s": 0.00342625001212582,
+    "end_to_end_s": 0.25084941706154495
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_fit",
+    "repetition": 3,
+    "train_ingest_s": 0.004547082993667573,
+    "train_s": 0.2395574999973178,
+    "first_prediction_s": 0.0034480830072425306,
+    "end_to_end_s": 0.2475526659982279
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 0,
+    "predict_s": 0.0033050000201910734
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 1,
+    "predict_s": 0.003231832990422845
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 2,
+    "predict_s": 0.003321999975014478
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 3,
+    "predict_s": 0.003258791984990239
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 4,
+    "predict_s": 0.003249041037634015
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 5,
+    "predict_s": 0.003300291020423174
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 6,
+    "predict_s": 0.00326550001045689
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 7,
+    "predict_s": 0.003292499983217567
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 8,
+    "predict_s": 0.003244624997023493
+  },
+  {
+    "task": "regression",
+    "pass": 2,
+    "engine": "cpu",
+    "phase": "steady_predict",
+    "repetition": 9,
+    "predict_s": 0.003238749981392175
+  }
+]

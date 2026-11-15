@@ -1,0 +1,35 @@
+[
+  {
+    "task": "classification",
+    "pass": 1,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392793
+    },
+    "metal": {
+      "log_loss": 0.12344148755073547,
+      "roc_auc": 0.9905123647392792
+    },
+    "differences": {
+      "log_loss": 0.0,
+      "roc_auc": 1.1102230246251565e-16
+    }
+  },
+  {
+    "task": "regression",
+    "pass": 1,
+    "repetition": 1,
+    "status": "PASS",
+    "cpu": {
+      "rmse": 1.0682941675186157
+    },
+    "metal": {
+      "rmse": 1.0682941675186157
+    },
+    "differences": {
+      "rmse": 0.0
+    }
+  }
+]
