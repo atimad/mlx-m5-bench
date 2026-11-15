@@ -1,5 +1,7 @@
 # Execution record
 
+This record covers the initial implementation and pre-publication review. See the [release roadmap](roadmap.md) for the current release sequence and [results](results.md) for the published benchmark evidence.
+
 ## Phase 1 — discovery and design
 
 2026-11-14. The empty target directory was initialized as a local Git repository on main. The verified machine reports macOS 27.2.1 build 26B131, Apple M5 Pro, 5 performance and 10 efficiency CPU cores, 16 GPU cores, 24 GiB physical memory and Metal 4.

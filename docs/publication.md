@@ -1,4 +1,6 @@
-# Publication checkpoint
+# Initial publication checkpoint
+
+This record describes the original pre-publication review. The repository is now public at [atimad/mlx-m5-bench](https://github.com/atimad/mlx-m5-bench). See [GitHub Actions](https://github.com/atimad/mlx-m5-bench/actions) for hosted CI, [results](results.md) for the subsequent Metal evidence, and the [release roadmap](roadmap.md) for the release sequence.
 
 The intended owner is atimad, repository name mlx-m5-bench and visibility public. The intended URL is https://github.com/atimad/mlx-m5-bench. The read-only GitHub CLI lookup could not resolve an existing repository on 2026-11-14.
 

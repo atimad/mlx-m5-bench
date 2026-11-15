@@ -11,5 +11,4 @@
 - Three or five repetitions and synthetic datasets provide an initial local measurement panel. They provide limited statistical power and limited external validity.
 - The dashboard displays one selected saved run. Its profile filter applies to that selected run. Missing comparison ratios stay empty and raw records retain failure information.
 - CPU-only runs retain INCONCLUSIVE paired correctness. Unit tests separately check CPU adapter behavior.
-- GitHub Actions is prepared locally. Remote CI execution awaits publication approval.
-- Publication approval is required before creating or pushing the GitHub repository.
+- GitHub Actions runs the CPU checks on Linux. Apple Silicon GPU checks and Metal tracing run separately on a Mac.
