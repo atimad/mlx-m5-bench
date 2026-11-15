@@ -37,14 +37,22 @@ def sync() -> None:
     mx.synchronize(mx.cpu)
 
 
-def observe(probe: ctypes.CDLL, path: Path, operation: Callable):
+def observe(probe: ctypes.CDLL, path: Path, operation: Callable, *, dispatches: bool = False):
     sync()
-    if not probe.trace_begin(os.fsencode(path)):
-        raise OSError(f"Cannot open {path}")
+    if dispatches:
+        dispatch_path = path.with_name(f"{path.stem}-dispatch.tsv")
+        if not probe.trace_begin_dispatch(os.fsencode(dispatch_path)):
+            raise OSError(f"Cannot open {dispatch_path}")
     try:
-        return operation()
+        if not probe.trace_begin(os.fsencode(path)):
+            raise OSError(f"Cannot open {path}")
+        try:
+            return operation()
+        finally:
+            probe.trace_end()
     finally:
-        probe.trace_end()
+        if dispatches:
+            probe.trace_end_dispatch()
 
 
 def summarize(path: Path) -> dict:
@@ -100,6 +108,7 @@ def main() -> None:
         help="Record Metal command completions without saving full GPU capture bundles",
     )
     parser.add_argument("--reuse-model", action="store_true", help="Trace a warmed prediction")
+    parser.add_argument("--dispatches", action="store_true", help="Record Metal compute dispatches")
     args = parser.parse_args()
     if os.environ.get("MTL_CAPTURE_ENABLED") != "1":
         parser.error("Start Python with MTL_CAPTURE_ENABLED=1")
@@ -115,6 +124,12 @@ def main() -> None:
     probe.trace_end.restype = None
     if not probe.trace_install():
         raise RuntimeError("Unable to install Metal command buffer observer")
+
+    if args.dispatches:
+        probe.trace_begin_dispatch.argtypes = [ctypes.c_char_p]
+        probe.trace_end_dispatch.restype = None
+        if not probe.trace_install_dispatch():
+            raise RuntimeError("Unable to install Metal compute dispatch observer")
 
     profile = load_profile("full" if args.case.endswith("-full") else "standard", args.config)
     key = CASES.get(args.case, args.case)
@@ -152,6 +167,7 @@ def main() -> None:
                 probe,
                 args.output / f"{implementation}-{inference}.tsv",
                 lambda model=model: getattr(model, inference)(data.test),
+                dispatches=args.dispatches,
             )
             if implementation == "mlxlearn":
                 routing[inference] = [
@@ -177,7 +193,11 @@ def main() -> None:
     result = compare(case.algorithm, outputs["sklearn"], outputs["mlxlearn"], data)
     if result["status"] != "PASS":
         raise RuntimeError(f"Traced replay failed numerical parity: {result}")
-    traces = {path.stem: summarize(path) for path in sorted(args.output.glob("*.tsv"))}
+    traces = {
+        path.stem: summarize(path)
+        for path in sorted(args.output.glob("*.tsv"))
+        if not path.stem.endswith("-dispatch")
+    }
     if any(
         trace["completed_buffers"] for name, trace in traces.items() if name.startswith("sklearn")
     ):
